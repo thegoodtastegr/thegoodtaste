@@ -3,698 +3,727 @@
 
 <head>
 
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>THE GOOD TASTE.</title>
-
-
-  <style>
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<title>THE GOOD TASTE.</title>
 
 
-    html {
-      scroll-behavior: smooth;
-    }
+<style>
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
+html {
+  scroll-behavior: smooth;
+}
 
-      background: #f4eee5;
 
-      color: #3b2b25;
-    }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4eee5;
+  color: #3b2b25;
+}
 
 
 
-    /* =========================
-       HEADER
-    ========================= */
+/* =========================
+   HEADER
+========================= */
 
-    header {
+header {
 
-      position: absolute;
+  position: absolute;
 
-      top: 0;
-      left: 0;
+  top: 0;
+  left: 0;
 
-      width: 100%;
+  width: 100%;
 
-      z-index: 20;
+  z-index: 20;
 
-      padding: 26px 5%;
+  padding: 26px 5%;
 
-      display: flex;
+  display: flex;
 
-      justify-content: space-between;
+  justify-content: space-between;
 
-      align-items: flex-start;
+  align-items: flex-start;
 
-      color: white;
-    }
-
-
-
-    /* Logo + name */
-
-    .brand {
-
-      display: flex;
-
-      flex-direction: column;
-
-      align-items: flex-start;
-    }
+  color: white;
+}
 
 
-    .brand-main {
+.brand {
 
-      display: flex;
+  display: flex;
 
-      align-items: center;
+  flex-direction: column;
 
-      gap: 9px;
-    }
+  align-items: flex-start;
+}
 
 
-  .site-logo {
+.brand-main {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+.site-logo {
+
   width: 56px;
+
   height: 56px;
+
   object-fit: contain;
+
   display: block;
 }
 
 
-    .logo {
+.logo {
 
-      font-family: Georgia, serif;
+  font-family: Georgia, serif;
 
-      font-size: 23px;
+  font-size: 23px;
 
-      letter-spacing: 2px;
+  letter-spacing: 2px;
 
-      line-height: 1;
+  line-height: 1;
 
-      white-space: nowrap;
-    }
+  white-space: nowrap;
+}
 
 
-    .tagline {
+.tagline {
 
-      margin-top: 7px;
+  margin-top: 7px;
 
-      margin-left: 37px;
+  margin-left: 68px;
 
-      font-family: Georgia, serif;
+  font-family: Georgia, serif;
 
-      font-size: 10px;
+  font-size: 10px;
 
-      font-style: italic;
+  font-style: italic;
 
-      letter-spacing: 1px;
+  letter-spacing: 1px;
 
-      color: #eee0d2;
-    }
+  color: #eee0d2;
+}
 
 
 
-    /* =========================
-       NAVIGATION
-    ========================= */
+/* =========================
+   NAVIGATION
+========================= */
 
-    nav {
+nav {
 
-      display: flex;
+  display: flex;
 
-      gap: 24px;
+  gap: 24px;
 
-      align-items: center;
+  align-items: center;
 
-      padding-top: 3px;
-    }
+  padding-top: 3px;
+}
 
 
-    nav a {
+nav a {
 
-      color: white;
+  color: white;
 
-      text-decoration: none;
+  text-decoration: none;
 
-      font-size: 11px;
+  font-size: 11px;
 
-      text-transform: uppercase;
+  text-transform: uppercase;
 
-      letter-spacing: 1.3px;
+  letter-spacing: 1.3px;
 
-      transition: opacity 0.3s ease;
-    }
+  transition: opacity 0.3s ease;
+}
 
 
-    nav a:hover {
+nav a:hover {
 
-      opacity: 0.6;
-    }
+  opacity: 0.6;
+}
 
 
 
-    /* =========================
-       HERO
-    ========================= */
+/* =========================
+   HERO
+========================= */
 
-    .hero {
+.hero {
 
-      position: relative;
+  position: relative;
 
-      height: 100vh;
+  height: 100vh;
 
-      min-height: 650px;
+  min-height: 650px;
 
-      overflow: hidden;
+  overflow: hidden;
 
-      display: flex;
+  display: flex;
 
-      align-items: center;
+  align-items: center;
 
-      justify-content: center;
+  justify-content: center;
 
-      text-align: center;
+  text-align: center;
 
-      color: white;
-    }
+  color: white;
+}
 
 
-    .hero-image {
+.hero-image {
 
-      position: absolute;
+  position: absolute;
 
-      inset: 0;
+  inset: 0;
 
-      width: 100%;
+  width: 100%;
 
-      height: 100%;
+  height: 100%;
 
-      background-size: cover;
+  background-size: cover;
 
-      background-position: center;
+  background-position: center;
 
-      opacity: 0;
+  opacity: 0;
 
-      transform: scale(1.025);
+  transform: scale(1.025);
 
-      transition:
+  transition:
+    opacity 2.5s ease-in-out,
+    transform 8s ease-out;
+}
 
-        opacity 2.4s ease-in-out,
 
-        transform 8s ease-out;
-    }
+.hero-image.active {
 
+  opacity: 1;
 
-    .hero-image.active {
+  transform: scale(1);
+}
 
-      opacity: 1;
 
-      transform: scale(1);
-    }
+.hero::after {
 
+  content: "";
 
-    .hero::after {
+  position: absolute;
 
-      content: "";
+  inset: 0;
 
-      position: absolute;
+  background:
 
-      inset: 0;
+    linear-gradient(
 
-      background:
+      rgba(54, 40, 33, 0.28),
 
-        linear-gradient(
+      rgba(54, 40, 33, 0.28)
 
-          rgba(54, 40, 33, 0.30),
+    );
 
-          rgba(54, 40, 33, 0.30)
+  z-index: 2;
+}
 
-        );
 
-      z-index: 2;
-    }
+.hero-content {
 
+  position: relative;
 
-    .hero-content {
+  z-index: 5;
 
-      position: relative;
+  padding: 20px;
 
-      z-index: 5;
+  display: flex;
 
-      padding: 20px;
+  flex-direction: column;
 
-      text-shadow:
+  align-items: center;
 
-        0 2px 22px rgba(0,0,0,0.16);
-    }
+  text-shadow:
 
+    0 2px 22px rgba(0,0,0,0.16);
+}
 
-    .hero .eyebrow {
 
-      margin-bottom: 20px;
 
-      font-size: 12px;
+/* BIG CENTER LOGO */
 
-      text-transform: uppercase;
+.hero-logo {
 
-      letter-spacing: 4px;
+  width: 300px;
 
-      color: #f3e6d8;
-    }
+  height: 300px;
 
+  object-fit: contain;
 
-    .hero h1 {
+  display: block;
 
-      font-family: Georgia, serif;
+  margin: 0 auto 25px;
+}
 
-      font-size:
 
-        clamp(55px, 9vw, 125px);
+.hero .eyebrow {
 
-      font-weight: normal;
+  margin-bottom: 20px;
 
-      letter-spacing: -4px;
+  font-size: 12px;
 
-      line-height: 0.95;
-    }
+  text-transform: uppercase;
 
+  letter-spacing: 4px;
 
+  color: #f3e6d8;
+}
 
-    /* =========================
-       WHAT'S YOUR TASTE?
-    ========================= */
 
-    .taste-section {
+.hero h1 {
 
-      padding: 110px 6%;
+  font-family: Georgia, serif;
 
-      background: #f4eee5;
-    }
+  font-size:
 
+    clamp(55px, 9vw, 125px);
 
-    .taste-heading {
+  font-weight: normal;
 
-      text-align: center;
+  letter-spacing: -4px;
 
-      margin-bottom: 55px;
-    }
+  line-height: 0.95;
+}
 
 
-    .taste-heading h2 {
 
-      font-family: Georgia, serif;
+/* =========================
+   WHAT'S YOUR TASTE?
+========================= */
 
-      font-size:
+.taste-section {
 
-        clamp(42px, 6vw, 72px);
+  padding: 110px 6%;
 
-      font-weight: normal;
+  background: #f4eee5;
+}
 
-      color: #3b2b25;
-    }
 
+.taste-heading {
 
-    .taste-heading p {
+  text-align: center;
 
-      margin-top: 12px;
+  margin-bottom: 55px;
+}
 
-      font-family: Georgia, serif;
 
-      font-style: italic;
+.taste-heading h2 {
 
-      color: #722f37;
+  font-family: Georgia, serif;
 
-      font-size: 17px;
-    }
+  font-size:
 
+    clamp(42px, 6vw, 72px);
 
+  font-weight: normal;
 
-    /* =========================
-       CARDS
-    ========================= */
+  color: #3b2b25;
+}
 
-    .taste-grid {
 
-      display: grid;
+.taste-heading p {
 
-      grid-template-columns:
+  margin-top: 12px;
 
-        repeat(3, 1fr);
+  font-family: Georgia, serif;
 
-      gap: 22px;
+  font-style: italic;
 
-      max-width: 1400px;
+  color: #722f37;
 
-      margin: 0 auto;
-    }
+  font-size: 17px;
+}
 
 
-    .taste-card {
 
-      position: relative;
+/* =========================
+   CARDS
+========================= */
 
-      min-height: 470px;
+.taste-grid {
 
-      overflow: hidden;
+  display: grid;
 
-      display: flex;
+  grid-template-columns:
 
-      align-items: flex-end;
+    repeat(3, 1fr);
 
-      text-decoration: none;
+  gap: 22px;
 
-      color: white;
+  max-width: 1400px;
 
-      background-size: cover;
+  margin: 0 auto;
+}
 
-      background-position: center;
 
-      transition:
+.taste-card {
 
-        transform 0.4s ease;
-    }
+  position: relative;
 
+  min-height: 470px;
 
-    .taste-card:hover {
+  overflow: hidden;
 
-      transform:
+  display: flex;
 
-        translateY(-5px);
-    }
+  align-items: flex-end;
 
+  text-decoration: none;
 
+  color: white;
 
-    /* =========================
-       RESTAURANT
-    ========================= */
+  background-size: cover;
 
-    .restaurant-card {
+  background-position: center;
 
-      background-image:
+  transition:
 
-        linear-gradient(
+    transform 0.4s ease;
+}
 
-          to top,
 
-          rgba(48, 35, 29, 0.78),
+.taste-card:hover {
 
-          rgba(48, 35, 29, 0.08)
+  transform:
 
-        ),
+    translateY(-5px);
+}
 
-        url(
 
-          "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=85"
 
-        );
-    }
+/* =========================
+   RESTAURANTS
+========================= */
 
+.restaurant-card {
 
+  background-image:
 
-    /* =========================
-       ARTICLES
-    ========================= */
+    linear-gradient(
 
-    .articles-card {
+      to top,
 
-      background-image:
+      rgba(48, 35, 29, 0.78),
 
-        linear-gradient(
+      rgba(48, 35, 29, 0.08)
 
-          to top,
+    ),
 
-          rgba(48, 35, 29, 0.80),
+    url(
 
-          rgba(48, 35, 29, 0.08)
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=85"
 
-        ),
+    );
+}
 
-        url(
 
-          "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1400&q=85"
 
-        );
-    }
+/* =========================
+   ARTICLES
+========================= */
 
+.articles-card {
 
+  background-image:
 
-    /* =========================
-       GOOD PLACES
-    ========================= */
+    linear-gradient(
 
-    .places-card {
+      to top,
 
-      background-image:
+      rgba(48, 35, 29, 0.80),
 
-        linear-gradient(
+      rgba(48, 35, 29, 0.08)
 
-          to top,
+    ),
 
-          rgba(48, 35, 29, 0.78),
+    url(
 
-          rgba(48, 35, 29, 0.08)
+      "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1400&q=85"
 
-        ),
+    );
+}
 
-        url(
 
-          "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1400&q=85"
 
-        );
-    }
+/* =========================
+   GOOD PLACES
+========================= */
 
+.places-card {
 
+  background-image:
 
-    /* =========================
-       CARD TEXT
-    ========================= */
+    linear-gradient(
 
-    .taste-overlay {
+      to top,
 
-      position: absolute;
+      rgba(48, 35, 29, 0.78),
 
-      bottom: 0;
+      rgba(48, 35, 29, 0.08)
 
-      left: 0;
+    ),
 
-      width: 100%;
+    url(
 
-      padding: 35px;
-    }
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1400&q=85"
 
+    );
+}
 
-    .taste-label {
 
-      font-size: 11px;
 
-      text-transform: uppercase;
+/* =========================
+   CARD TEXT
+========================= */
 
-      letter-spacing: 3px;
+.taste-overlay {
 
-      color: #e5cbbb;
+  position: absolute;
 
-      margin-bottom: 13px;
-    }
+  bottom: 0;
 
+  left: 0;
 
-    .taste-card h3 {
+  width: 100%;
 
-      font-family: Georgia, serif;
+  padding: 35px;
+}
 
-      font-size: 34px;
 
-      font-weight: normal;
+.taste-label {
 
-      line-height: 1.05;
+  font-size: 11px;
 
-      margin-bottom: 15px;
-    }
+  text-transform: uppercase;
 
+  letter-spacing: 3px;
 
-    .taste-card p {
+  color: #e5cbbb;
 
-      font-size: 14px;
+  margin-bottom: 13px;
+}
 
-      line-height: 1.6;
 
-      color: #f1e8de;
+.taste-card h3 {
 
-      max-width: 380px;
-    }
+  font-family: Georgia, serif;
 
+  font-size: 34px;
 
+  font-weight: normal;
 
-    /* =========================
-       FOOTER
-    ========================= */
+  line-height: 1.05;
 
-    footer {
+  margin-bottom: 15px;
+}
 
-      padding: 80px 7%;
 
-      text-align: center;
+.taste-card p {
 
-      background: #3b2b25;
+  font-size: 14px;
 
-      color: #f4eee5;
-    }
+  line-height: 1.6;
 
+  color: #f1e8de;
 
-    footer h2 {
+  max-width: 380px;
+}
 
-      font-family: Georgia, serif;
 
-      font-size: 32px;
 
-      font-weight: normal;
+/* =========================
+   FOOTER
+========================= */
 
-      letter-spacing: 2px;
-    }
+footer {
 
+  padding: 80px 7%;
 
-    footer p {
+  text-align: center;
 
-      margin-top: 10px;
+  background: #3b2b25;
 
-      font-family: Georgia, serif;
+  color: #f4eee5;
+}
 
-      font-size: 13px;
 
-      font-style: italic;
+footer h2 {
 
-      letter-spacing: 1px;
+  font-family: Georgia, serif;
 
-      color: #d9b9a8;
-    }
+  font-size: 32px;
 
+  font-weight: normal;
 
+  letter-spacing: 2px;
+}
 
-    /* =========================
-       MOBILE
-    ========================= */
 
-    @media (max-width: 850px) {
+footer p {
 
-      header {
+  margin-top: 10px;
 
-        padding: 22px 5%;
+  font-family: Georgia, serif;
 
-        flex-direction: column;
+  font-size: 13px;
 
-        gap: 18px;
-      }
+  font-style: italic;
 
+  letter-spacing: 1px;
 
-      nav {
+  color: #d9b9a8;
+}
 
-        gap: 10px;
 
-        flex-wrap: wrap;
 
-        justify-content: center;
-      }
+/* =========================
+   MOBILE
+========================= */
 
+@media (max-width: 850px) {
 
-      nav a {
+  header {
 
-        font-size: 9px;
-      }
+    padding: 22px 5%;
 
+    flex-direction: column;
 
-      .site-logo {
+    gap: 18px;
+  }
 
-        width: 24px;
 
-        height: 24px;
-      }
+  nav {
 
+    gap: 10px;
 
-      .logo {
+    flex-wrap: wrap;
 
-        font-size: 19px;
+    justify-content: center;
+  }
 
-        letter-spacing: 1.5px;
-      }
 
+  nav a {
 
-      .tagline {
+    font-size: 9px;
+  }
 
-        margin-left: 33px;
 
-        font-size: 9px;
-      }
+  .site-logo {
 
+    width: 42px;
 
-      .hero {
+    height: 42px;
+  }
 
-        min-height: 700px;
-      }
 
+  .logo {
 
-      .hero h1 {
+    font-size: 19px;
 
-        font-size:
+    letter-spacing: 1.5px;
+  }
 
-          clamp(48px, 14vw, 80px);
 
-        letter-spacing: -2px;
-      }
+  .tagline {
 
+    margin-left: 54px;
 
-      .hero .eyebrow {
+    font-size: 9px;
+  }
 
-        font-size: 10px;
 
-        letter-spacing: 2px;
-      }
+  .hero {
 
+    min-height: 700px;
+  }
 
-      .taste-section {
 
-        padding: 75px 5%;
-      }
+  .hero-logo {
 
+    width: 210px;
 
-      .taste-grid {
+    height: 210px;
 
-        grid-template-columns: 1fr;
+    margin-bottom: 20px;
+  }
 
-        gap: 18px;
-      }
 
+  .hero h1 {
 
-      .taste-card {
+    font-size:
 
-        min-height: 430px;
-      }
+      clamp(48px, 14vw, 80px);
 
+    letter-spacing: -2px;
+  }
 
-      .taste-overlay {
 
-        padding: 28px;
-      }
+  .hero .eyebrow {
 
+    font-size: 10px;
 
-      .taste-card h3 {
+    letter-spacing: 2px;
+  }
 
-        font-size: 30px;
-      }
 
-    }
+  .taste-section {
 
-  </style>
+    padding: 75px 5%;
+  }
+
+
+  .taste-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+
+  .taste-card {
+
+    min-height: 430px;
+  }
+
+
+  .taste-overlay {
+
+    padding: 28px;
+  }
+
+
+  .taste-card h3 {
+
+    font-size: 30px;
+  }
+
+}
+
+</style>
 
 </head>
 
@@ -703,430 +732,435 @@
 
 
 
-  <!-- =========================
-       HEADER
-  ========================= -->
+<!-- =========================
+     HEADER
+========================= -->
 
-  <header>
+<header>
 
 
-    <div class="brand">
+  <div class="brand">
 
 
-      <div class="brand-main">
+    <div class="brand-main">
 
 
-        <img
+      <img
 
-          src="logo.png.png"
+        src="logo.png.png"
 
-          alt="The Good Taste"
+        alt="The Good Taste"
 
-          class="site-logo"
+        class="site-logo"
 
-        >
+      >
 
 
-        <div class="logo">
-
-          THE GOOD TASTE.
-
-        </div>
-
-
-      </div>
-
-
-      <div class="tagline">
-
-        good food, great stories
-
-      </div>
-
-
-    </div>
-
-
-
-    <nav>
-
-
-      <a href="#">
-        Home
-      </a>
-
-
-      <a href="#">
-        Restaurants
-      </a>
-
-
-      <a href="#">
-        Latest from the table
-      </a>
-
-
-      <a href="#">
-        Articles
-      </a>
-
-
-      <a href="#">
-        Good places
-      </a>
-
-
-      <a href="#">
-        About
-      </a>
-
-
-    </nav>
-
-
-  </header>
-
-
-
-  <!-- =========================
-       HERO
-  ========================= -->
-
-  <section class="hero">
-
-
-
-    <!-- HERO 1 -->
-
-    <div
-
-      class="hero-image active"
-
-      style="
-
-        background-image:
-
-        url(
-
-          'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=2200&q=90'
-
-        );
-
-      "
-
-    >
-
-    </div>
-
-
-
-    <!-- HERO 2 -->
-
-    <div
-
-      class="hero-image"
-
-      style="
-
-        background-image:
-
-        url(
-
-          'https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=2200&q=90'
-
-        );
-
-      "
-
-    >
-
-    </div>
-
-
-
-    <!-- HERO 3 -->
-
-    <div
-
-      class="hero-image"
-
-      style="
-
-        background-image:
-
-        url(
-
-          'https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=2200&q=90'
-
-        );
-
-      "
-
-    >
-
-    </div>
-
-
-
-    <!-- HERO TEXT -->
-
-    <div class="hero-content">
-
-
-      <p class="eyebrow">
-
-        food · places · stories
-
-      </p>
-
-
-      <h1>
+      <div class="logo">
 
         THE GOOD TASTE.
 
-      </h1>
+      </div>
 
 
     </div>
 
 
-  </section>
+    <div class="tagline">
 
-
-
-  <!-- =========================
-       WHAT'S YOUR TASTE?
-  ========================= -->
-
-  <section class="taste-section">
-
-
-
-    <div class="taste-heading">
-
-
-      <h2>
-
-        What's your taste?
-
-      </h2>
-
-
-      <p>
-
-        Find something worth tasting, reading or discovering.
-
-      </p>
-
+      good food, great stories
 
     </div>
 
 
+  </div>
 
-    <div class="taste-grid">
 
 
+  <nav>
 
-      <!-- RESTAURANT -->
 
-      <a
+    <a href="#">
+      Home
+    </a>
 
-        href="#"
 
-        class="taste-card restaurant-card"
+    <a href="#">
+      Restaurants
+    </a>
 
-      >
 
+    <a href="#">
+      Latest from the table
+    </a>
 
-        <div class="taste-overlay">
 
+    <a href="#">
+      Articles
+    </a>
 
-          <div class="taste-label">
 
-            Restaurant
+    <a href="#">
+      Good places
+    </a>
 
-          </div>
 
+    <a href="#">
+      About
+    </a>
 
-          <h3>
 
-            Your next favourite table.
+  </nav>
 
-          </h3>
 
+</header>
 
-          <p>
 
-            Restaurant reviews, food experiences
 
-            and honest opinions.
+<!-- =========================
+     HERO
+========================= -->
 
-          </p>
+<section class="hero">
 
 
-        </div>
 
+  <!-- HERO PHOTO 1 -->
 
-      </a>
+  <div
 
+    class="hero-image active"
 
+    style="
 
-      <!-- ARTICLES -->
+      background-image:
 
-      <a
+      url(
 
-        href="#"
+        'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=2200&q=90'
 
-        class="taste-card articles-card"
+      );
 
-      >
+    "
 
+  ></div>
 
-        <div class="taste-overlay">
 
 
-          <div class="taste-label">
+  <!-- HERO PHOTO 2 -->
 
-            Articles
+  <div
 
-          </div>
+    class="hero-image"
 
+    style="
 
-          <h3>
+      background-image:
 
-            Stories worth tasting.
+      url(
 
-          </h3>
+        'https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=2200&q=90'
 
+      );
 
-          <p>
+    "
 
-            The conversations happening around the table.
+  ></div>
 
-          </p>
 
 
-        </div>
+  <!-- HERO PHOTO 3 -->
 
+  <div
 
-      </a>
+    class="hero-image"
 
+    style="
 
+      background-image:
 
-      <!-- GOOD PLACES -->
+      url(
 
-      <a
+        'https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=2200&q=90'
 
-        href="#"
+      );
 
-        class="taste-card places-card"
+    "
 
-      >
+  ></div>
 
 
-        <div class="taste-overlay">
 
+  <!-- HERO CONTENT -->
 
-          <div class="taste-label">
+  <div class="hero-content">
 
-            Good places
 
-          </div>
+    <img
 
+      src="logo.png.png"
 
-          <h3>
+      alt=""
 
-            Places worth going.
+      class="hero-logo"
 
-          </h3>
+    >
 
 
-          <p>
+    <p class="eyebrow">
 
-            Hotels, destinations and experiences
+      food · places · stories
 
-            worth discovering.
+    </p>
 
-          </p>
 
+    <h1>
 
-        </div>
+      THE GOOD TASTE.
 
+    </h1>
 
-      </a>
 
+  </div>
 
-    </div>
 
+</section>
 
-  </section>
 
 
+<!-- =========================
+     WHAT'S YOUR TASTE?
+========================= -->
 
-  <!-- =========================
-       FOOTER
-  ========================= -->
+<section class="taste-section">
 
-  <footer>
+
+
+  <div class="taste-heading">
 
 
     <h2>
 
-      THE GOOD TASTE.
+      What's your taste?
 
     </h2>
 
 
     <p>
 
-      good food, great stories.
+      Find something worth tasting, reading or discovering.
 
     </p>
 
 
-  </footer>
+  </div>
 
 
 
-  <!-- =========================
-       SMOOTH HERO SLIDESHOW
-  ========================= -->
-
-  <script>
+  <div class="taste-grid">
 
 
-    const heroImages =
 
-      document.querySelectorAll(".hero-image");
+    <!-- RESTAURANTS -->
 
+    <a
 
-    let currentImage = 0;
+      href="#"
 
+      class="taste-card restaurant-card"
 
-    setInterval(() => {
-
-
-      heroImages[currentImage]
-
-        .classList.remove("active");
+    >
 
 
-      currentImage =
-
-        (currentImage + 1)
-
-        % heroImages.length;
+      <div class="taste-overlay">
 
 
-      heroImages[currentImage]
+        <div class="taste-label">
 
-        .classList.add("active");
+          Restaurants
+
+        </div>
 
 
-    }, 7000);
+        <h3>
+
+          Your next favourite table.
+
+        </h3>
 
 
-  </script>
+        <p>
+
+          Restaurant reviews, food experiences
+
+          and honest opinions.
+
+        </p>
+
+
+      </div>
+
+
+    </a>
+
+
+
+    <!-- ARTICLES -->
+
+    <a
+
+      href="#"
+
+      class="taste-card articles-card"
+
+    >
+
+
+      <div class="taste-overlay">
+
+
+        <div class="taste-label">
+
+          Articles
+
+        </div>
+
+
+        <h3>
+
+          Stories worth tasting.
+
+        </h3>
+
+
+        <p>
+
+          The conversations happening around the table.
+
+        </p>
+
+
+      </div>
+
+
+    </a>
+
+
+
+    <!-- GOOD PLACES -->
+
+    <a
+
+      href="#"
+
+      class="taste-card places-card"
+
+    >
+
+
+      <div class="taste-overlay">
+
+
+        <div class="taste-label">
+
+          Good places
+
+        </div>
+
+
+        <h3>
+
+          Places worth going.
+
+        </h3>
+
+
+        <p>
+
+          Hotels, destinations and experiences
+
+          worth discovering.
+
+        </p>
+
+
+      </div>
+
+
+    </a>
+
+
+  </div>
+
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+
+  <h2>
+
+    THE GOOD TASTE.
+
+  </h2>
+
+
+  <p>
+
+    good food, great stories.
+
+  </p>
+
+
+</footer>
+
+
+
+<!-- =========================
+     SMOOTH HERO SLIDESHOW
+========================= -->
+
+<script>
+
+
+const heroImages =
+
+  document.querySelectorAll(".hero-image");
+
+
+let currentImage = 0;
+
+
+setInterval(() => {
+
+
+  heroImages[currentImage]
+
+    .classList.remove("active");
+
+
+  currentImage =
+
+    (currentImage + 1)
+
+    % heroImages.length;
+
+
+  heroImages[currentImage]
+
+    .classList.add("active");
+
+
+}, 7000);
+
+
+</script>
 
 
 </body>
