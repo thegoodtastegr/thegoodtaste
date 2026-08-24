@@ -52,6 +52,7 @@
     nav {
       display: flex;
       gap: 25px;
+      align-items: center;
     }
 
     nav a {
@@ -68,6 +69,7 @@
     nav a:hover {
       opacity: 0.65;
     }
+
 
     /* =========================
        HERO
@@ -173,86 +175,170 @@
       color: #f4e7d7;
     }
 
+
     /* =========================
-       LATEST SECTION
+       WHAT'S YOUR TASTE?
     ========================= */
 
-    .section {
-      padding: 100px 7%;
+    .taste-section {
+      padding: 110px 6%;
 
       background: #f5efe6;
     }
 
-    .section-label {
-      color: #722f37;
+    .taste-heading {
+      text-align: center;
 
-      font-size: 12px;
-
-      text-transform: uppercase;
-
-      letter-spacing: 3px;
-
-      margin-bottom: 18px;
+      margin-bottom: 55px;
     }
 
-    .section-title {
+    .taste-heading h2 {
       font-family: Georgia, serif;
 
-      font-size: clamp(38px, 5vw, 65px);
+      font-size: clamp(42px, 6vw, 72px);
 
       font-weight: normal;
 
-      margin-bottom: 50px;
+      color: #3b2a22;
     }
 
-    .cards {
+    .taste-heading p {
+      margin-top: 12px;
+
+      font-family: Georgia, serif;
+
+      font-style: italic;
+
+      color: #722f37;
+
+      font-size: 17px;
+    }
+
+
+    /* =========================
+       TASTE CARDS
+    ========================= */
+
+    .taste-grid {
       display: grid;
 
       grid-template-columns:
         repeat(3, 1fr);
 
-      gap: 25px;
+      gap: 22px;
+
+      max-width: 1400px;
+
+      margin: 0 auto;
     }
 
-    .card {
-      background: #eadfd1;
+    .taste-card {
+      position: relative;
 
-      min-height: 300px;
+      min-height: 470px;
 
-      padding: 30px;
+      overflow: hidden;
 
       display: flex;
 
-      flex-direction: column;
+      align-items: flex-end;
 
-      justify-content: flex-end;
+      text-decoration: none;
+
+      color: white;
+
+      background-size: cover;
+
+      background-position: center;
+
+      transition: transform 0.4s ease;
     }
 
-    .card span {
-      color: #722f37;
+    .taste-card:hover {
+      transform: translateY(-5px);
+    }
 
+
+    /* Individual photos */
+
+    .restaurant-card {
+      background-image:
+        linear-gradient(
+          to top,
+          rgba(45, 31, 25, 0.82),
+          rgba(45, 31, 25, 0.12)
+        ),
+        url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80");
+    }
+
+    .articles-card {
+      background-image:
+        linear-gradient(
+          to top,
+          rgba(45, 31, 25, 0.82),
+          rgba(45, 31, 25, 0.12)
+        ),
+        url("https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1200&q=80");
+    }
+
+    .places-card {
+      background-image:
+        linear-gradient(
+          to top,
+          rgba(45, 31, 25, 0.82),
+          rgba(45, 31, 25, 0.12)
+        ),
+        url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80");
+    }
+
+
+    /* Text over photos */
+
+    .taste-overlay {
+      position: absolute;
+
+      bottom: 0;
+      left: 0;
+
+      width: 100%;
+
+      padding: 35px;
+    }
+
+    .taste-label {
       font-size: 11px;
 
       text-transform: uppercase;
 
-      letter-spacing: 2px;
+      letter-spacing: 3px;
+
+      color: #e4c8b5;
+
+      margin-bottom: 13px;
     }
 
-    .card h3 {
+    .taste-card h3 {
       font-family: Georgia, serif;
 
-      font-size: 28px;
+      font-size: 34px;
 
       font-weight: normal;
 
-      margin: 12px 0;
+      line-height: 1.05;
+
+      margin-bottom: 15px;
     }
 
-    .card p {
-      color: #654d42;
-
+    .taste-card p {
       font-size: 14px;
+
+      line-height: 1.6;
+
+      color: #f1e8de;
+
+      max-width: 380px;
     }
+
 
     /* =========================
        FOOTER
@@ -288,11 +374,12 @@
       color: #d9b9a8;
     }
 
+
     /* =========================
        MOBILE
     ========================= */
 
-    @media (max-width: 800px) {
+    @media (max-width: 850px) {
 
       header {
         padding: 22px 5%;
@@ -303,7 +390,7 @@
       }
 
       nav {
-        gap: 12px;
+        gap: 10px;
 
         flex-wrap: wrap;
 
@@ -311,7 +398,7 @@
       }
 
       nav a {
-        font-size: 10px;
+        font-size: 9px;
       }
 
       .hero {
@@ -330,12 +417,26 @@
         letter-spacing: 2px;
       }
 
-      .cards {
-        grid-template-columns: 1fr;
+      .taste-section {
+        padding: 75px 5%;
       }
 
-      .section {
-        padding: 70px 6%;
+      .taste-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+      }
+
+      .taste-card {
+        min-height: 430px;
+      }
+
+      .taste-overlay {
+        padding: 28px;
+      }
+
+      .taste-card h3 {
+        font-size: 30px;
       }
     }
   </style>
@@ -372,7 +473,7 @@
   </header>
 
 
-  <!-- HERO / HOME -->
+  <!-- HERO -->
 
   <section class="hero">
 
@@ -391,74 +492,95 @@
   </section>
 
 
-  <!-- LATEST FROM THE TABLE -->
+  <!-- WHAT'S YOUR TASTE? -->
 
-  <section class="section">
+  <section class="taste-section">
 
-    <p class="section-label">
-      Latest from the table
-    </p>
+    <div class="taste-heading">
 
-    <h2 class="section-title">
-      What's on the table.
-    </h2>
+      <h2>
+        What's your taste?
+      </h2>
 
+      <p>
+        Find something worth tasting, reading or discovering.
+      </p>
 
-    <div class="cards">
-
-
-      <article class="card">
-
-        <span>
-          Restaurant
-        </span>
-
-        <h3>
-          Your next favourite table.
-        </h3>
-
-        <p>
-          Restaurant reviews, food experiences
-          and honest opinions.
-        </p>
-
-      </article>
+    </div>
 
 
-      <article class="card">
-
-        <span>
-          Story
-        </span>
-
-        <h3>
-          Stories worth tasting.
-        </h3>
-
-        <p>
-          People, places and ideas from
-          the world of food.
-        </p>
-
-      </article>
+    <div class="taste-grid">
 
 
-      <article class="card">
+      <!-- RESTAURANTS -->
 
-        <span>
-          Place
-        </span>
+      <a href="#" class="taste-card restaurant-card">
 
-        <h3>
-          Places worth going.
-        </h3>
+        <div class="taste-overlay">
 
-        <p>
-          Hotels, destinations and experiences
-          worth discovering.
-        </p>
+          <div class="taste-label">
+            Restaurant
+          </div>
 
-      </article>
+          <h3>
+            Your next favourite table.
+          </h3>
+
+          <p>
+            Restaurant reviews, food experiences
+            and honest opinions.
+          </p>
+
+        </div>
+
+      </a>
+
+
+      <!-- ARTICLES -->
+
+      <a href="#" class="taste-card articles-card">
+
+        <div class="taste-overlay">
+
+          <div class="taste-label">
+            Articles
+          </div>
+
+          <h3>
+            Stories worth tasting.
+          </h3>
+
+          <p>
+            The conversations happening around the table.
+          </p>
+
+        </div>
+
+      </a>
+
+
+      <!-- GOOD PLACES -->
+
+      <a href="#" class="taste-card places-card">
+
+        <div class="taste-overlay">
+
+          <div class="taste-label">
+            Good places
+          </div>
+
+          <h3>
+            Places worth going.
+          </h3>
+
+          <p>
+            Hotels, destinations and experiences
+            worth discovering.
+          </p>
+
+        </div>
+
+      </a>
 
 
     </div>
