@@ -13,233 +13,473 @@
       padding: 0;
     }
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5efe6;
-      color: #3b2a22;
-      line-height: 1.6;
+    html {
+      scroll-behavior: smooth;
     }
 
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5efe6;
+      color: #3b2a22;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
     header {
-      padding: 35px 7%;
-      border-bottom: 1px solid #d8cbbb;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+
+      padding: 28px 5%;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      color: white;
     }
 
     .logo {
       font-family: Georgia, serif;
-      font-size: 28px;
+      font-size: 24px;
       letter-spacing: 2px;
     }
 
-    .tagline {
-      font-family: Georgia, serif;
-      font-style: italic;
-      color: #722f37;
-      font-size: 14px;
+    nav {
+      display: flex;
+      gap: 25px;
     }
 
     nav a {
-      color: #3b2a22;
+      color: white;
       text-decoration: none;
-      margin-left: 25px;
-      font-size: 13px;
+
+      font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 1.2px;
+
+      transition: opacity 0.3s ease;
     }
 
     nav a:hover {
-      color: #722f37;
+      opacity: 0.65;
     }
 
+    /* =========================
+       HERO
+    ========================= */
+
     .hero {
-      min-height: 70vh;
+      height: 100vh;
+      min-height: 650px;
+
+      position: relative;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       text-align: center;
-      padding: 80px 20px;
+
+      color: white;
+
+      background-image:
+        linear-gradient(
+          rgba(45, 31, 25, 0.38),
+          rgba(45, 31, 25, 0.38)
+        ),
+        url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=2000&q=85");
+
+      background-size: cover;
+      background-position: center;
+
+      animation: heroImage 18s infinite;
+    }
+
+    @keyframes heroImage {
+
+      0% {
+        background-image:
+          linear-gradient(
+            rgba(45, 31, 25, 0.38),
+            rgba(45, 31, 25, 0.38)
+          ),
+          url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=2000&q=85");
+      }
+
+      33% {
+        background-image:
+          linear-gradient(
+            rgba(45, 31, 25, 0.38),
+            rgba(45, 31, 25, 0.38)
+          ),
+          url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2000&q=85");
+      }
+
+      66% {
+        background-image:
+          linear-gradient(
+            rgba(45, 31, 25, 0.38),
+            rgba(45, 31, 25, 0.38)
+          ),
+          url("https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=2000&q=85");
+      }
+
+      100% {
+        background-image:
+          linear-gradient(
+            rgba(45, 31, 25, 0.38),
+            rgba(45, 31, 25, 0.38)
+          ),
+          url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=2000&q=85");
+      }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+
+      padding: 20px;
     }
 
     .hero h1 {
       font-family: Georgia, serif;
-      font-size: clamp(50px, 9vw, 110px);
+
+      font-size: clamp(55px, 9vw, 125px);
+
       font-weight: normal;
+
+      letter-spacing: -4px;
+
       line-height: 0.95;
-      letter-spacing: -3px;
+
+      text-shadow:
+        0 2px 20px rgba(0,0,0,0.15);
     }
 
-    .hero p {
-      margin-top: 25px;
-      font-family: Georgia, serif;
-      font-style: italic;
-      font-size: 20px;
-      color: #722f37;
+    .hero .eyebrow {
+      margin-bottom: 22px;
+
+      font-size: 13px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 4px;
+
+      color: #f4e7d7;
     }
+
+    /* =========================
+       LATEST SECTION
+    ========================= */
 
     .section {
-      padding: 80px 7%;
-      border-top: 1px solid #d8cbbb;
+      padding: 100px 7%;
+
+      background: #f5efe6;
+    }
+
+    .section-label {
+      color: #722f37;
+
+      font-size: 12px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 3px;
+
+      margin-bottom: 18px;
     }
 
     .section-title {
       font-family: Georgia, serif;
-      font-size: 42px;
+
+      font-size: clamp(38px, 5vw, 65px);
+
       font-weight: normal;
-      margin-bottom: 40px;
+
+      margin-bottom: 50px;
     }
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
       gap: 25px;
     }
 
     .card {
-      background: #eee4d7;
+      background: #eadfd1;
+
+      min-height: 300px;
+
       padding: 30px;
-      min-height: 220px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: flex-end;
     }
 
     .card span {
       color: #722f37;
-      font-size: 12px;
+
+      font-size: 11px;
+
       text-transform: uppercase;
-      letter-spacing: 1px;
+
+      letter-spacing: 2px;
     }
 
     .card h3 {
       font-family: Georgia, serif;
-      font-size: 27px;
+
+      font-size: 28px;
+
       font-weight: normal;
-      margin: 15px 0;
+
+      margin: 12px 0;
     }
 
     .card p {
-      font-size: 14px;
       color: #654d42;
+
+      font-size: 14px;
     }
 
+    /* =========================
+       FOOTER
+    ========================= */
+
     footer {
-      padding: 70px 7%;
-      border-top: 1px solid #d8cbbb;
+      padding: 80px 7%;
+
       text-align: center;
+
+      background: #3b2a22;
+
+      color: #f5efe6;
     }
 
     footer h2 {
       font-family: Georgia, serif;
+
       font-size: 32px;
+
       font-weight: normal;
+
       letter-spacing: 2px;
     }
 
     footer p {
-      margin-top: 10px;
+      margin-top: 12px;
+
       font-family: Georgia, serif;
+
       font-style: italic;
-      color: #722f37;
+
+      color: #d9b9a8;
     }
 
-    @media (max-width: 700px) {
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 800px) {
+
       header {
-        display: block;
-        text-align: center;
+        padding: 22px 5%;
+
+        flex-direction: column;
+
+        gap: 18px;
       }
 
       nav {
-        margin-top: 20px;
+        gap: 12px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
       }
 
       nav a {
-        margin: 0 7px;
-        font-size: 11px;
+        font-size: 10px;
+      }
+
+      .hero {
+        min-height: 700px;
+      }
+
+      .hero h1 {
+        font-size: clamp(48px, 14vw, 80px);
+
+        letter-spacing: -2px;
+      }
+
+      .hero .eyebrow {
+        font-size: 10px;
+
+        letter-spacing: 2px;
       }
 
       .cards {
         grid-template-columns: 1fr;
       }
 
-      .hero {
-        min-height: 60vh;
+      .section {
+        padding: 70px 6%;
       }
     }
   </style>
 </head>
 
+
 <body>
 
+
+  <!-- HEADER -->
+
   <header>
-    <div>
-      <div class="logo">THE GOOD TASTE.</div>
-      <div class="tagline">good food, great stories.</div>
+
+    <div class="logo">
+      THE GOOD TASTE.
     </div>
 
     <nav>
-  <a href="#">Home</a>
-  <a href="#">Restaurants</a>
-  <a href="#">Latest from the table</a>
-  <a href="#">Articles</a>
-  <a href="#">Good places</a>
-  <a href="#">About</a>
-</nav>
+
+      <a href="#">Home</a>
+
+      <a href="#">Restaurants</a>
+
+      <a href="#">Latest from the table</a>
+
+      <a href="#">Articles</a>
+
+      <a href="#">Good places</a>
+
+      <a href="#">About</a>
+
+    </nav>
+
   </header>
 
-  <main>
 
-   <section class="hero">
-  <div class="hero-content">
-    <p class="eyebrow">FOOD · PLACES · STORIES</p>
+  <!-- HERO / HOME -->
 
-    <h1>Good food.<br>Great stories.</h1>
+  <section class="hero">
 
-    <p class="hero-text">
-      Discover restaurants, places and experiences worth talking about.
+    <div class="hero-content">
+
+      <p class="eyebrow">
+        food · places · stories
+      </p>
+
+      <h1>
+        THE GOOD TASTE.
+      </h1>
+
+    </div>
+
+  </section>
+
+
+  <!-- LATEST FROM THE TABLE -->
+
+  <section class="section">
+
+    <p class="section-label">
+      Latest from the table
     </p>
 
-    <a class="hero-link" href="#">Explore the latest →</a>
-  </div>
-</section>
+    <h2 class="section-title">
+      What's on the table.
+    </h2>
 
-    <section class="section">
-      <h2 class="section-title">Latest from the table</h2>
 
-      <div class="cards">
+    <div class="cards">
 
-        <article class="card">
-          <span>Restaurant</span>
-          <h3>Your next favourite table.</h3>
-          <p>
-            Restaurant reviews, food experiences and honest opinions.
-          </p>
-        </article>
 
-        <article class="card">
-          <span>News</span>
-          <h3>What's new?</h3>
-          <p>
-            New openings, interesting people and everything happening around food.
-          </p>
-        </article>
+      <article class="card">
 
-        <article class="card">
-          <span>Weekly</span>
-          <h3>A taste worth talking about.</h3>
-          <p>
-            One story every week about food, restaurants and the people behind them.
-          </p>
-        </article>
+        <span>
+          Restaurant
+        </span>
 
-      </div>
-    </section>
+        <h3>
+          Your next favourite table.
+        </h3>
 
-  </main>
+        <p>
+          Restaurant reviews, food experiences
+          and honest opinions.
+        </p>
+
+      </article>
+
+
+      <article class="card">
+
+        <span>
+          Story
+        </span>
+
+        <h3>
+          Stories worth tasting.
+        </h3>
+
+        <p>
+          People, places and ideas from
+          the world of food.
+        </p>
+
+      </article>
+
+
+      <article class="card">
+
+        <span>
+          Place
+        </span>
+
+        <h3>
+          Places worth going.
+        </h3>
+
+        <p>
+          Hotels, destinations and experiences
+          worth discovering.
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
 
   <footer>
-    <h2>THE GOOD TASTE.</h2>
-    <p>good food, great stories.</p>
+
+    <h2>
+      THE GOOD TASTE.
+    </h2>
+
+    <p>
+      good food, great stories.
+    </p>
+
   </footer>
+
 
 </body>
 </html>
