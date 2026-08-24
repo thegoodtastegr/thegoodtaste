@@ -21,8 +21,8 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #f5efe6;
-      color: #3b2a22;
+      background: #f4eee5;
+      color: #3b2b25;
     }
 
 
@@ -32,7 +32,6 @@
 
     header {
       position: absolute;
-
       top: 0;
       left: 0;
 
@@ -40,55 +39,73 @@
 
       z-index: 20;
 
-      padding: 28px 5%;
+      padding: 26px 5%;
 
       display: flex;
-
       justify-content: space-between;
-
-      align-items: center;
+      align-items: flex-start;
 
       color: white;
     }
 
+    .brand {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
 
     .logo {
       font-family: Georgia, serif;
 
-      font-size: 24px;
+      font-size: 23px;
 
       letter-spacing: 2px;
+
+      line-height: 1;
+    }
+
+    .tagline {
+      margin-top: 7px;
+
+      font-family: Georgia, serif;
+
+      font-size: 10px;
+
+      font-style: italic;
+
+      letter-spacing: 1px;
+
+      color: #eee0d2;
     }
 
 
     nav {
       display: flex;
 
-      gap: 25px;
+      gap: 24px;
 
       align-items: center;
-    }
 
+      padding-top: 3px;
+    }
 
     nav a {
       color: white;
 
       text-decoration: none;
 
-      font-size: 12px;
+      font-size: 11px;
 
       text-transform: uppercase;
 
-      letter-spacing: 1.2px;
+      letter-spacing: 1.3px;
 
       transition: opacity 0.3s ease;
     }
 
-
     nav a:hover {
-      opacity: 0.65;
+      opacity: 0.6;
     }
-
 
 
     /* =========================
@@ -96,12 +113,11 @@
     ========================= */
 
     .hero {
+      position: relative;
 
       height: 100vh;
 
       min-height: 650px;
-
-      position: relative;
 
       overflow: hidden;
 
@@ -117,16 +133,12 @@
     }
 
 
-    /* Background images */
-
     .hero-image {
-
       position: absolute;
 
       inset: 0;
 
       width: 100%;
-
       height: 100%;
 
       background-size: cover;
@@ -135,26 +147,21 @@
 
       opacity: 0;
 
-      transform: scale(1.02);
+      transform: scale(1.025);
 
       transition:
-        opacity 2.2s ease-in-out,
+        opacity 2.4s ease-in-out,
         transform 8s ease-out;
     }
 
-
     .hero-image.active {
-
       opacity: 1;
 
       transform: scale(1);
     }
 
 
-    /* Warm overlay */
-
     .hero::after {
-
       content: "";
 
       position: absolute;
@@ -162,10 +169,9 @@
       inset: 0;
 
       background:
-
         linear-gradient(
-          rgba(48, 34, 27, 0.34),
-          rgba(48, 34, 27, 0.34)
+          rgba(54, 40, 33, 0.30),
+          rgba(54, 40, 33, 0.30)
         );
 
       z-index: 2;
@@ -173,7 +179,6 @@
 
 
     .hero-content {
-
       position: relative;
 
       z-index: 5;
@@ -181,26 +186,24 @@
       padding: 20px;
 
       text-shadow:
-        0 2px 25px rgba(0,0,0,0.18);
+        0 2px 22px rgba(0,0,0,0.16);
     }
 
 
     .hero .eyebrow {
+      margin-bottom: 20px;
 
-      margin-bottom: 22px;
-
-      font-size: 13px;
+      font-size: 12px;
 
       text-transform: uppercase;
 
       letter-spacing: 4px;
 
-      color: #f4e7d7;
+      color: #f3e6d8;
     }
 
 
     .hero h1 {
-
       font-family: Georgia, serif;
 
       font-size:
@@ -214,21 +217,18 @@
     }
 
 
-
     /* =========================
        WHAT'S YOUR TASTE?
     ========================= */
 
     .taste-section {
-
       padding: 110px 6%;
 
-      background: #f5efe6;
+      background: #f4eee5;
     }
 
 
     .taste-heading {
-
       text-align: center;
 
       margin-bottom: 55px;
@@ -236,7 +236,6 @@
 
 
     .taste-heading h2 {
-
       font-family: Georgia, serif;
 
       font-size:
@@ -244,12 +243,11 @@
 
       font-weight: normal;
 
-      color: #3b2a22;
+      color: #3b2b25;
     }
 
 
     .taste-heading p {
-
       margin-top: 12px;
 
       font-family: Georgia, serif;
@@ -262,13 +260,11 @@
     }
 
 
-
     /* =========================
        CARDS
     ========================= */
 
     .taste-grid {
-
       display: grid;
 
       grid-template-columns:
@@ -283,7 +279,6 @@
 
 
     .taste-card {
-
       position: relative;
 
       min-height: 470px;
@@ -308,15 +303,12 @@
 
 
     .taste-card:hover {
-
-      transform:
-        translateY(-5px);
+      transform: translateY(-5px);
     }
 
 
-
     /* =========================
-       RESTAURANT PHOTO
+       RESTAURANT
     ========================= */
 
     .restaurant-card {
@@ -325,8 +317,8 @@
 
         linear-gradient(
           to top,
-          rgba(45, 31, 25, 0.82),
-          rgba(45, 31, 25, 0.10)
+          rgba(48, 35, 29, 0.78),
+          rgba(48, 35, 29, 0.08)
         ),
 
         url(
@@ -335,9 +327,9 @@
     }
 
 
-
     /* =========================
-       ARTICLES PHOTO
+       ARTICLES
+       FRIENDS + WHITE WINE
     ========================= */
 
     .articles-card {
@@ -346,19 +338,18 @@
 
         linear-gradient(
           to top,
-          rgba(45, 31, 25, 0.82),
-          rgba(45, 31, 25, 0.10)
+          rgba(48, 35, 29, 0.80),
+          rgba(48, 35, 29, 0.08)
         ),
 
         url(
-          "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1400&q=85"
+          "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1400&q=85"
         );
     }
 
 
-
     /* =========================
-       GOOD PLACES PHOTO
+       GOOD PLACES
     ========================= */
 
     .places-card {
@@ -367,8 +358,8 @@
 
         linear-gradient(
           to top,
-          rgba(45, 31, 25, 0.82),
-          rgba(45, 31, 25, 0.10)
+          rgba(48, 35, 29, 0.78),
+          rgba(48, 35, 29, 0.08)
         ),
 
         url(
@@ -377,17 +368,14 @@
     }
 
 
-
     /* =========================
        CARD TEXT
     ========================= */
 
     .taste-overlay {
-
       position: absolute;
 
       bottom: 0;
-
       left: 0;
 
       width: 100%;
@@ -397,21 +385,19 @@
 
 
     .taste-label {
-
       font-size: 11px;
 
       text-transform: uppercase;
 
       letter-spacing: 3px;
 
-      color: #e4c8b5;
+      color: #e5cbbb;
 
       margin-bottom: 13px;
     }
 
 
     .taste-card h3 {
-
       font-family: Georgia, serif;
 
       font-size: 34px;
@@ -425,7 +411,6 @@
 
 
     .taste-card p {
-
       font-size: 14px;
 
       line-height: 1.6;
@@ -436,25 +421,22 @@
     }
 
 
-
     /* =========================
        FOOTER
     ========================= */
 
     footer {
-
       padding: 80px 7%;
 
       text-align: center;
 
-      background: #3b2a22;
+      background: #3b2b25;
 
-      color: #f5efe6;
+      color: #f4eee5;
     }
 
 
     footer h2 {
-
       font-family: Georgia, serif;
 
       font-size: 32px;
@@ -466,16 +448,18 @@
 
 
     footer p {
-
-      margin-top: 12px;
+      margin-top: 10px;
 
       font-family: Georgia, serif;
 
+      font-size: 13px;
+
       font-style: italic;
+
+      letter-spacing: 1px;
 
       color: #d9b9a8;
     }
-
 
 
     /* =========================
@@ -485,7 +469,6 @@
     @media (max-width: 850px) {
 
       header {
-
         padding: 22px 5%;
 
         flex-direction: column;
@@ -495,7 +478,6 @@
 
 
       nav {
-
         gap: 10px;
 
         flex-wrap: wrap;
@@ -505,19 +487,16 @@
 
 
       nav a {
-
         font-size: 9px;
       }
 
 
       .hero {
-
         min-height: 700px;
       }
 
 
       .hero h1 {
-
         font-size:
           clamp(48px, 14vw, 80px);
 
@@ -526,7 +505,6 @@
 
 
       .hero .eyebrow {
-
         font-size: 10px;
 
         letter-spacing: 2px;
@@ -534,13 +512,11 @@
 
 
       .taste-section {
-
         padding: 75px 5%;
       }
 
 
       .taste-grid {
-
         grid-template-columns: 1fr;
 
         gap: 18px;
@@ -548,19 +524,16 @@
 
 
       .taste-card {
-
         min-height: 430px;
       }
 
 
       .taste-overlay {
-
         padding: 28px;
       }
 
 
       .taste-card h3 {
-
         font-size: 30px;
       }
 
@@ -574,14 +547,20 @@
 <body>
 
 
-  <!-- =========================
-       HEADER
-  ========================= -->
+  <!-- HEADER -->
 
   <header>
 
-    <div class="logo">
-      THE GOOD TASTE.
+    <div class="brand">
+
+      <div class="logo">
+        THE GOOD TASTE.
+      </div>
+
+      <div class="tagline">
+        good food, great stories
+      </div>
+
     </div>
 
 
@@ -617,36 +596,34 @@
 
 
 
-  <!-- =========================
-       HERO
-  ========================= -->
+  <!-- HERO -->
 
   <section class="hero">
 
 
-    <!-- Photo 1 -->
+    <!-- HERO 1 — MINIMAL FOOD -->
 
     <div
       class="hero-image active"
       style="
         background-image:
-        url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=2200&q=90');
+        url('https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=2200&q=90');
       ">
     </div>
 
 
-    <!-- Photo 2 -->
+    <!-- HERO 2 — WINE -->
 
     <div
       class="hero-image"
       style="
         background-image:
-        url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=2200&q=90');
+        url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=2200&q=90');
       ">
     </div>
 
 
-    <!-- Photo 3 -->
+    <!-- HERO 3 — RESTAURANT WITH VIEW -->
 
     <div
       class="hero-image"
@@ -657,7 +634,7 @@
     </div>
 
 
-    <!-- Center text -->
+    <!-- CENTER -->
 
     <div class="hero-content">
 
@@ -675,9 +652,7 @@
 
 
 
-  <!-- =========================
-       WHAT'S YOUR TASTE?
-  ========================= -->
+  <!-- WHAT'S YOUR TASTE? -->
 
   <section class="taste-section">
 
@@ -699,7 +674,7 @@
     <div class="taste-grid">
 
 
-      <!-- RESTAURANTS -->
+      <!-- RESTAURANT -->
 
       <a
         href="#"
@@ -784,9 +759,7 @@
 
 
 
-  <!-- =========================
-       FOOTER
-  ========================= -->
+  <!-- FOOTER -->
 
   <footer>
 
@@ -802,9 +775,7 @@
 
 
 
-  <!-- =========================
-       HERO SLIDESHOW
-  ========================= -->
+  <!-- HERO SMOOTH SLIDESHOW -->
 
   <script>
 
