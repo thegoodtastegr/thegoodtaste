@@ -10,6 +10,7 @@
 
 <title>THE GOOD TASTE.</title>
 
+
 <style>
 
 * {
@@ -18,11 +19,9 @@
   padding: 0;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
-
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -31,97 +30,59 @@ body {
 }
 
 
-
 /* =========================
    HEADER
 ========================= */
 
 header {
-
   position: absolute;
-
   top: 0;
   left: 0;
-
   width: 100%;
-
   z-index: 20;
-
   padding: 26px 5%;
-
   display: flex;
-
   justify-content: space-between;
-
   align-items: flex-start;
-
   color: white;
 }
 
-
 .brand {
-
   display: flex;
-
   flex-direction: column;
-
   align-items: flex-start;
 }
 
-
 .brand-main {
-
   display: flex;
-
   align-items: center;
-
   gap: 12px;
 }
 
-
 .site-logo {
-
   width: 56px;
-
   height: 56px;
-
   object-fit: contain;
-
   display: block;
 }
 
-
 .logo {
-
   font-family: Georgia, serif;
-
   font-size: 23px;
-
   letter-spacing: 2px;
-
   line-height: 1;
-
   white-space: nowrap;
 }
 
-
 .tagline {
-
   margin-top: 7px;
-
   margin-left: 68px;
-
   font-family: Georgia, serif;
-
   font-size: 10px;
-
   font-style: italic;
-
   letter-spacing: 1px;
-
   color: #eee0d2;
 }
-
 
 
 /* =========================
@@ -129,38 +90,24 @@ header {
 ========================= */
 
 nav {
-
   display: flex;
-
   gap: 24px;
-
   align-items: center;
-
   padding-top: 3px;
 }
 
-
 nav a {
-
   color: white;
-
   text-decoration: none;
-
   font-size: 11px;
-
   text-transform: uppercase;
-
   letter-spacing: 1.3px;
-
   transition: opacity 0.3s ease;
 }
 
-
 nav a:hover {
-
   opacity: 0.6;
 }
-
 
 
 /* =========================
@@ -168,147 +115,82 @@ nav a:hover {
 ========================= */
 
 .hero {
-
   position: relative;
-
   height: 100vh;
-
   min-height: 650px;
-
   overflow: hidden;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   text-align: center;
-
   color: white;
 }
 
-
 .hero-image {
-
   position: absolute;
-
   inset: 0;
-
   width: 100%;
-
   height: 100%;
-
   background-size: cover;
-
   background-position: center;
-
   opacity: 0;
-
   transform: scale(1.025);
-
   transition:
     opacity 2.5s ease-in-out,
     transform 8s ease-out;
 }
 
-
 .hero-image.active {
-
   opacity: 1;
-
   transform: scale(1);
 }
 
-
 .hero::after {
-
   content: "";
-
   position: absolute;
-
   inset: 0;
-
   background:
-
     linear-gradient(
-
       rgba(54, 40, 33, 0.28),
-
       rgba(54, 40, 33, 0.28)
-
     );
-
   z-index: 2;
 }
 
-
 .hero-content {
-
   position: relative;
-
   z-index: 5;
-
   padding: 20px;
-
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
-
   text-shadow:
-
     0 2px 22px rgba(0,0,0,0.16);
 }
 
-
-
-/* BIG CENTER LOGO */
-
 .hero-logo {
-
   width: 300px;
-
   height: 300px;
-
   object-fit: contain;
-
   display: block;
-
   margin: 0 auto 25px;
 }
 
-
 .hero .eyebrow {
-
   margin-bottom: 20px;
-
   font-size: 12px;
-
   text-transform: uppercase;
-
   letter-spacing: 4px;
-
   color: #f3e6d8;
 }
 
-
 .hero h1 {
-
   font-family: Georgia, serif;
-
-  font-size:
-
-    clamp(55px, 9vw, 125px);
-
+  font-size: clamp(55px, 9vw, 125px);
   font-weight: normal;
-
   letter-spacing: -4px;
-
   line-height: 0.95;
 }
-
 
 
 /* =========================
@@ -316,48 +198,29 @@ nav a:hover {
 ========================= */
 
 .taste-section {
-
   padding: 110px 6%;
-
   background: #f4eee5;
 }
 
-
 .taste-heading {
-
   text-align: center;
-
   margin-bottom: 55px;
 }
 
-
 .taste-heading h2 {
-
   font-family: Georgia, serif;
-
-  font-size:
-
-    clamp(42px, 6vw, 72px);
-
+  font-size: clamp(42px, 6vw, 72px);
   font-weight: normal;
-
   color: #3b2b25;
 }
 
-
 .taste-heading p {
-
   margin-top: 12px;
-
   font-family: Georgia, serif;
-
   font-style: italic;
-
   color: #722f37;
-
   font-size: 17px;
 }
-
 
 
 /* =========================
@@ -365,54 +228,29 @@ nav a:hover {
 ========================= */
 
 .taste-grid {
-
   display: grid;
-
-  grid-template-columns:
-
-    repeat(3, 1fr);
-
+  grid-template-columns: repeat(3, 1fr);
   gap: 22px;
-
   max-width: 1400px;
-
   margin: 0 auto;
 }
 
-
 .taste-card {
-
   position: relative;
-
   min-height: 470px;
-
   overflow: hidden;
-
   display: flex;
-
   align-items: flex-end;
-
   text-decoration: none;
-
   color: white;
-
   background-size: cover;
-
   background-position: center;
-
-  transition:
-
-    transform 0.4s ease;
+  transition: transform 0.4s ease;
 }
-
 
 .taste-card:hover {
-
-  transform:
-
-    translateY(-5px);
+  transform: translateY(-5px);
 }
-
 
 
 /* =========================
@@ -420,26 +258,16 @@ nav a:hover {
 ========================= */
 
 .restaurant-card {
-
   background-image:
-
     linear-gradient(
-
       to top,
-
       rgba(48, 35, 29, 0.78),
-
       rgba(48, 35, 29, 0.08)
-
     ),
-
     url(
-
       "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=85"
-
     );
 }
-
 
 
 /* =========================
@@ -447,26 +275,16 @@ nav a:hover {
 ========================= */
 
 .articles-card {
-
   background-image:
-
     linear-gradient(
-
       to top,
-
       rgba(48, 35, 29, 0.80),
-
       rgba(48, 35, 29, 0.08)
-
     ),
-
     url(
-
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1400&q=85"
-
     );
 }
-
 
 
 /* =========================
@@ -474,26 +292,16 @@ nav a:hover {
 ========================= */
 
 .places-card {
-
   background-image:
-
     linear-gradient(
-
       to top,
-
       rgba(48, 35, 29, 0.78),
-
       rgba(48, 35, 29, 0.08)
-
     ),
-
     url(
-
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1400&q=85"
-
     );
 }
-
 
 
 /* =========================
@@ -501,213 +309,133 @@ nav a:hover {
 ========================= */
 
 .taste-overlay {
-
   position: absolute;
-
   bottom: 0;
-
   left: 0;
-
   width: 100%;
-
   padding: 35px;
 }
 
-
 .taste-label {
-
   font-size: 11px;
-
   text-transform: uppercase;
-
   letter-spacing: 3px;
-
   color: #e5cbbb;
-
   margin-bottom: 13px;
 }
 
-
 .taste-card h3 {
-
   font-family: Georgia, serif;
-
   font-size: 34px;
-
   font-weight: normal;
-
   line-height: 1.05;
-
   margin-bottom: 15px;
 }
 
-
 .taste-card p {
-
   font-size: 14px;
-
   line-height: 1.6;
-
   color: #f1e8de;
-
   max-width: 380px;
 }
 
 
-
 /* =========================
    ABOUT
+   HIDDEN ON HOME
 ========================= */
 
 .about-section {
-
+  display: none;
   padding: 120px 7% 130px;
-
   background: #f4eee5;
-
   color: #3b2b25;
 }
 
+.about-section.active {
+  display: block;
+}
 
 .about-container {
-
   max-width: 900px;
-
   margin: 0 auto;
-
   text-align: center;
 }
 
-
 .about-logo {
-
   width: 110px;
-
   height: 110px;
-
   object-fit: contain;
-
   display: block;
-
   margin: 0 auto 25px;
 }
 
-
 .about-title {
-
   font-family: Georgia, serif;
-
   font-size: clamp(42px, 6vw, 72px);
-
   font-weight: normal;
-
   letter-spacing: -1px;
-
   color: #3b2b25;
-
   line-height: 1;
-
   margin-bottom: 18px;
 }
 
-
 .about-label {
-
   font-size: 10px;
-
   text-transform: uppercase;
-
   letter-spacing: 4px;
-
   color: #722f37;
-
   margin-bottom: 65px;
 }
 
-
 .about-content {
-
   max-width: 780px;
-
   margin: 0 auto;
-
   text-align: left;
 }
 
-
 .about-content h3 {
-
   font-family: Georgia, serif;
-
   font-size: 30px;
-
   font-weight: normal;
-
   color: #3b2b25;
-
   margin-top: 55px;
-
   margin-bottom: 22px;
 }
 
-
 .about-content h3:first-child {
-
   margin-top: 0;
 }
 
-
 .about-content p {
-
   font-family: Georgia, serif;
-
   font-size: 17px;
-
   line-height: 1.9;
-
   color: #4b3a32;
-
   margin-bottom: 22px;
 }
 
-
 .about-content strong {
-
   color: #722f37;
-
   font-weight: normal;
 }
 
-
 .about-content em {
-
   color: #722f37;
 }
-
 
 .about-quote {
-
   margin: 65px auto 0;
-
   padding: 35px 30px;
-
   border-top: 1px solid #cdbdaf;
-
   border-bottom: 1px solid #cdbdaf;
-
   text-align: center;
-
   font-family: Georgia, serif;
-
   font-size: clamp(22px, 3vw, 32px);
-
   line-height: 1.45;
-
   font-style: italic;
-
   color: #722f37;
 }
-
 
 
 /* =========================
@@ -715,44 +443,27 @@ nav a:hover {
 ========================= */
 
 footer {
-
   padding: 80px 7%;
-
   text-align: center;
-
   background: #3b2b25;
-
   color: #f4eee5;
 }
 
-
 footer h2 {
-
   font-family: Georgia, serif;
-
   font-size: 32px;
-
   font-weight: normal;
-
   letter-spacing: 2px;
 }
 
-
 footer p {
-
   margin-top: 10px;
-
   font-family: Georgia, serif;
-
   font-size: 13px;
-
   font-style: italic;
-
   letter-spacing: 1px;
-
   color: #d9b9a8;
 }
-
 
 
 /* =========================
@@ -762,177 +473,111 @@ footer p {
 @media (max-width: 850px) {
 
   header {
-
     padding: 22px 5%;
-
     flex-direction: column;
-
     gap: 18px;
   }
 
-
   nav {
-
     gap: 10px;
-
     flex-wrap: wrap;
-
     justify-content: center;
   }
 
-
   nav a {
-
     font-size: 9px;
   }
 
-
   .site-logo {
-
     width: 42px;
-
     height: 42px;
   }
 
-
   .logo {
-
     font-size: 19px;
-
     letter-spacing: 1.5px;
   }
 
-
   .tagline {
-
     margin-left: 54px;
-
     font-size: 9px;
   }
 
-
   .hero {
-
     min-height: 700px;
   }
 
-
   .hero-logo {
-
     width: 210px;
-
     height: 210px;
-
     margin-bottom: 20px;
   }
 
-
   .hero h1 {
-
-    font-size:
-
-      clamp(48px, 14vw, 80px);
-
+    font-size: clamp(48px, 14vw, 80px);
     letter-spacing: -2px;
   }
 
-
   .hero .eyebrow {
-
     font-size: 10px;
-
     letter-spacing: 2px;
   }
 
-
   .taste-section {
-
     padding: 75px 5%;
   }
 
-
   .taste-grid {
-
     grid-template-columns: 1fr;
-
     gap: 18px;
   }
 
-
   .taste-card {
-
     min-height: 430px;
   }
 
-
   .taste-overlay {
-
     padding: 28px;
   }
 
-
   .taste-card h3 {
-
     font-size: 30px;
   }
 
-
   .about-section {
-
     padding: 80px 7% 90px;
   }
 
-
   .about-logo {
-
     width: 85px;
-
     height: 85px;
-
     margin-bottom: 20px;
   }
 
-
   .about-title {
-
     font-size: 44px;
-
     margin-bottom: 15px;
   }
 
-
   .about-label {
-
     font-size: 9px;
-
     letter-spacing: 3px;
-
     margin-bottom: 45px;
   }
 
-
   .about-content h3 {
-
     font-size: 27px;
-
     margin-top: 45px;
   }
 
-
   .about-content p {
-
     font-size: 16px;
-
     line-height: 1.8;
   }
 
-
   .about-quote {
-
     margin-top: 50px;
-
     padding: 28px 10px;
-
     font-size: 23px;
   }
 
@@ -942,7 +587,9 @@ footer p {
 
 </head>
 
+
 <body>
+
 
 <!-- =========================
      HEADER
@@ -952,351 +599,231 @@ footer p {
 
   <div class="brand">
 
-```
-<div class="brand-main">
+    <div class="brand-main">
 
+      <img
+        src="logo.png.png"
+        alt="The Good Taste"
+        class="site-logo"
+      >
 
-  <img
+      <div class="logo">
+        THE GOOD TASTE.
+      </div>
 
-    src="logo.png.png"
+    </div>
 
-    alt="The Good Taste"
-
-    class="site-logo"
-
-  >
-
-
-  <div class="logo">
-
-    THE GOOD TASTE.
-
-  </div>
-
-
-</div>
-
-
-<div class="tagline">
-
-  good food, great stories
-
-</div>
-```
+    <div class="tagline">
+      good food, great stories
+    </div>
 
   </div>
+
 
   <nav>
 
-```
-<a href="#">
+    <a href="#" onclick="showHome()">
+      Home
+    </a>
 
-  Home
+    <a href="#">
+      Restaurants
+    </a>
 
-</a>
+    <a href="#">
+      Latest from the table
+    </a>
 
+    <a href="#">
+      Articles
+    </a>
 
-<a href="#">
+    <a href="#">
+      Good places
+    </a>
 
-  Restaurants
-
-</a>
-
-
-<a href="#">
-
-  Latest from the table
-
-</a>
-
-
-<a href="#">
-
-  Articles
-
-</a>
-
-
-<a href="#">
-
-  Good places
-
-</a>
-
-
-<a href="#about">
-
-  About
-
-</a>
-```
+    <a href="#about" onclick="showAbout(event)">
+      About
+    </a>
 
   </nav>
 
 </header>
 
-<!-- =========================
-     HERO
-========================= -->
 
-<section class="hero">
-
-  <!-- HERO PHOTO 1 -->
-
-  <div
-
-```
-class="hero-image active"
-
-style="
-
-  background-image:
-
-  url(
-
-    'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=2200&q=90'
-
-  );
-
-"
-```
-
-> </div>
-
-  <!-- HERO PHOTO 2 -->
-
-  <div
-
-```
-class="hero-image"
-
-style="
-
-  background-image:
-
-  url(
-
-    'https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=2200&q=90'
-
-  );
-
-"
-```
-
-> </div>
-
-  <!-- HERO PHOTO 3 -->
-
-  <div
-
-```
-class="hero-image"
-
-style="
-
-  background-image:
-
-  url(
-
-    'https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=2200&q=90'
-
-  );
-
-"
-```
-
-> </div>
-
-  <!-- HERO CONTENT -->
-
-  <div class="hero-content">
-
-```
-<img
-
-  src="logo.png.png"
-
-  alt=""
-
-  class="hero-logo"
-
->
-
-
-<p class="eyebrow">
-
-  food · places · stories
-
-</p>
-
-
-<h1>
-
-  THE GOOD TASTE.
-
-</h1>
-```
-
-  </div>
-
-</section>
 
 <!-- =========================
-     WHAT'S YOUR TASTE?
+     HOME
 ========================= -->
 
-<section class="taste-section">
-
-  <div class="taste-heading">
-
-```
-<h2>
-
-  What's your taste?
-
-</h2>
+<div id="home">
 
 
-<p>
+  <!-- HERO -->
 
-  Find something worth tasting, reading or discovering.
+  <section class="hero">
 
-</p>
-```
-
-  </div>
-
-  <div class="taste-grid">
-
-```
-<!-- RESTAURANTS -->
-
-<a
-
-  href="#"
-
-  class="taste-card restaurant-card"
-
->
+    <div
+      class="hero-image active"
+      style="
+        background-image:
+        url(
+          'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=2200&q=90'
+        );
+      "
+    ></div>
 
 
-  <div class="taste-overlay">
+    <div
+      class="hero-image"
+      style="
+        background-image:
+        url(
+          'https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=2200&q=90'
+        );
+      "
+    ></div>
 
 
-    <div class="taste-label">
+    <div
+      class="hero-image"
+      style="
+        background-image:
+        url(
+          'https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=2200&q=90'
+        );
+      "
+    ></div>
 
-      Restaurants
+
+    <div class="hero-content">
+
+      <img
+        src="logo.png.png"
+        alt=""
+        class="hero-logo"
+      >
+
+      <p class="eyebrow">
+        food · places · stories
+      </p>
+
+      <h1>
+        THE GOOD TASTE.
+      </h1>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- WHAT'S YOUR TASTE? -->
+
+  <section class="taste-section">
+
+    <div class="taste-heading">
+
+      <h2>
+        What's your taste?
+      </h2>
+
+      <p>
+        Find something worth tasting, reading or discovering.
+      </p>
 
     </div>
 
 
-    <h3>
-
-      Your next favourite table.
-
-    </h3>
+    <div class="taste-grid">
 
 
-    <p>
+      <!-- RESTAURANTS -->
 
-      Restaurant reviews, food experiences and honest opinions.
+      <a
+        href="#"
+        class="taste-card restaurant-card"
+      >
 
-    </p>
+        <div class="taste-overlay">
 
+          <div class="taste-label">
+            Restaurants
+          </div>
 
-  </div>
+          <h3>
+            Your next favourite table.
+          </h3>
 
+          <p>
+            Restaurant reviews, food experiences and honest opinions.
+          </p>
 
-</a>
+        </div>
 
-
-
-<!-- ARTICLES -->
-
-<a
-
-  href="#"
-
-  class="taste-card articles-card"
-
->
-
-
-  <div class="taste-overlay">
+      </a>
 
 
-    <div class="taste-label">
 
-      Articles
+      <!-- ARTICLES -->
+
+      <a
+        href="#"
+        class="taste-card articles-card"
+      >
+
+        <div class="taste-overlay">
+
+          <div class="taste-label">
+            Articles
+          </div>
+
+          <h3>
+            Stories worth tasting.
+          </h3>
+
+          <p>
+            The conversations happening around the table.
+          </p>
+
+        </div>
+
+      </a>
+
+
+
+      <!-- GOOD PLACES -->
+
+      <a
+        href="#"
+        class="taste-card places-card"
+      >
+
+        <div class="taste-overlay">
+
+          <div class="taste-label">
+            Good places
+          </div>
+
+          <h3>
+            Places worth going.
+          </h3>
+
+          <p>
+            Hotels, destinations and experiences worth discovering.
+          </p>
+
+        </div>
+
+      </a>
 
     </div>
 
+  </section>
 
-    <h3>
-
-      Stories worth tasting.
-
-    </h3>
+</div>
 
 
-    <p>
-
-      The conversations happening around the table.
-
-    </p>
-
-
-  </div>
-
-
-</a>
-
-
-
-<!-- GOOD PLACES -->
-
-<a
-
-  href="#"
-
-  class="taste-card places-card"
-
->
-
-
-  <div class="taste-overlay">
-
-
-    <div class="taste-label">
-
-      Good places
-
-    </div>
-
-
-    <h3>
-
-      Places worth going.
-
-    </h3>
-
-
-    <p>
-
-      Hotels, destinations and experiences worth discovering.
-
-    </p>
-
-
-  </div>
-
-
-</a>
-```
-
-  </div>
-
-</section>
 
 <!-- =========================
      ABOUT
@@ -1304,128 +831,97 @@ style="
 
 <section class="about-section" id="about">
 
+
   <div class="about-container">
 
-```
-<img
 
-  src="logo.png.png"
+    <img
+      src="logo.png.png"
+      alt="The Good Taste"
+      class="about-logo"
+    >
 
-  alt="The Good Taste"
 
-  class="about-logo"
+    <h2 class="about-title">
+      THE GOOD TASTE.
+    </h2>
 
->
 
+    <div class="about-label">
+      Food · Places · Stories
+    </div>
 
-<h2 class="about-title">
 
-  THE GOOD TASTE.
+    <div class="about-content">
 
-</h2>
 
+      <h3>
+        About The Good Taste
+      </h3>
 
-<div class="about-label">
 
-  Food · Places · Stories
+      <p>
+        Η ζωή είναι γεμάτη εμπειρίες. Και οι καλύτερες είναι εκείνες που μπορούν να αγγίξουν όλες μας τις αισθήσεις. Να δεις ένα όμορφο μέρος, να ακούσεις ενδιαφέρουσες απόψεις, να μυρίσεις ένα κρασί που θα σε ταξιδέψει, να γευτείς ένα ξεχωριστό πιάτο, να ανακαλύψεις ένα ξενοδοχείο ή έναν προορισμό που θα σου μείνει.
+      </p>
 
-</div>
 
+      <p>
+        Αυτό είναι το <strong>The Good Taste.</strong>
+      </p>
 
-<div class="about-content">
 
+      <p>
+        Ένας χώρος γεμάτος ιδέες, εμπειρίες και προσωπικές προτάσεις γύρω από το φαγητό, το κρασί, τα εστιατόρια, τα ταξίδια και όλα εκείνα τα μικρά ή μεγάλα πράγματα που κάνουν την καθημερινότητα λίγο πιο όμορφη.
+      </p>
 
-  <h3>
 
-    About The Good Taste
+      <p>
+        Σκοπός μου είναι απλός. Την επόμενη φορά που θα αναρωτηθείς <em>«Τι να κάνω σήμερα; Πού να πάω με την παρέα μου; Πού μπορώ να πιω ένα ωραίο κρασί στο κέντρο;»</em>, να μπορείς να μπεις στο <strong>The Good Taste</strong> και να βρεις μια ιδέα που θα αξίζει τον χρόνο σου.
+      </p>
 
-  </h3>
 
+      <h3>
+        Η δική μου ματιά
+      </h3>
 
-  <p>
 
-    Η ζωή είναι γεμάτη εμπειρίες. Και οι καλύτερες είναι εκείνες που μπορούν να αγγίξουν όλες μας τις αισθήσεις. Να δεις ένα όμορφο μέρος, να ακούσεις ενδιαφέρουσες απόψεις, να μυρίσεις ένα κρασί που θα σε ταξιδέψει, να γευτείς ένα ξεχωριστό πιάτο, να ανακαλύψεις ένα ξενοδοχείο ή έναν προορισμό που θα σου μείνει.
+      <p>
+        Το <strong>The Good Taste</strong> είναι ένα honest food & lifestyle blog. Δεν γράφω ως ειδικός που γνωρίζει τα πάντα. Γράφω ως ένας άνθρωπος που αγαπά το καλό φαγητό, το καλό κρασί και τις όμορφες εμπειρίες — και θέλει, όταν πληρώνει για κάτι, να αισθάνεται ότι άξιζε.
+      </p>
 
-  </p>
 
+      <p>
+        Γιατί ξέρω πόσο κουραστικό μπορεί να είναι να ψάχνεις πού θα πας, να βλέπεις δεκάδες επιλογές και τελικά να μην ξέρεις αν αυτό που επέλεξες θα είναι πραγματικά καλό.
+      </p>
 
-  <p>
 
-    Αυτό είναι το <strong>The Good Taste.</strong>
+      <p>
+        Γι' αυτό θέλω το <strong>The Good Taste</strong> να είναι λίγο σαν τη γνώμη ενός φίλου.
+      </p>
 
-  </p>
 
+      <p>
+        Ενός φίλου που έχει ήδη πάει. Που έχει δοκιμάσει. Που έχει δει. Που μπορεί να σου πει τι του άρεσε, τι ξεχώρισε και αν τελικά άξιζε.
+      </p>
 
-  <p>
 
-    Ένας χώρος γεμάτος ιδέες, εμπειρίες και προσωπικές προτάσεις γύρω από το φαγητό, το κρασί, τα εστιατόρια, τα ταξίδια και όλα εκείνα τα μικρά ή μεγάλα πράγματα που κάνουν την καθημερινότητα λίγο πιο όμορφη.
+      <p>
+        Και μετά, η επιλογή είναι δική σου.
+      </p>
 
-  </p>
 
+      <div class="about-quote">
+        Γιατί πιστεύω πως η ζωή αξίζει για τις όμορφες εμπειρίες της. Και το φαγητό, αναμφίβολα, είναι ένα μεγάλο κομμάτι αυτών.
+      </div>
 
-  <p>
 
-    Σκοπός μου είναι απλός. Την επόμενη φορά που θα αναρωτηθείς <em>«Τι να κάνω σήμερα; Πού να πάω με την παρέα μου; Πού μπορώ να πιω ένα ωραίο κρασί στο κέντρο;»</em>, να μπορείς να μπεις στο <strong>The Good Taste</strong> και να βρεις μια ιδέα που θα αξίζει τον χρόνο σου.
-
-  </p>
-
-
-
-  <h3>
-
-    Η δική μου ματιά
-
-  </h3>
-
-
-  <p>
-
-    Το <strong>The Good Taste</strong> είναι ένα honest food & lifestyle blog. Δεν γράφω ως ειδικός που γνωρίζει τα πάντα. Γράφω ως ένας άνθρωπος που αγαπά το καλό φαγητό, το καλό κρασί και τις όμορφες εμπειρίες — και θέλει, όταν πληρώνει για κάτι, να αισθάνεται ότι άξιζε.
-
-  </p>
-
-
-  <p>
-
-    Γιατί ξέρω πόσο κουραστικό μπορεί να είναι να ψάχνεις πού θα πας, να βλέπεις δεκάδες επιλογές και τελικά να μην ξέρεις αν αυτό που επέλεξες θα είναι πραγματικά καλό.
-
-  </p>
-
-
-  <p>
-
-    Γι' αυτό θέλω το <strong>The Good Taste</strong> να είναι λίγο σαν τη γνώμη ενός φίλου.
-
-  </p>
-
-
-  <p>
-
-    Ενός φίλου που έχει ήδη πάει. Που έχει δοκιμάσει. Που έχει δει. Που μπορεί να σου πει τι του άρεσε, τι ξεχώρισε και αν τελικά άξιζε.
-
-  </p>
-
-
-  <p>
-
-    Και μετά, η επιλογή είναι δική σου.
-
-  </p>
-
-
-  <div class="about-quote">
-
-    Γιατί πιστεύω πως η ζωή αξίζει για τις όμορφες εμπειρίες της. Και το φαγητό, αναμφίβολα, είναι ένα μεγάλο κομμάτι αυτών.
-
-  </div>
-
-
-</div>
-```
+    </div>
 
   </div>
 
 </section>
+
+
 
 <!-- =========================
      FOOTER
@@ -1434,62 +930,88 @@ style="
 <footer>
 
   <h2>
-
-```
-THE GOOD TASTE.
-```
-
+    THE GOOD TASTE.
   </h2>
 
   <p>
-
-```
-good food, great stories.
-```
-
+    good food, great stories.
   </p>
 
 </footer>
 
+
+
 <!-- =========================
-     SMOOTH HERO SLIDESHOW
+     JAVASCRIPT
 ========================= -->
 
 <script>
 
 
+/* HERO SLIDESHOW */
+
 const heroImages =
-
   document.querySelectorAll(".hero-image");
-
 
 let currentImage = 0;
 
-
 setInterval(() => {
 
-
   heroImages[currentImage]
-
     .classList.remove("active");
 
-
   currentImage =
-
     (currentImage + 1)
-
     % heroImages.length;
 
-
   heroImages[currentImage]
-
     .classList.add("active");
-
 
 }, 7000);
 
 
+
+/* SHOW ABOUT */
+
+function showAbout(event) {
+
+  event.preventDefault();
+
+  document.getElementById("home").style.display = "none";
+
+  const about =
+    document.getElementById("about");
+
+  about.classList.add("active");
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+}
+
+
+
+/* SHOW HOME */
+
+function showHome() {
+
+  document.getElementById("about")
+    .classList.remove("active");
+
+  document.getElementById("home")
+    .style.display = "block";
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+}
+
 </script>
+
 
 </body>
 
