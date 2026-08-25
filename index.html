@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -14,7 +13,7 @@
 <style>
 
 /* =========================
-   GENERAL
+   RESET
 ========================= */
 
 * {
@@ -32,6 +31,7 @@ body {
   background: #f4eee5;
   color: #3b2b25;
 }
+
 
 
 /* =========================
@@ -59,21 +59,16 @@ header {
 
   color: white;
 
-  transition:
-    background 0.4s ease,
-    color 0.4s ease;
+  transition: background 0.4s ease;
+
 }
 
+header.scrolled {
 
-header.light-header {
+  background: rgba(59, 43, 37, 0.96);
 
-  background: rgba(244, 238, 229, 0.96);
-
-  color: #3b2b25;
-
-  box-shadow:
-    0 1px 0 rgba(59, 43, 37, 0.08);
 }
+
 
 
 .brand {
@@ -83,6 +78,7 @@ header.light-header {
   flex-direction: column;
 
   align-items: flex-start;
+
 }
 
 
@@ -93,6 +89,7 @@ header.light-header {
   align-items: center;
 
   gap: 12px;
+
 }
 
 
@@ -105,6 +102,7 @@ header.light-header {
   object-fit: contain;
 
   display: block;
+
 }
 
 
@@ -119,6 +117,7 @@ header.light-header {
   line-height: 1;
 
   white-space: nowrap;
+
 }
 
 
@@ -137,13 +136,9 @@ header.light-header {
   letter-spacing: 1px;
 
   color: #eee0d2;
+
 }
 
-
-header.light-header .tagline {
-
-  color: #722f37;
-}
 
 
 /* =========================
@@ -159,12 +154,13 @@ nav {
   align-items: center;
 
   padding-top: 3px;
+
 }
 
 
 nav a {
 
-  color: inherit;
+  color: white;
 
   text-decoration: none;
 
@@ -174,16 +170,19 @@ nav a {
 
   letter-spacing: 1.3px;
 
+  transition: opacity 0.3s ease;
+
   cursor: pointer;
 
-  transition: opacity 0.3s ease;
 }
 
 
 nav a:hover {
 
   opacity: 0.6;
+
 }
+
 
 
 /* =========================
@@ -195,18 +194,30 @@ nav a:hover {
   display: none;
 
   min-height: 100vh;
+
+  padding-top: 105px;
+
 }
 
 
 .page.active {
 
   display: block;
+
 }
+
 
 
 /* =========================
    HOME / HERO
 ========================= */
+
+#home {
+
+  padding-top: 0;
+
+}
+
 
 .hero {
 
@@ -227,6 +238,7 @@ nav a:hover {
   text-align: center;
 
   color: white;
+
 }
 
 
@@ -251,6 +263,7 @@ nav a:hover {
   transition:
     opacity 2.5s ease-in-out,
     transform 8s ease-out;
+
 }
 
 
@@ -259,6 +272,7 @@ nav a:hover {
   opacity: 1;
 
   transform: scale(1);
+
 }
 
 
@@ -281,6 +295,7 @@ nav a:hover {
     );
 
   z-index: 2;
+
 }
 
 
@@ -301,6 +316,7 @@ nav a:hover {
   text-shadow:
 
     0 2px 22px rgba(0,0,0,0.16);
+
 }
 
 
@@ -315,6 +331,7 @@ nav a:hover {
   display: block;
 
   margin: 0 auto 25px;
+
 }
 
 
@@ -329,6 +346,7 @@ nav a:hover {
   letter-spacing: 4px;
 
   color: #f3e6d8;
+
 }
 
 
@@ -345,11 +363,13 @@ nav a:hover {
   letter-spacing: -4px;
 
   line-height: 0.95;
+
 }
 
 
+
 /* =========================
-   HOME CARDS
+   HOME TASTE SECTION
 ========================= */
 
 .taste-section {
@@ -357,6 +377,7 @@ nav a:hover {
   padding: 110px 6%;
 
   background: #f4eee5;
+
 }
 
 
@@ -365,6 +386,7 @@ nav a:hover {
   text-align: center;
 
   margin-bottom: 55px;
+
 }
 
 
@@ -379,6 +401,7 @@ nav a:hover {
   font-weight: normal;
 
   color: #3b2b25;
+
 }
 
 
@@ -393,6 +416,7 @@ nav a:hover {
   color: #722f37;
 
   font-size: 17px;
+
 }
 
 
@@ -400,15 +424,14 @@ nav a:hover {
 
   display: grid;
 
-  grid-template-columns:
-
-    repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 
   gap: 22px;
 
   max-width: 1400px;
 
   margin: 0 auto;
+
 }
 
 
@@ -432,17 +455,17 @@ nav a:hover {
 
   background-position: center;
 
-  transition:
+  transition: transform 0.4s ease;
 
-    transform 0.4s ease;
+  cursor: pointer;
+
 }
 
 
 .taste-card:hover {
 
-  transform:
+  transform: translateY(-5px);
 
-    translateY(-5px);
 }
 
 
@@ -465,6 +488,7 @@ nav a:hover {
       "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=85"
 
     );
+
 }
 
 
@@ -487,6 +511,7 @@ nav a:hover {
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1400&q=85"
 
     );
+
 }
 
 
@@ -509,6 +534,7 @@ nav a:hover {
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1400&q=85"
 
     );
+
 }
 
 
@@ -523,6 +549,7 @@ nav a:hover {
   width: 100%;
 
   padding: 35px;
+
 }
 
 
@@ -537,6 +564,7 @@ nav a:hover {
   color: #e5cbbb;
 
   margin-bottom: 13px;
+
 }
 
 
@@ -551,6 +579,7 @@ nav a:hover {
   line-height: 1.05;
 
   margin-bottom: 15px;
+
 }
 
 
@@ -563,58 +592,27 @@ nav a:hover {
   color: #f1e8de;
 
   max-width: 380px;
+
 }
 
 
+
 /* =========================
-   RESTAURANTS PAGE
+   INTERNAL PAGE HEADER
 ========================= */
 
-.restaurants-page {
+.internal-header {
 
-  min-height: 100vh;
-
-  padding:
-
-    150px 7%
-
-    100px;
+  padding: 70px 7% 55px;
 
   background: #f4eee5;
+
+  text-align: center;
+
 }
 
 
-.restaurants-container {
-
-  max-width: 1400px;
-
-  margin: 0 auto;
-
-  display: grid;
-
-  grid-template-columns:
-
-    270px 1fr;
-
-  gap: 90px;
-
-  align-items: start;
-}
-
-
-/* =========================
-   RESTAURANTS LEFT MENU
-========================= */
-
-.restaurants-menu {
-
-  position: sticky;
-
-  top: 120px;
-}
-
-
-.restaurants-label {
+.internal-header .small-title {
 
   font-size: 10px;
 
@@ -625,210 +623,272 @@ nav a:hover {
   color: #722f37;
 
   margin-bottom: 18px;
+
 }
 
 
-.restaurants-menu h1 {
+.internal-header h1 {
 
   font-family: Georgia, serif;
 
-  font-size: 52px;
+  font-size: clamp(50px, 7vw, 85px);
 
   font-weight: normal;
 
-  line-height: 1;
-
   color: #3b2b25;
 
-  margin-bottom: 45px;
 }
 
-
-.restaurant-category {
-
-  display: block;
-
-  position: relative;
-
-  padding: 11px 0;
-
-  color: #3b2b25;
-
-  text-decoration: none;
-
-  font-family: Georgia, serif;
-
-  font-size: 18px;
-
-  transition:
-
-    color 0.3s ease,
-
-    padding-left 0.3s ease;
-}
-
-
-.restaurant-category span {
-
-  display: inline-block;
-
-  margin-right: 9px;
-
-  color: #722f37;
-
-  font-family: Arial, Helvetica, sans-serif;
-
-  font-size: 13px;
-
-  transition:
-
-    transform 0.3s ease;
-}
-
-
-.restaurant-category:hover {
-
-  color: #722f37;
-
-  padding-left: 6px;
-}
-
-
-.restaurant-category:hover span {
-
-  transform: translateX(4px);
-}
-
-
-.restaurant-category.active {
-
-  color: #722f37;
-
-  padding-left: 6px;
-}
-
-
-.restaurant-category.active span {
-
-  transform: translateX(4px);
-}
 
 
 /* =========================
-   RESTAURANTS RIGHT SIDE
+   RESTAURANTS PAGE
 ========================= */
 
-.restaurants-content {
+.content-layout {
 
-  border-top:
+  display: grid;
 
-    1px solid #cdbdaf;
+  grid-template-columns: 230px 1fr;
 
-  padding-top: 30px;
+  gap: 60px;
 
-  min-height: 500px;
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  padding: 20px 6% 100px;
+
 }
 
 
-.restaurant-intro {
+.sidebar {
 
-  margin-bottom: 60px;
+  position: sticky;
+
+  top: 130px;
+
+  align-self: start;
+
 }
 
 
-.restaurant-intro h2 {
+.sidebar-title {
 
-  font-family: Georgia, serif;
+  font-size: 10px;
 
-  font-size:
+  text-transform: uppercase;
 
-    clamp(38px, 5vw, 62px);
+  letter-spacing: 3px;
 
-  font-weight: normal;
+  color: #722f37;
 
-  line-height: 1;
+  margin-bottom: 22px;
 
-  color: #3b2b25;
-
-  margin-bottom: 17px;
 }
 
 
-.restaurant-intro p {
+.sidebar-list {
+
+  list-style: none;
+
+  border-left: 1px solid #cdbdaf;
+
+}
+
+
+.sidebar-list li {
+
+  margin: 0;
+
+}
+
+
+.sidebar-list button {
+
+  width: 100%;
+
+  border: none;
+
+  background: transparent;
+
+  text-align: left;
+
+  padding: 11px 0 11px 18px;
 
   font-family: Georgia, serif;
 
   font-size: 16px;
 
-  line-height: 1.7;
+  color: #4b3a32;
 
-  color: #6a5549;
+  cursor: pointer;
 
-  max-width: 650px;
+  transition: all 0.3s ease;
+
 }
 
 
-/* =========================
-   CATEGORY CONTENT
-========================= */
-
-.category-content {
-
-  display: none;
-}
-
-
-.category-content.active {
-
-  display: block;
-}
-
-
-.category-title {
-
-  font-family: Georgia, serif;
-
-  font-size: 32px;
-
-  font-weight: normal;
+.sidebar-list button:hover {
 
   color: #722f37;
 
-  margin-bottom: 15px;
+  padding-left: 23px;
+
+}
+
+
+.sidebar-list button.active {
+
+  color: #722f37;
+
+  border-left: 2px solid #722f37;
+
+  margin-left: -1px;
+
 }
 
 
 .category-description {
 
-  font-family: Georgia, serif;
+  margin-bottom: 35px;
 
-  font-size: 16px;
-
-  line-height: 1.8;
-
-  color: #6a5549;
-
-  max-width: 650px;
 }
 
 
+.category-description h2 {
+
+  font-family: Georgia, serif;
+
+  font-size: 38px;
+
+  font-weight: normal;
+
+  margin-bottom: 10px;
+
+}
+
+
+.category-description p {
+
+  font-family: Georgia, serif;
+
+  font-style: italic;
+
+  font-size: 16px;
+
+  color: #765e52;
+
+}
+
+
+
 /* =========================
-   ABOUT PAGE
+   ARTICLE / PLACE CARDS
 ========================= */
 
-.about-page {
+.article-grid {
 
-  min-height: 100vh;
+  display: grid;
 
-  padding:
+  grid-template-columns: repeat(2, 1fr);
 
-    145px 7%
+  gap: 35px 25px;
 
-    120px;
+}
+
+
+.article-card {
+
+  text-decoration: none;
+
+  color: #3b2b25;
+
+  display: block;
+
+  cursor: pointer;
+
+}
+
+
+.article-image {
+
+  width: 100%;
+
+  aspect-ratio: 4 / 3;
+
+  object-fit: cover;
+
+  display: block;
+
+  margin-bottom: 18px;
+
+  transition: transform 0.4s ease;
+
+}
+
+
+.article-card:hover .article-image {
+
+  transform: scale(1.015);
+
+}
+
+
+.article-category {
+
+  font-size: 9px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 3px;
+
+  color: #722f37;
+
+  margin-bottom: 8px;
+
+}
+
+
+.article-card h3 {
+
+  font-family: Georgia, serif;
+
+  font-size: 28px;
+
+  font-weight: normal;
+
+  line-height: 1.1;
+
+  margin-bottom: 8px;
+
+}
+
+
+.article-card p {
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  color: #765e52;
+
+}
+
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-section {
+
+  padding: 70px 7% 130px;
 
   background: #f4eee5;
 
   color: #3b2b25;
+
 }
 
 
@@ -839,6 +899,7 @@ nav a:hover {
   margin: 0 auto;
 
   text-align: center;
+
 }
 
 
@@ -853,6 +914,7 @@ nav a:hover {
   display: block;
 
   margin: 0 auto 25px;
+
 }
 
 
@@ -860,9 +922,7 @@ nav a:hover {
 
   font-family: Georgia, serif;
 
-  font-size:
-
-    clamp(42px, 6vw, 72px);
+  font-size: clamp(42px, 6vw, 72px);
 
   font-weight: normal;
 
@@ -873,6 +933,7 @@ nav a:hover {
   line-height: 1;
 
   margin-bottom: 18px;
+
 }
 
 
@@ -887,6 +948,7 @@ nav a:hover {
   color: #722f37;
 
   margin-bottom: 65px;
+
 }
 
 
@@ -897,6 +959,7 @@ nav a:hover {
   margin: 0 auto;
 
   text-align: left;
+
 }
 
 
@@ -913,12 +976,14 @@ nav a:hover {
   margin-top: 55px;
 
   margin-bottom: 22px;
+
 }
 
 
 .about-content h3:first-child {
 
   margin-top: 0;
+
 }
 
 
@@ -933,6 +998,7 @@ nav a:hover {
   color: #4b3a32;
 
   margin-bottom: 22px;
+
 }
 
 
@@ -941,12 +1007,14 @@ nav a:hover {
   color: #722f37;
 
   font-weight: normal;
+
 }
 
 
 .about-content em {
 
   color: #722f37;
+
 }
 
 
@@ -956,28 +1024,24 @@ nav a:hover {
 
   padding: 35px 30px;
 
-  border-top:
+  border-top: 1px solid #cdbdaf;
 
-    1px solid #cdbdaf;
-
-  border-bottom:
-
-    1px solid #cdbdaf;
+  border-bottom: 1px solid #cdbdaf;
 
   text-align: center;
 
   font-family: Georgia, serif;
 
-  font-size:
-
-    clamp(22px, 3vw, 32px);
+  font-size: clamp(22px, 3vw, 32px);
 
   line-height: 1.45;
 
   font-style: italic;
 
   color: #722f37;
+
 }
+
 
 
 /* =========================
@@ -993,6 +1057,7 @@ footer {
   background: #3b2b25;
 
   color: #f4eee5;
+
 }
 
 
@@ -1005,6 +1070,7 @@ footer h2 {
   font-weight: normal;
 
   letter-spacing: 2px;
+
 }
 
 
@@ -1021,7 +1087,9 @@ footer p {
   letter-spacing: 1px;
 
   color: #d9b9a8;
+
 }
+
 
 
 /* =========================
@@ -1032,11 +1100,12 @@ footer p {
 
   header {
 
-    padding: 22px 5%;
+    padding: 18px 5%;
 
     flex-direction: column;
 
-    gap: 18px;
+    gap: 15px;
+
   }
 
 
@@ -1047,12 +1116,14 @@ footer p {
     flex-wrap: wrap;
 
     justify-content: center;
+
   }
 
 
   nav a {
 
-    font-size: 9px;
+    font-size: 8px;
+
   }
 
 
@@ -1061,6 +1132,7 @@ footer p {
     width: 42px;
 
     height: 42px;
+
   }
 
 
@@ -1069,6 +1141,7 @@ footer p {
     font-size: 19px;
 
     letter-spacing: 1.5px;
+
   }
 
 
@@ -1077,12 +1150,14 @@ footer p {
     margin-left: 54px;
 
     font-size: 9px;
+
   }
 
 
   .hero {
 
     min-height: 700px;
+
   }
 
 
@@ -1093,6 +1168,7 @@ footer p {
     height: 210px;
 
     margin-bottom: 20px;
+
   }
 
 
@@ -1103,6 +1179,7 @@ footer p {
       clamp(48px, 14vw, 80px);
 
     letter-spacing: -2px;
+
   }
 
 
@@ -1111,12 +1188,14 @@ footer p {
     font-size: 10px;
 
     letter-spacing: 2px;
+
   }
 
 
   .taste-section {
 
     padding: 75px 5%;
+
   }
 
 
@@ -1125,90 +1204,127 @@ footer p {
     grid-template-columns: 1fr;
 
     gap: 18px;
+
   }
 
 
   .taste-card {
 
     min-height: 430px;
+
   }
 
 
   .taste-overlay {
 
     padding: 28px;
+
   }
 
 
   .taste-card h3 {
 
     font-size: 30px;
+
   }
 
 
-  .restaurants-page {
+  .page {
 
-    padding:
+    padding-top: 120px;
 
-      120px 6%
-
-      80px;
   }
 
 
-  .restaurants-container {
+  #home {
+
+    padding-top: 0;
+
+  }
+
+
+  .internal-header {
+
+    padding: 55px 6% 40px;
+
+  }
+
+
+  .content-layout {
 
     grid-template-columns: 1fr;
 
-    gap: 55px;
+    gap: 35px;
+
+    padding: 10px 6% 80px;
+
   }
 
 
-  .restaurants-menu {
+  .sidebar {
 
     position: relative;
 
     top: auto;
+
   }
 
 
-  .restaurants-menu h1 {
+  .sidebar-list {
 
-    font-size: 44px;
+    display: flex;
 
-    margin-bottom: 30px;
+    flex-wrap: wrap;
+
+    border-left: none;
+
+    border-bottom: 1px solid #cdbdaf;
+
+    padding-bottom: 10px;
+
   }
 
 
-  .restaurant-category {
+  .sidebar-list button {
 
-    font-size: 17px;
+    width: auto;
 
-    padding: 9px 0;
+    padding: 8px 15px;
+
+    border: none;
+
   }
 
 
-  .restaurants-content {
+  .sidebar-list button.active {
 
-    padding-top: 0;
+    border-left: none;
 
-    border-top: none;
+    border-bottom: 2px solid #722f37;
+
+    margin-left: 0;
+
   }
 
 
-  .restaurant-intro h2 {
+  .article-grid {
 
-    font-size: 38px;
+    grid-template-columns: 1fr;
+
   }
 
 
-  .about-page {
+  .article-card h3 {
 
-    padding:
+    font-size: 26px;
 
-      120px 7%
+  }
 
-      90px;
+
+  .about-section {
+
+    padding: 50px 7% 90px;
+
   }
 
 
@@ -1219,6 +1335,7 @@ footer p {
     height: 85px;
 
     margin-bottom: 20px;
+
   }
 
 
@@ -1227,6 +1344,7 @@ footer p {
     font-size: 44px;
 
     margin-bottom: 15px;
+
   }
 
 
@@ -1237,6 +1355,7 @@ footer p {
     letter-spacing: 3px;
 
     margin-bottom: 45px;
+
   }
 
 
@@ -1245,6 +1364,7 @@ footer p {
     font-size: 27px;
 
     margin-top: 45px;
+
   }
 
 
@@ -1253,6 +1373,7 @@ footer p {
     font-size: 16px;
 
     line-height: 1.8;
+
   }
 
 
@@ -1263,6 +1384,7 @@ footer p {
     padding: 28px 10px;
 
     font-size: 23px;
+
   }
 
 }
@@ -1275,101 +1397,61 @@ footer p {
 <body>
 
 
+
 <!-- =========================
      HEADER
 ========================= -->
 
-<header id="site-header">
-
+<header id="mainHeader">
 
   <div class="brand">
 
-
     <div class="brand-main">
 
-
       <img
-
         src="logo.png.png"
-
         alt="The Good Taste"
-
         class="site-logo"
-
       >
 
-
       <div class="logo">
-
         THE GOOD TASTE.
-
       </div>
 
-
     </div>
-
 
     <div class="tagline">
-
       good food, great stories
-
     </div>
-
 
   </div>
 
 
-
   <nav>
 
-
-    <a
-      href="#"
-      onclick="showPage('home'); return false;"
-    >
+    <a onclick="showPage('home')">
       Home
     </a>
 
-
-    <a
-      href="#"
-      onclick="showPage('restaurants'); return false;"
-    >
+    <a onclick="showPage('restaurants')">
       Restaurants
     </a>
 
-
-    <a
-      href="#"
-      onclick="showPage('home'); return false;"
-    >
+    <a onclick="showPage('latest')">
       Latest from the table
     </a>
 
-
-    <a
-      href="#"
-      onclick="showPage('home'); return false;"
-    >
+    <a onclick="showPage('articles')">
       Articles
     </a>
 
-
-    <a
-      href="#"
-      onclick="showPage('home'); return false;"
-    >
+    <a onclick="showPage('places')">
       Good places
     </a>
 
-
-    <a
-      href="#"
-      onclick="showPage('about'); return false;"
-    >
+    <a onclick="showPage('about')">
       About
     </a>
-
 
   </nav>
 
@@ -1378,273 +1460,167 @@ footer p {
 
 
 <!-- =========================
-     HOME PAGE
+     HOME
 ========================= -->
 
-<main
-  id="home"
-  class="page active"
->
+<main id="home" class="page active">
 
-
-  <!-- HERO -->
 
   <section class="hero">
 
 
     <div
-
       class="hero-image active"
-
       style="
-
         background-image:
-
         url(
-
           'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=2200&q=90'
-
         );
-
       "
-
     ></div>
 
 
     <div
-
       class="hero-image"
-
       style="
-
         background-image:
-
         url(
-
           'https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=2200&q=90'
-
         );
-
       "
-
     ></div>
 
 
     <div
-
       class="hero-image"
-
       style="
-
         background-image:
-
         url(
-
           'https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=2200&q=90'
-
         );
-
       "
-
     ></div>
 
 
     <div class="hero-content">
 
-
       <img
-
         src="logo.png.png"
-
         alt=""
-
         class="hero-logo"
-
       >
 
-
       <p class="eyebrow">
-
         food · places · stories
-
       </p>
 
-
       <h1>
-
         THE GOOD TASTE.
-
       </h1>
 
-
     </div>
-
 
   </section>
 
 
-
-  <!-- WHAT'S YOUR TASTE? -->
 
   <section class="taste-section">
 
 
     <div class="taste-heading">
 
-
       <h2>
-
         What's your taste?
-
       </h2>
 
-
       <p>
-
         Find something worth tasting, reading or discovering.
-
       </p>
 
-
     </div>
-
 
 
     <div class="taste-grid">
 
 
-      <!-- RESTAURANTS -->
-
-      <a
-
-        href="#"
-
-        onclick="showPage('restaurants'); return false;"
-
+      <div
         class="taste-card restaurant-card"
-
+        onclick="showPage('restaurants')"
       >
-
 
         <div class="taste-overlay">
 
-
           <div class="taste-label">
-
             Restaurants
-
           </div>
 
-
           <h3>
-
             Your next favourite table.
-
           </h3>
 
-
           <p>
-
             Restaurant reviews, food experiences and honest opinions.
-
           </p>
-
 
         </div>
 
-
-      </a>
-
+      </div>
 
 
-      <!-- ARTICLES -->
 
-      <a
-
-        href="#"
-
+      <div
         class="taste-card articles-card"
-
+        onclick="showPage('articles')"
       >
-
 
         <div class="taste-overlay">
 
-
           <div class="taste-label">
-
             Articles
-
           </div>
 
-
           <h3>
-
             Stories worth tasting.
-
           </h3>
 
-
           <p>
-
-            The conversations happening around the table.
-
+            Personal thoughts, opinions and conversations around food,
+            wine and experiences.
           </p>
-
 
         </div>
 
-
-      </a>
-
+      </div>
 
 
-      <!-- GOOD PLACES -->
 
-      <a
-
-        href="#"
-
+      <div
         class="taste-card places-card"
-
+        onclick="showPage('places')"
       >
-
 
         <div class="taste-overlay">
 
-
           <div class="taste-label">
-
-            Good places
-
+            Good Places
           </div>
 
-
           <h3>
-
             Places worth going.
-
           </h3>
 
-
           <p>
-
             Hotels, destinations and experiences worth discovering.
-
           </p>
-
 
         </div>
 
-
-      </a>
+      </div>
 
 
     </div>
 
-
   </section>
-
 
 </main>
 
@@ -1654,393 +1630,789 @@ footer p {
      RESTAURANTS PAGE
 ========================= -->
 
-<main
-  id="restaurants"
-  class="page"
->
+<section id="restaurants" class="page">
 
 
-  <section class="restaurants-page">
+  <div class="internal-header">
 
+    <div class="small-title">
+      The Good Taste
+    </div>
 
-    <div class="restaurants-container">
+    <h1>
+      Restaurants
+    </h1>
 
+  </div>
 
-      <!-- LEFT SIDE -->
 
-      <aside class="restaurants-menu">
 
+  <div class="content-layout">
 
-        <div class="restaurants-label">
 
-          Explore
+    <aside class="sidebar">
 
-        </div>
+      <div class="sidebar-title">
+        Explore
+      </div>
 
+      <ul class="sidebar-list">
 
-        <h1>
+        <li>
+          <button
+            class="restaurant-filter active"
+            onclick="showRestaurantCategory('riviera', this)"
+          >
+            Athenian Riviera
+          </button>
+        </li>
 
-          Restaurants
+        <li>
+          <button
+            class="restaurant-filter"
+            onclick="showRestaurantCategory('northbound', this)"
+          >
+            Northbound
+          </button>
+        </li>
 
-        </h1>
+        <li>
+          <button
+            class="restaurant-filter"
+            onclick="showRestaurantCategory('city', this)"
+          >
+            City Vibes
+          </button>
+        </li>
 
+        <li>
+          <button
+            class="restaurant-filter"
+            onclick="showRestaurantCategory('islands', this)"
+          >
+            Island Life
+          </button>
+        </li>
 
-        <!-- CATEGORY 1 -->
+        <li>
+          <button
+            class="restaurant-filter"
+            onclick="showRestaurantCategory('mainland', this)"
+          >
+            Mainland Greece
+          </button>
+        </li>
 
-        <a
+        <li>
+          <button
+            class="restaurant-filter"
+            onclick="showRestaurantCategory('abroad', this)"
+          >
+            Beyond Borders
+          </button>
+        </li>
 
-          href="#"
+      </ul>
 
-          class="restaurant-category active"
+    </aside>
 
-          data-category="riviera"
 
-        >
 
-          <span>→</span>
+    <div class="category-area">
 
-          Athenian Riviera
 
-        </a>
+      <div id="riviera" class="restaurant-category">
 
-
-        <!-- CATEGORY 2 -->
-
-        <a
-
-          href="#"
-
-          class="restaurant-category"
-
-          data-category="northbound"
-
-        >
-
-          <span>→</span>
-
-          Northbound
-
-        </a>
-
-
-        <!-- CATEGORY 3 -->
-
-        <a
-
-          href="#"
-
-          class="restaurant-category"
-
-          data-category="city"
-
-        >
-
-          <span>→</span>
-
-          City Vibes
-
-        </a>
-
-
-        <!-- CATEGORY 4 -->
-
-        <a
-
-          href="#"
-
-          class="restaurant-category"
-
-          data-category="islands"
-
-        >
-
-          <span>→</span>
-
-          Island Life
-
-        </a>
-
-
-        <!-- CATEGORY 5 -->
-
-        <a
-
-          href="#"
-
-          class="restaurant-category"
-
-          data-category="mainland"
-
-        >
-
-          <span>→</span>
-
-          Mainland Greece
-
-        </a>
-
-
-        <!-- CATEGORY 6 -->
-
-        <a
-
-          href="#"
-
-          class="restaurant-category"
-
-          data-category="abroad"
-
-        >
-
-          <span>→</span>
-
-          Beyond Borders
-
-        </a>
-
-
-      </aside>
-
-
-
-      <!-- RIGHT SIDE -->
-
-      <div class="restaurants-content">
-
-
-        <div class="restaurant-intro">
-
+        <div class="category-description">
 
           <h2>
-
-            Discover the table.
-
+            Athenian Riviera
           </h2>
 
+          <p>
+            Restaurants across the southern coast of Athens.
+          </p>
+
+        </div>
+
+
+        <div class="article-grid">
+
+          <a href="#" class="article-card">
+
+            <img
+              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=85"
+              class="article-image"
+              alt="Restaurant"
+            >
+
+            <div class="article-category">
+              Athenian Riviera
+            </div>
+
+            <h3>
+              Restaurant Name
+            </h3>
+
+            <p>
+              Restaurant review and personal experience.
+            </p>
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <div id="northbound" class="restaurant-category" style="display:none;">
+
+        <div class="category-description">
+
+          <h2>
+            Northbound
+          </h2>
 
           <p>
-
-            Places I've visited, tables I've sat at and experiences worth sharing.
-
-          </p>
-
-
-        </div>
-
-
-
-        <!-- ATHENIAN RIVIERA -->
-
-        <div
-
-          class="category-content active"
-
-          id="riviera"
-
-        >
-
-          <div class="category-title">
-
-            Athenian Riviera
-
-          </div>
-
-
-          <p class="category-description">
-
-            Restaurants along the Athenian Riviera, from the southern suburbs to the coast.
-
+            Restaurants across the Northern Suburbs of Athens.
           </p>
 
         </div>
 
 
+        <div class="article-grid">
 
-        <!-- NORTHBOUND -->
+          <a href="#" class="article-card">
 
-        <div
+            <img
+              src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1200&q=85"
+              class="article-image"
+              alt="Restaurant"
+            >
 
-          class="category-content"
+            <div class="article-category">
+              Northbound
+            </div>
 
-          id="northbound"
+            <h3>
+              Restaurant Name
+            </h3>
 
-        >
+            <p>
+              Restaurant review and personal experience.
+            </p>
 
-          <div class="category-title">
-
-            Northbound
-
-          </div>
-
-
-          <p class="category-description">
-
-            Restaurant discoveries from Northern Greece.
-
-          </p>
+          </a>
 
         </div>
 
+      </div>
 
 
-        <!-- CITY VIBES -->
 
-        <div
+      <div id="city" class="restaurant-category" style="display:none;">
 
-          class="category-content"
+        <div class="category-description">
 
-          id="city"
-
-        >
-
-          <div class="category-title">
-
+          <h2>
             City Vibes
+          </h2>
 
-          </div>
-
-
-          <p class="category-description">
-
-            Tables, flavours and restaurants around the heart of Athens.
-
+          <p>
+            Restaurants and food experiences in the heart of Athens.
           </p>
 
         </div>
 
 
+        <div class="article-grid">
 
-        <!-- ISLAND LIFE -->
+          <a href="#" class="article-card">
 
-        <div
+            <img
+              src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1200&q=85"
+              class="article-image"
+              alt="Restaurant"
+            >
 
-          class="category-content"
+            <div class="article-category">
+              City Vibes
+            </div>
 
-          id="islands"
+            <h3>
+              Restaurant Name
+            </h3>
 
-        >
+            <p>
+              Restaurant review and personal experience.
+            </p>
 
-          <div class="category-title">
+          </a>
 
+        </div>
+
+      </div>
+
+
+
+      <div id="islands" class="restaurant-category" style="display:none;">
+
+        <div class="category-description">
+
+          <h2>
             Island Life
+          </h2>
 
-          </div>
-
-
-          <p class="category-description">
-
-            Restaurant experiences from the Greek islands.
-
+          <p>
+            Restaurants and food experiences from the Greek islands.
           </p>
 
         </div>
 
 
+        <div class="article-grid">
 
-        <!-- MAINLAND GREECE -->
+          <a href="#" class="article-card">
 
-        <div
+            <img
+              src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=85"
+              class="article-image"
+              alt="Restaurant"
+            >
 
-          class="category-content"
+            <div class="article-category">
+              Island Life
+            </div>
 
-          id="mainland"
+            <h3>
+              Restaurant Name
+            </h3>
 
-        >
+            <p>
+              Restaurant review and personal experience.
+            </p>
 
-          <div class="category-title">
+          </a>
 
+        </div>
+
+      </div>
+
+
+
+      <div id="mainland" class="restaurant-category" style="display:none;">
+
+        <div class="category-description">
+
+          <h2>
             Mainland Greece
+          </h2>
 
-          </div>
-
-
-          <p class="category-description">
-
-            Food experiences from destinations across mainland Greece.
-
+          <p>
+            Restaurants and food experiences across mainland Greece.
           </p>
 
         </div>
 
 
+        <div class="article-grid">
 
-        <!-- BEYOND BORDERS -->
+          <a href="#" class="article-card">
 
-        <div
+            <img
+              src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1200&q=85"
+              class="article-image"
+              alt="Restaurant"
+            >
 
-          class="category-content"
+            <div class="article-category">
+              Mainland Greece
+            </div>
 
-          id="abroad"
+            <h3>
+              Restaurant Name
+            </h3>
 
-        >
+            <p>
+              Restaurant review and personal experience.
+            </p>
 
-          <div class="category-title">
+          </a>
 
+        </div>
+
+      </div>
+
+
+
+      <div id="abroad" class="restaurant-category" style="display:none;">
+
+        <div class="category-description">
+
+          <h2>
             Beyond Borders
+          </h2>
 
-          </div>
-
-
-          <p class="category-description">
-
-            Restaurants and food experiences beyond Greece.
-
+          <p>
+            Restaurants and food experiences from around the world.
           </p>
 
         </div>
 
+
+        <div class="article-grid">
+
+          <a href="#" class="article-card">
+
+            <img
+              src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=85"
+              class="article-image"
+              alt="Restaurant"
+            >
+
+            <div class="article-category">
+              Beyond Borders
+            </div>
+
+            <h3>
+              Restaurant Name
+            </h3>
+
+            <p>
+              Restaurant review and personal experience.
+            </p>
+
+          </a>
+
+        </div>
 
       </div>
 
 
     </div>
 
+  </div>
 
-  </section>
-
-
-</main>
+</section>
 
 
 
 <!-- =========================
-     ABOUT PAGE
+     LATEST FROM THE TABLE
 ========================= -->
 
-<main
-  id="about"
-  class="page"
->
+<section id="latest" class="page">
 
 
-  <section class="about-page">
+  <div class="internal-header">
 
+    <div class="small-title">
+      The Good Taste
+    </div>
+
+    <h1>
+      Latest from the Table
+    </h1>
+
+  </div>
+
+
+  <div class="content-layout">
+
+    <div style="grid-column: 1 / -1;">
+
+      <div class="article-grid">
+
+        <a href="#" class="article-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1200&q=85"
+            class="article-image"
+            alt="Latest"
+          >
+
+          <div class="article-category">
+            Latest
+          </div>
+
+          <h3>
+            Coming soon
+          </h3>
+
+          <p>
+            The latest things from around my table.
+          </p>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     ARTICLES
+========================= -->
+
+<section id="articles" class="page">
+
+
+  <div class="internal-header">
+
+    <div class="small-title">
+      The Good Taste
+    </div>
+
+    <h1>
+      Articles
+    </h1>
+
+  </div>
+
+
+  <div class="content-layout">
+
+    <div style="grid-column: 1 / -1;">
+
+      <div class="article-grid">
+
+        <a href="#" class="article-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=85"
+            class="article-image"
+            alt="Article"
+          >
+
+          <div class="article-category">
+            Personal thoughts
+          </div>
+
+          <h3>
+            Coming soon
+          </h3>
+
+          <p>
+            Personal stories, opinions and thoughts around food,
+            wine and everything in between.
+          </p>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     GOOD PLACES
+========================= -->
+
+<section id="places" class="page">
+
+
+  <div class="internal-header">
+
+    <div class="small-title">
+      The Good Taste
+    </div>
+
+    <h1>
+      Good Places
+    </h1>
+
+  </div>
+
+
+
+  <div class="content-layout">
+
+
+    <aside class="sidebar">
+
+      <div class="sidebar-title">
+        Explore
+      </div>
+
+      <ul class="sidebar-list">
+
+        <li>
+
+          <button
+            class="places-filter active"
+            onclick="showPlacesCategory('hospitality', this)"
+          >
+            Hospitality
+          </button>
+
+        </li>
+
+        <li>
+
+          <button
+            class="places-filter"
+            onclick="showPlacesCategory('experiences', this)"
+          >
+            Experiences
+          </button>
+
+        </li>
+
+        <li>
+
+          <button
+            class="places-filter"
+            onclick="showPlacesCategory('nature', this)"
+          >
+            Nature
+          </button>
+
+        </li>
+
+        <li>
+
+          <button
+            class="places-filter"
+            onclick="showPlacesCategory('architecture', this)"
+          >
+            Architecture
+          </button>
+
+        </li>
+
+      </ul>
+
+    </aside>
+
+
+
+    <div class="category-area">
+
+
+      <div id="hospitality" class="places-category">
+
+        <div class="category-description">
+
+          <h2>
+            Hospitality
+          </h2>
+
+          <p>
+            Hotels, stays and beautiful places to stay.
+          </p>
+
+        </div>
+
+
+        <div class="article-grid">
+
+          <a href="#" class="article-card">
+
+            <img
+              src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=85"
+              class="article-image"
+              alt="Hotel"
+            >
+
+            <div class="article-category">
+              Hospitality
+            </div>
+
+            <h3>
+              Place Name
+            </h3>
+
+            <p>
+              A place worth discovering and staying in.
+            </p>
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <div id="experiences" class="places-category" style="display:none;">
+
+        <div class="category-description">
+
+          <h2>
+            Experiences
+          </h2>
+
+          <p>
+            Things worth doing, tasting and experiencing.
+          </p>
+
+        </div>
+
+
+        <div class="article-grid">
+
+          <a href="#" class="article-card">
+
+            <img
+              src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=1200&q=85"
+              class="article-image"
+              alt="Experience"
+            >
+
+            <div class="article-category">
+              Experiences
+            </div>
+
+            <h3>
+              Experience Name
+            </h3>
+
+            <p>
+              An experience I would recommend discovering.
+            </p>
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <div id="nature" class="places-category" style="display:none;">
+
+        <div class="category-description">
+
+          <h2>
+            Nature
+          </h2>
+
+          <p>
+            Landscapes, places and experiences surrounded by nature.
+          </p>
+
+        </div>
+
+
+        <div class="article-grid">
+
+          <a href="#" class="article-card">
+
+            <img
+              src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=85"
+              class="article-image"
+              alt="Nature"
+            >
+
+            <div class="article-category">
+              Nature
+            </div>
+
+            <h3>
+              Place Name
+            </h3>
+
+            <p>
+              A natural place worth discovering.
+            </p>
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <div id="architecture" class="places-category" style="display:none;">
+
+        <div class="category-description">
+
+          <h2>
+            Architecture
+          </h2>
+
+          <p>
+            Museums, buildings, history and places with a story to tell.
+          </p>
+
+        </div>
+
+
+        <div class="article-grid">
+
+          <a href="#" class="article-card">
+
+            <img
+              src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=85"
+              class="article-image"
+              alt="Architecture"
+            >
+
+            <div class="article-category">
+              Architecture
+            </div>
+
+            <h3>
+              Place Name
+            </h3>
+
+            <p>
+              A place connected to the history and identity of its location.
+            </p>
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about" class="page">
+
+
+  <div class="about-section">
 
     <div class="about-container">
 
 
       <img
-
         src="logo.png.png"
-
         alt="The Good Taste"
-
         class="about-logo"
-
       >
 
 
       <h2 class="about-title">
-
         THE GOOD TASTE.
-
       </h2>
 
 
       <div class="about-label">
-
         Food · Places · Stories
-
       </div>
 
 
@@ -2048,99 +2420,94 @@ footer p {
 
 
         <h3>
-
           About The Good Taste
-
         </h3>
 
 
         <p>
-
-          Η ζωή είναι γεμάτη εμπειρίες. Και οι καλύτερες είναι εκείνες που μπορούν να αγγίξουν όλες μας τις αισθήσεις. Να δεις ένα όμορφο μέρος, να ακούσεις ενδιαφέρουσες απόψεις, να μυρίσεις ένα κρασί που θα σε ταξιδέψει, να γευτείς ένα ξεχωριστό πιάτο, να ανακαλύψεις ένα ξενοδοχείο ή έναν προορισμό που θα σου μείνει.
-
+          Η ζωή είναι γεμάτη εμπειρίες. Και οι καλύτερες είναι εκείνες
+          που μπορούν να αγγίξουν όλες μας τις αισθήσεις. Να δεις ένα
+          όμορφο μέρος, να ακούσεις ενδιαφέρουσες απόψεις, να μυρίσεις
+          ένα κρασί που θα σε ταξιδέψει, να γευτείς ένα ξεχωριστό πιάτο,
+          να ανακαλύψεις ένα ξενοδοχείο ή έναν προορισμό που θα σου μείνει.
         </p>
 
 
         <p>
-
           Αυτό είναι το <strong>The Good Taste.</strong>
-
         </p>
 
 
         <p>
-
-          Ένας χώρος γεμάτος ιδέες, εμπειρίες και προσωπικές προτάσεις γύρω από το φαγητό, το κρασί, τα εστιατόρια, τα ταξίδια και όλα εκείνα τα μικρά ή μεγάλα πράγματα που κάνουν την καθημερινότητα λίγο πιο όμορφη.
-
+          Ένας χώρος γεμάτος ιδέες, εμπειρίες και προσωπικές προτάσεις
+          γύρω από το φαγητό, το κρασί, τα εστιατόρια, τα ταξίδια και όλα
+          εκείνα τα μικρά ή μεγάλα πράγματα που κάνουν την καθημερινότητα
+          λίγο πιο όμορφη.
         </p>
 
 
         <p>
-
-          Σκοπός μου είναι απλός. Την επόμενη φορά που θα αναρωτηθείς <em>«Τι να κάνω σήμερα; Πού να πάω με την παρέα μου; Πού μπορώ να πιω ένα ωραίο κρασί στο κέντρο;»</em>, να μπορείς να μπεις στο <strong>The Good Taste</strong> και να βρεις μια ιδέα που θα αξίζει τον χρόνο σου.
-
+          Σκοπός μου είναι απλός. Την επόμενη φορά που θα αναρωτηθείς
+          <em>«Τι να κάνω σήμερα; Πού να πάω με την παρέα μου;
+          Πού μπορώ να πιω ένα ωραίο κρασί στο κέντρο;»</em>,
+          να μπορείς να μπεις στο <strong>The Good Taste</strong>
+          και να βρεις μια ιδέα που θα αξίζει τον χρόνο σου.
         </p>
+
 
 
         <h3>
-
           Η δική μου ματιά
-
         </h3>
 
 
         <p>
-
-          Το <strong>The Good Taste</strong> είναι ένα honest food & lifestyle blog. Δεν γράφω ως ειδικός που γνωρίζει τα πάντα. Γράφω ως ένας άνθρωπος που αγαπά το καλό φαγητό, το καλό κρασί και τις όμορφες εμπειρίες — και θέλει, όταν πληρώνει για κάτι, να αισθάνεται ότι άξιζε.
-
+          Το <strong>The Good Taste</strong> είναι ένα honest food &
+          lifestyle blog. Δεν γράφω ως ειδικός που γνωρίζει τα πάντα.
+          Γράφω ως ένας άνθρωπος που αγαπά το καλό φαγητό, το καλό κρασί
+          και τις όμορφες εμπειρίες — και θέλει, όταν πληρώνει για κάτι,
+          να αισθάνεται ότι άξιζε.
         </p>
 
 
         <p>
-
-          Γιατί ξέρω πόσο κουραστικό μπορεί να είναι να ψάχνεις πού θα πας, να βλέπεις δεκάδες επιλογές και τελικά να μην ξέρεις αν αυτό που επέλεξες θα είναι πραγματικά καλό.
-
+          Γιατί ξέρω πόσο κουραστικό μπορεί να είναι να ψάχνεις πού θα πας,
+          να βλέπεις δεκάδες επιλογές και τελικά να μην ξέρεις αν αυτό
+          που επέλεξες θα είναι πραγματικά καλό.
         </p>
 
 
         <p>
-
-          Γι' αυτό θέλω το <strong>The Good Taste</strong> να είναι λίγο σαν τη γνώμη ενός φίλου.
-
+          Γι' αυτό θέλω το <strong>The Good Taste</strong> να είναι λίγο
+          σαν τη γνώμη ενός φίλου.
         </p>
 
 
         <p>
-
-          Ενός φίλου που έχει ήδη πάει. Που έχει δοκιμάσει. Που έχει δει. Που μπορεί να σου πει τι του άρεσε, τι ξεχώρισε και αν τελικά άξιζε.
-
+          Ενός φίλου που έχει ήδη πάει. Που έχει δοκιμάσει. Που έχει δει.
+          Που μπορεί να σου πει τι του άρεσε, τι ξεχώρισε και αν τελικά
+          άξιζε.
         </p>
 
 
         <p>
-
           Και μετά, η επιλογή είναι δική σου.
-
         </p>
 
 
         <div class="about-quote">
-
-          Γιατί πιστεύω πως η ζωή αξίζει για τις όμορφες εμπειρίες της. Και το φαγητό, αναμφίβολα, είναι ένα μεγάλο κομμάτι αυτών.
-
+          Γιατί πιστεύω πως η ζωή αξίζει για τις όμορφες εμπειρίες της.
+          Και το φαγητό, αναμφίβολα, είναι ένα μεγάλο κομμάτι αυτών.
         </div>
 
 
       </div>
 
-
     </div>
 
+  </div>
 
-  </section>
-
-
-</main>
+</section>
 
 
 
@@ -2150,44 +2517,27 @@ footer p {
 
 <footer>
 
-
   <h2>
-
     THE GOOD TASTE.
-
   </h2>
 
-
   <p>
-
     good food, great stories.
-
   </p>
-
 
 </footer>
 
 
 
-<!-- =========================
-     JAVASCRIPT
-========================= -->
-
 <script>
-
 
 /* =========================
    PAGE NAVIGATION
 ========================= */
 
-function showPage(pageName) {
+function showPage(pageId) {
 
-
-  /* Hide all pages */
-
-  const pages =
-    document.querySelectorAll(".page");
-
+  const pages = document.querySelectorAll(".page");
 
   pages.forEach(page => {
 
@@ -2196,33 +2546,14 @@ function showPage(pageName) {
   });
 
 
-  /* Show selected page */
+  const selectedPage = document.getElementById(pageId);
 
-  const selectedPage =
-    document.getElementById(pageName);
+  if (selectedPage) {
 
-
-  selectedPage.classList.add("active");
-
-
-  /* Change header style */
-
-  const header =
-    document.getElementById("site-header");
-
-
-  if (pageName === "home") {
-
-    header.classList.remove("light-header");
-
-  } else {
-
-    header.classList.add("light-header");
+    selectedPage.classList.add("active");
 
   }
 
-
-  /* Go to top */
 
   window.scrollTo({
 
@@ -2233,6 +2564,97 @@ function showPage(pageName) {
   });
 
 }
+
+
+
+/* =========================
+   RESTAURANT CATEGORIES
+========================= */
+
+function showRestaurantCategory(categoryId, button) {
+
+  const categories =
+    document.querySelectorAll(".restaurant-category");
+
+
+  categories.forEach(category => {
+
+    category.style.display = "none";
+
+  });
+
+
+  const selected =
+    document.getElementById(categoryId);
+
+
+  if (selected) {
+
+    selected.style.display = "block";
+
+  }
+
+
+  const buttons =
+    document.querySelectorAll(".restaurant-filter");
+
+
+  buttons.forEach(btn => {
+
+    btn.classList.remove("active");
+
+  });
+
+
+  button.classList.add("active");
+
+}
+
+
+
+/* =========================
+   GOOD PLACES CATEGORIES
+========================= */
+
+function showPlacesCategory(categoryId, button) {
+
+  const categories =
+    document.querySelectorAll(".places-category");
+
+
+  categories.forEach(category => {
+
+    category.style.display = "none";
+
+  });
+
+
+  const selected =
+    document.getElementById(categoryId);
+
+
+  if (selected) {
+
+    selected.style.display = "block";
+
+  }
+
+
+  const buttons =
+    document.querySelectorAll(".places-filter");
+
+
+  buttons.forEach(btn => {
+
+    btn.classList.remove("active");
+
+  });
+
+
+  button.classList.add("active");
+
+}
+
 
 
 /* =========================
@@ -2248,21 +2670,16 @@ let currentImage = 0;
 
 setInterval(() => {
 
-
   heroImages[currentImage]
-
     .classList.remove("active");
 
 
   currentImage =
-
     (currentImage + 1)
-
     % heroImages.length;
 
 
   heroImages[currentImage]
-
     .classList.add("active");
 
 
@@ -2271,74 +2688,26 @@ setInterval(() => {
 
 
 /* =========================
-   RESTAURANT CATEGORIES
+   HEADER SCROLL
 ========================= */
 
-const categories =
-  document.querySelectorAll(
-    ".restaurant-category"
-  );
+window.addEventListener("scroll", () => {
+
+  const header =
+    document.getElementById("mainHeader");
 
 
-const categoryContents =
-  document.querySelectorAll(
-    ".category-content"
-  );
+  if (window.scrollY > 50) {
 
+    header.classList.add("scrolled");
 
-categories.forEach(category => {
+  } else {
 
+    header.classList.remove("scrolled");
 
-  category.addEventListener(
-    "click",
-    function(event) {
-
-
-      event.preventDefault();
-
-
-      /* Remove active from every category */
-
-      categories.forEach(item => {
-
-        item.classList.remove("active");
-
-      });
-
-
-      /* Activate clicked category */
-
-      this.classList.add("active");
-
-
-      /* Hide all category content */
-
-      categoryContents.forEach(content => {
-
-        content.classList.remove("active");
-
-      });
-
-
-      /* Show selected content */
-
-      const selectedCategory =
-        document.getElementById(
-          this.dataset.category
-        );
-
-
-      selectedCategory.classList.add(
-        "active"
-      );
-
-
-    }
-  );
-
+  }
 
 });
-
 
 </script>
 
