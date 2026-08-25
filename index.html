@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -8,7 +9,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>THE GOOD TASTE.</title>
-
 
 <style>
 
@@ -556,6 +556,161 @@ nav a:hover {
 
 
 /* =========================
+   ABOUT
+========================= */
+
+.about-section {
+
+  padding: 120px 7% 130px;
+
+  background: #f4eee5;
+
+  color: #3b2b25;
+}
+
+
+.about-container {
+
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+
+.about-logo {
+
+  width: 110px;
+
+  height: 110px;
+
+  object-fit: contain;
+
+  display: block;
+
+  margin: 0 auto 25px;
+}
+
+
+.about-title {
+
+  font-family: Georgia, serif;
+
+  font-size: clamp(42px, 6vw, 72px);
+
+  font-weight: normal;
+
+  letter-spacing: -1px;
+
+  color: #3b2b25;
+
+  line-height: 1;
+
+  margin-bottom: 18px;
+}
+
+
+.about-label {
+
+  font-size: 10px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 4px;
+
+  color: #722f37;
+
+  margin-bottom: 65px;
+}
+
+
+.about-content {
+
+  max-width: 780px;
+
+  margin: 0 auto;
+
+  text-align: left;
+}
+
+
+.about-content h3 {
+
+  font-family: Georgia, serif;
+
+  font-size: 30px;
+
+  font-weight: normal;
+
+  color: #3b2b25;
+
+  margin-top: 55px;
+
+  margin-bottom: 22px;
+}
+
+
+.about-content h3:first-child {
+
+  margin-top: 0;
+}
+
+
+.about-content p {
+
+  font-family: Georgia, serif;
+
+  font-size: 17px;
+
+  line-height: 1.9;
+
+  color: #4b3a32;
+
+  margin-bottom: 22px;
+}
+
+
+.about-content strong {
+
+  color: #722f37;
+
+  font-weight: normal;
+}
+
+
+.about-content em {
+
+  color: #722f37;
+}
+
+
+.about-quote {
+
+  margin: 65px auto 0;
+
+  padding: 35px 30px;
+
+  border-top: 1px solid #cdbdaf;
+
+  border-bottom: 1px solid #cdbdaf;
+
+  text-align: center;
+
+  font-family: Georgia, serif;
+
+  font-size: clamp(22px, 3vw, 32px);
+
+  line-height: 1.45;
+
+  font-style: italic;
+
+  color: #722f37;
+}
+
+
+
+/* =========================
    FOOTER
 ========================= */
 
@@ -721,16 +876,73 @@ footer p {
     font-size: 30px;
   }
 
+
+  .about-section {
+
+    padding: 80px 7% 90px;
+  }
+
+
+  .about-logo {
+
+    width: 85px;
+
+    height: 85px;
+
+    margin-bottom: 20px;
+  }
+
+
+  .about-title {
+
+    font-size: 44px;
+
+    margin-bottom: 15px;
+  }
+
+
+  .about-label {
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 45px;
+  }
+
+
+  .about-content h3 {
+
+    font-size: 27px;
+
+    margin-top: 45px;
+  }
+
+
+  .about-content p {
+
+    font-size: 16px;
+
+    line-height: 1.8;
+  }
+
+
+  .about-quote {
+
+    margin-top: 50px;
+
+    padding: 28px 10px;
+
+    font-size: 23px;
+  }
+
 }
 
 </style>
 
 </head>
 
-
 <body>
-
-
 
 <!-- =========================
      HEADER
@@ -738,84 +950,90 @@ footer p {
 
 <header>
 
-
   <div class="brand">
 
-
-    <div class="brand-main">
-
-
-      <img
-
-        src="logo.png.png"
-
-        alt="The Good Taste"
-
-        class="site-logo"
-
-      >
+```
+<div class="brand-main">
 
 
-      <div class="logo">
+  <img
 
-        THE GOOD TASTE.
+    src="logo.png.png"
 
-      </div>
+    alt="The Good Taste"
+
+    class="site-logo"
+
+  >
 
 
-    </div>
+  <div class="logo">
 
-
-    <div class="tagline">
-
-      good food, great stories
-
-    </div>
-
+    THE GOOD TASTE.
 
   </div>
 
 
+</div>
+
+
+<div class="tagline">
+
+  good food, great stories
+
+</div>
+```
+
+  </div>
 
   <nav>
 
+```
+<a href="#">
 
-    <a href="#">
-      Home
-    </a>
+  Home
 
-
-    <a href="#">
-      Restaurants
-    </a>
+</a>
 
 
-    <a href="#">
-      Latest from the table
-    </a>
+<a href="#">
+
+  Restaurants
+
+</a>
 
 
-    <a href="#">
-      Articles
-    </a>
+<a href="#">
+
+  Latest from the table
+
+</a>
 
 
-    <a href="#">
-      Good places
-    </a>
+<a href="#">
+
+  Articles
+
+</a>
 
 
-    <a href="#">
-      About
-    </a>
+<a href="#">
 
+  Good places
+
+</a>
+
+
+<a href="#about">
+
+  About
+
+</a>
+```
 
   </nav>
 
-
 </header>
-
-
 
 <!-- =========================
      HERO
@@ -823,110 +1041,105 @@ footer p {
 
 <section class="hero">
 
-
-
   <!-- HERO PHOTO 1 -->
 
   <div
 
-    class="hero-image active"
+```
+class="hero-image active"
 
-    style="
+style="
 
-      background-image:
+  background-image:
 
-      url(
+  url(
 
-        'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=2200&q=90'
+    'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=2200&q=90'
 
-      );
+  );
 
-    "
+"
+```
 
-  ></div>
-
-
+> </div>
 
   <!-- HERO PHOTO 2 -->
 
   <div
 
-    class="hero-image"
+```
+class="hero-image"
 
-    style="
+style="
 
-      background-image:
+  background-image:
 
-      url(
+  url(
 
-        'https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=2200&q=90'
+    'https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=2200&q=90'
 
-      );
+  );
 
-    "
+"
+```
 
-  ></div>
-
-
+> </div>
 
   <!-- HERO PHOTO 3 -->
 
   <div
 
-    class="hero-image"
+```
+class="hero-image"
 
-    style="
+style="
 
-      background-image:
+  background-image:
 
-      url(
+  url(
 
-        'https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=2200&q=90'
+    'https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=2200&q=90'
 
-      );
+  );
 
-    "
+"
+```
 
-  ></div>
-
-
+> </div>
 
   <!-- HERO CONTENT -->
 
   <div class="hero-content">
 
+```
+<img
 
-    <img
+  src="logo.png.png"
 
-      src="logo.png.png"
+  alt=""
 
-      alt=""
+  class="hero-logo"
 
-      class="hero-logo"
-
-    >
-
-
-    <p class="eyebrow">
-
-      food · places · stories
-
-    </p>
+>
 
 
-    <h1>
+<p class="eyebrow">
 
-      THE GOOD TASTE.
+  food · places · stories
 
-    </h1>
+</p>
 
+
+<h1>
+
+  THE GOOD TASTE.
+
+</h1>
+```
 
   </div>
 
-
 </section>
-
-
 
 <!-- =========================
      WHAT'S YOUR TASTE?
@@ -934,21 +1147,59 @@ footer p {
 
 <section class="taste-section">
 
-
-
   <div class="taste-heading">
 
+```
+<h2>
 
-    <h2>
+  What's your taste?
 
-      What's your taste?
+</h2>
 
-    </h2>
+
+<p>
+
+  Find something worth tasting, reading or discovering.
+
+</p>
+```
+
+  </div>
+
+  <div class="taste-grid">
+
+```
+<!-- RESTAURANTS -->
+
+<a
+
+  href="#"
+
+  class="taste-card restaurant-card"
+
+>
+
+
+  <div class="taste-overlay">
+
+
+    <div class="taste-label">
+
+      Restaurants
+
+    </div>
+
+
+    <h3>
+
+      Your next favourite table.
+
+    </h3>
 
 
     <p>
 
-      Find something worth tasting, reading or discovering.
+      Restaurant reviews, food experiences and honest opinions.
 
     </p>
 
@@ -956,146 +1207,225 @@ footer p {
   </div>
 
 
+</a>
 
-  <div class="taste-grid">
 
 
+<!-- ARTICLES -->
 
-    <!-- RESTAURANTS -->
+<a
 
-    <a
+  href="#"
 
-      href="#"
+  class="taste-card articles-card"
 
-      class="taste-card restaurant-card"
+>
 
-    >
 
+  <div class="taste-overlay">
 
-      <div class="taste-overlay">
 
+    <div class="taste-label">
 
-        <div class="taste-label">
+      Articles
 
-          Restaurants
+    </div>
 
-        </div>
 
+    <h3>
 
-        <h3>
+      Stories worth tasting.
 
-          Your next favourite table.
+    </h3>
 
-        </h3>
 
+    <p>
 
-        <p>
+      The conversations happening around the table.
 
-          Restaurant reviews, food experiences
-
-          and honest opinions.
-
-        </p>
-
-
-      </div>
-
-
-    </a>
-
-
-
-    <!-- ARTICLES -->
-
-    <a
-
-      href="#"
-
-      class="taste-card articles-card"
-
-    >
-
-
-      <div class="taste-overlay">
-
-
-        <div class="taste-label">
-
-          Articles
-
-        </div>
-
-
-        <h3>
-
-          Stories worth tasting.
-
-        </h3>
-
-
-        <p>
-
-          The conversations happening around the table.
-
-        </p>
-
-
-      </div>
-
-
-    </a>
-
-
-
-    <!-- GOOD PLACES -->
-
-    <a
-
-      href="#"
-
-      class="taste-card places-card"
-
-    >
-
-
-      <div class="taste-overlay">
-
-
-        <div class="taste-label">
-
-          Good places
-
-        </div>
-
-
-        <h3>
-
-          Places worth going.
-
-        </h3>
-
-
-        <p>
-
-          Hotels, destinations and experiences
-
-          worth discovering.
-
-        </p>
-
-
-      </div>
-
-
-    </a>
+    </p>
 
 
   </div>
 
 
+</a>
+
+
+
+<!-- GOOD PLACES -->
+
+<a
+
+  href="#"
+
+  class="taste-card places-card"
+
+>
+
+
+  <div class="taste-overlay">
+
+
+    <div class="taste-label">
+
+      Good places
+
+    </div>
+
+
+    <h3>
+
+      Places worth going.
+
+    </h3>
+
+
+    <p>
+
+      Hotels, destinations and experiences worth discovering.
+
+    </p>
+
+
+  </div>
+
+
+</a>
+```
+
+  </div>
+
 </section>
 
+<!-- =========================
+     ABOUT
+========================= -->
 
+<section class="about-section" id="about">
+
+  <div class="about-container">
+
+```
+<img
+
+  src="logo.png.png"
+
+  alt="The Good Taste"
+
+  class="about-logo"
+
+>
+
+
+<h2 class="about-title">
+
+  THE GOOD TASTE.
+
+</h2>
+
+
+<div class="about-label">
+
+  Food · Places · Stories
+
+</div>
+
+
+<div class="about-content">
+
+
+  <h3>
+
+    About The Good Taste
+
+  </h3>
+
+
+  <p>
+
+    Η ζωή είναι γεμάτη εμπειρίες. Και οι καλύτερες είναι εκείνες που μπορούν να αγγίξουν όλες μας τις αισθήσεις. Να δεις ένα όμορφο μέρος, να ακούσεις ενδιαφέρουσες απόψεις, να μυρίσεις ένα κρασί που θα σε ταξιδέψει, να γευτείς ένα ξεχωριστό πιάτο, να ανακαλύψεις ένα ξενοδοχείο ή έναν προορισμό που θα σου μείνει.
+
+  </p>
+
+
+  <p>
+
+    Αυτό είναι το <strong>The Good Taste.</strong>
+
+  </p>
+
+
+  <p>
+
+    Ένας χώρος γεμάτος ιδέες, εμπειρίες και προσωπικές προτάσεις γύρω από το φαγητό, το κρασί, τα εστιατόρια, τα ταξίδια και όλα εκείνα τα μικρά ή μεγάλα πράγματα που κάνουν την καθημερινότητα λίγο πιο όμορφη.
+
+  </p>
+
+
+  <p>
+
+    Σκοπός μου είναι απλός. Την επόμενη φορά που θα αναρωτηθείς <em>«Τι να κάνω σήμερα; Πού να πάω με την παρέα μου; Πού μπορώ να πιω ένα ωραίο κρασί στο κέντρο;»</em>, να μπορείς να μπεις στο <strong>The Good Taste</strong> και να βρεις μια ιδέα που θα αξίζει τον χρόνο σου.
+
+  </p>
+
+
+
+  <h3>
+
+    Η δική μου ματιά
+
+  </h3>
+
+
+  <p>
+
+    Το <strong>The Good Taste</strong> είναι ένα honest food & lifestyle blog. Δεν γράφω ως ειδικός που γνωρίζει τα πάντα. Γράφω ως ένας άνθρωπος που αγαπά το καλό φαγητό, το καλό κρασί και τις όμορφες εμπειρίες — και θέλει, όταν πληρώνει για κάτι, να αισθάνεται ότι άξιζε.
+
+  </p>
+
+
+  <p>
+
+    Γιατί ξέρω πόσο κουραστικό μπορεί να είναι να ψάχνεις πού θα πας, να βλέπεις δεκάδες επιλογές και τελικά να μην ξέρεις αν αυτό που επέλεξες θα είναι πραγματικά καλό.
+
+  </p>
+
+
+  <p>
+
+    Γι' αυτό θέλω το <strong>The Good Taste</strong> να είναι λίγο σαν τη γνώμη ενός φίλου.
+
+  </p>
+
+
+  <p>
+
+    Ενός φίλου που έχει ήδη πάει. Που έχει δοκιμάσει. Που έχει δει. Που μπορεί να σου πει τι του άρεσε, τι ξεχώρισε και αν τελικά άξιζε.
+
+  </p>
+
+
+  <p>
+
+    Και μετά, η επιλογή είναι δική σου.
+
+  </p>
+
+
+  <div class="about-quote">
+
+    Γιατί πιστεύω πως η ζωή αξίζει για τις όμορφες εμπειρίες της. Και το φαγητό, αναμφίβολα, είναι ένα μεγάλο κομμάτι αυτών.
+
+  </div>
+
+
+</div>
+```
+
+  </div>
+
+</section>
 
 <!-- =========================
      FOOTER
@@ -1103,24 +1433,23 @@ footer p {
 
 <footer>
 
-
   <h2>
 
-    THE GOOD TASTE.
+```
+THE GOOD TASTE.
+```
 
   </h2>
 
-
   <p>
 
-    good food, great stories.
+```
+good food, great stories.
+```
 
   </p>
 
-
 </footer>
-
-
 
 <!-- =========================
      SMOOTH HERO SLIDESHOW
@@ -1161,7 +1490,6 @@ setInterval(() => {
 
 
 </script>
-
 
 </body>
 
