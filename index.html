@@ -12,6 +12,10 @@
 
 <style>
 
+/* =========================
+   RESET
+========================= */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -264,7 +268,9 @@ nav a:hover {
 
 
 
-/* BIG CENTER LOGO */
+/* =========================
+   HERO LOGO
+========================= */
 
 .hero-logo {
 
@@ -416,7 +422,7 @@ nav a:hover {
 
 
 /* =========================
-   RESTAURANTS
+   RESTAURANTS CARD
 ========================= */
 
 .restaurant-card {
@@ -443,7 +449,7 @@ nav a:hover {
 
 
 /* =========================
-   ARTICLES
+   ARTICLES CARD
 ========================= */
 
 .articles-card {
@@ -470,7 +476,7 @@ nav a:hover {
 
 
 /* =========================
-   GOOD PLACES
+   GOOD PLACES CARD
 ========================= */
 
 .places-card {
@@ -556,16 +562,168 @@ nav a:hover {
 
 
 /* =========================
+   RESTAURANTS PAGE
+========================= */
+
+.restaurants-section {
+
+  display: none;
+
+  min-height: 100vh;
+
+  padding: 150px 5% 100px;
+
+  background: #f4eee5;
+}
+
+
+.restaurants-section:target {
+
+  display: block;
+}
+
+
+.section-title {
+
+  font-family: Georgia, serif;
+
+  font-size: clamp(48px, 7vw, 90px);
+
+  font-weight: normal;
+
+  color: #3b2b25;
+
+  margin-bottom: 60px;
+}
+
+
+.subsection-layout {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 70px;
+}
+
+
+.subsection-menu {
+
+  width: 220px;
+
+  flex-shrink: 0;
+
+  position: sticky;
+
+  top: 40px;
+}
+
+
+.subsection-menu h3 {
+
+  font-family: Georgia, serif;
+
+  font-size: 18px;
+
+  font-weight: normal;
+
+  margin-bottom: 25px;
+
+  color: #722f37;
+}
+
+
+.subsection-menu a {
+
+  display: block;
+
+  color: #3b2b25;
+
+  text-decoration: none;
+
+  font-family: Georgia, serif;
+
+  font-size: 17px;
+
+  margin-bottom: 16px;
+
+  transition: color 0.3s ease;
+}
+
+
+.subsection-menu a:hover {
+
+  color: #722f37;
+}
+
+
+.subsection-content {
+
+  flex: 1;
+}
+
+
+.subsection-intro {
+
+  font-family: Georgia, serif;
+
+  font-size: 20px;
+
+  line-height: 1.7;
+
+  color: #4b3a32;
+
+  max-width: 700px;
+
+  margin-bottom: 45px;
+}
+
+
+
+/* =========================
+   GOOD PLACES PAGE
+========================= */
+
+.places-section {
+
+  display: none;
+
+  min-height: 100vh;
+
+  padding: 150px 5% 100px;
+
+  background: #f4eee5;
+}
+
+
+.places-section:target {
+
+  display: block;
+}
+
+
+
+/* =========================
    ABOUT
 ========================= */
 
 .about-section {
+
+  display: none;
+
+  min-height: 100vh;
 
   padding: 120px 7% 130px;
 
   background: #f4eee5;
 
   color: #3b2b25;
+}
+
+
+.about-section:target {
+
+  display: block;
 }
 
 
@@ -877,6 +1035,45 @@ footer p {
   }
 
 
+  .subsection-layout {
+
+    flex-direction: column;
+
+    gap: 40px;
+  }
+
+
+  .subsection-menu {
+
+    width: 100%;
+
+    position: static;
+  }
+
+
+  .subsection-menu a {
+
+    display: inline-block;
+
+    margin-right: 20px;
+  }
+
+
+  .restaurants-section,
+  .places-section {
+
+    padding: 110px 7% 80px;
+  }
+
+
+  .section-title {
+
+    font-size: 52px;
+
+    margin-bottom: 45px;
+  }
+
+
   .about-section {
 
     padding: 80px 7% 90px;
@@ -942,7 +1139,9 @@ footer p {
 
 </head>
 
+
 <body>
+
 
 <!-- =========================
      HEADER
@@ -980,37 +1179,43 @@ footer p {
 
   </div>
 
+
   <nav>
 
-    <a href="#">
+    <a href="#home">
 
       Home
 
     </a>
 
-    <a href="#">
+
+    <a href="#restaurants">
 
       Restaurants
 
     </a>
 
-    <a href="#">
+
+    <a href="#latest">
 
       Latest from the table
 
     </a>
 
-    <a href="#">
+
+    <a href="#articles">
 
       Articles
 
     </a>
 
-    <a href="#">
+
+    <a href="#places">
 
       Good places
 
     </a>
+
 
     <a href="#about">
 
@@ -1025,10 +1230,11 @@ footer p {
 
 
 <!-- =========================
-     HERO
+     HOME
 ========================= -->
 
-<section class="hero">
+<section class="hero" id="home">
+
 
   <!-- HERO PHOTO 1 -->
 
@@ -1049,7 +1255,6 @@ footer p {
     "
 
   ></div>
-
 
 
   <!-- HERO PHOTO 2 -->
@@ -1073,7 +1278,6 @@ footer p {
   ></div>
 
 
-
   <!-- HERO PHOTO 3 -->
 
   <div
@@ -1094,9 +1298,6 @@ footer p {
 
   ></div>
 
-
-
-  <!-- HERO CONTENT -->
 
   <div class="hero-content">
 
@@ -1132,7 +1333,8 @@ footer p {
      WHAT'S YOUR TASTE?
 ========================= -->
 
-<section class="taste-section">
+<section class="taste-section" id="taste">
+
 
   <div class="taste-heading">
 
@@ -1141,6 +1343,7 @@ footer p {
       What's your taste?
 
     </h2>
+
 
     <p>
 
@@ -1151,14 +1354,14 @@ footer p {
   </div>
 
 
-
   <div class="taste-grid">
+
 
     <!-- RESTAURANTS -->
 
     <a
 
-      href="#"
+      href="#restaurants"
 
       class="taste-card restaurant-card"
 
@@ -1172,11 +1375,13 @@ footer p {
 
         </div>
 
+
         <h3>
 
           Your next favourite table.
 
         </h3>
+
 
         <p>
 
@@ -1194,7 +1399,7 @@ footer p {
 
     <a
 
-      href="#"
+      href="#articles"
 
       class="taste-card articles-card"
 
@@ -1208,11 +1413,13 @@ footer p {
 
         </div>
 
+
         <h3>
 
           Stories worth tasting.
 
         </h3>
+
 
         <p>
 
@@ -1230,7 +1437,7 @@ footer p {
 
     <a
 
-      href="#"
+      href="#places"
 
       class="taste-card places-card"
 
@@ -1240,15 +1447,17 @@ footer p {
 
         <div class="taste-label">
 
-          Good places
+          Good Places
 
         </div>
+
 
         <h3>
 
           Places worth going.
 
         </h3>
+
 
         <p>
 
@@ -1267,12 +1476,230 @@ footer p {
 
 
 <!-- =========================
+     RESTAURANTS
+========================= -->
+
+<section class="restaurants-section" id="restaurants">
+
+
+  <h2 class="section-title">
+
+    Restaurants
+
+  </h2>
+
+
+  <div class="subsection-layout">
+
+
+    <div class="subsection-menu">
+
+      <h3>
+
+        Explore
+
+      </h3>
+
+
+      <a href="#restaurants">
+
+        Athenian Riviera
+
+      </a>
+
+
+      <a href="#restaurants">
+
+        Northbound
+
+      </a>
+
+
+      <a href="#restaurants">
+
+        City Vibes
+
+      </a>
+
+
+      <a href="#restaurants">
+
+        Island Life
+
+      </a>
+
+
+      <a href="#restaurants">
+
+        Mainland Greece
+
+      </a>
+
+
+      <a href="#restaurants">
+
+        Beyond Borders
+
+      </a>
+
+    </div>
+
+
+    <div class="subsection-content">
+
+      <p class="subsection-intro">
+
+        Restaurant reviews, food experiences and honest opinions from places I have visited.
+
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     LATEST FROM THE TABLE
+========================= -->
+
+<section class="restaurants-section" id="latest">
+
+
+  <h2 class="section-title">
+
+    Latest from the table
+
+  </h2>
+
+
+  <div class="subsection-content">
+
+    <p class="subsection-intro">
+
+      The latest things happening around the table — food, wine, restaurants and experiences.
+
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     ARTICLES
+========================= -->
+
+<section class="restaurants-section" id="articles">
+
+
+  <h2 class="section-title">
+
+    Articles
+
+  </h2>
+
+
+  <div class="subsection-content">
+
+    <p class="subsection-intro">
+
+      Personal thoughts, opinions and stories about food, wine, experiences, quality and everything in between.
+
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     GOOD PLACES
+========================= -->
+
+<section class="places-section" id="places">
+
+
+  <h2 class="section-title">
+
+    Good Places
+
+  </h2>
+
+
+  <div class="subsection-layout">
+
+
+    <div class="subsection-menu">
+
+      <h3>
+
+        Explore
+
+      </h3>
+
+
+      <a href="#places">
+
+        Hospitality
+
+      </a>
+
+
+      <a href="#places">
+
+        Experiences
+
+      </a>
+
+
+      <a href="#places">
+
+        Nature
+
+      </a>
+
+
+      <a href="#places">
+
+        Architecture
+
+      </a>
+
+    </div>
+
+
+    <div class="subsection-content">
+
+      <p class="subsection-intro">
+
+        Places worth discovering — from hotels and stays to experiences, nature, architecture and everything that makes a place memorable.
+
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
      ABOUT
 ========================= -->
 
 <section class="about-section" id="about">
 
+
   <div class="about-container">
+
 
     <img
 
@@ -1284,11 +1711,13 @@ footer p {
 
     >
 
+
     <h2 class="about-title">
 
       THE GOOD TASTE.
 
     </h2>
+
 
     <div class="about-label">
 
@@ -1297,8 +1726,8 @@ footer p {
     </div>
 
 
-
     <div class="about-content">
+
 
       <h3>
 
@@ -1306,11 +1735,13 @@ footer p {
 
       </h3>
 
+
       <p>
 
         Η ζωή είναι γεμάτη εμπειρίες. Και οι καλύτερες είναι εκείνες που μπορούν να αγγίξουν όλες μας τις αισθήσεις. Να δεις ένα όμορφο μέρος, να ακούσεις ενδιαφέρουσες απόψεις, να μυρίσεις ένα κρασί που θα σε ταξιδέψει, να γευτείς ένα ξεχωριστό πιάτο, να ανακαλύψεις ένα ξενοδοχείο ή έναν προορισμό που θα σου μείνει.
 
       </p>
+
 
       <p>
 
@@ -1318,11 +1749,13 @@ footer p {
 
       </p>
 
+
       <p>
 
         Ένας χώρος γεμάτος ιδέες, εμπειρίες και προσωπικές προτάσεις γύρω από το φαγητό, το κρασί, τα εστιατόρια, τα ταξίδια και όλα εκείνα τα μικρά ή μεγάλα πράγματα που κάνουν την καθημερινότητα λίγο πιο όμορφη.
 
       </p>
+
 
       <p>
 
@@ -1331,12 +1764,12 @@ footer p {
       </p>
 
 
-
       <h3>
 
         Η δική μου ματιά
 
       </h3>
+
 
       <p>
 
@@ -1344,11 +1777,13 @@ footer p {
 
       </p>
 
+
       <p>
 
         Γιατί ξέρω πόσο κουραστικό μπορεί να είναι να ψάχνεις πού θα πας, να βλέπεις δεκάδες επιλογές και τελικά να μην ξέρεις αν αυτό που επέλεξες θα είναι πραγματικά καλό.
 
       </p>
+
 
       <p>
 
@@ -1356,11 +1791,13 @@ footer p {
 
       </p>
 
+
       <p>
 
         Ενός φίλου που έχει ήδη πάει. Που έχει δοκιμάσει. Που έχει δει. Που μπορεί να σου πει τι του άρεσε, τι ξεχώρισε και αν τελικά άξιζε.
 
       </p>
+
 
       <p>
 
@@ -1369,12 +1806,12 @@ footer p {
       </p>
 
 
-
       <div class="about-quote">
 
         Γιατί πιστεύω πως η ζωή αξίζει για τις όμορφες εμπειρίες της. Και το φαγητό, αναμφίβολα, είναι ένα μεγάλο κομμάτι αυτών.
 
       </div>
+
 
     </div>
 
@@ -1390,11 +1827,13 @@ footer p {
 
 <footer>
 
+
   <h2>
 
     THE GOOD TASTE.
 
   </h2>
+
 
   <p>
 
@@ -1402,12 +1841,13 @@ footer p {
 
   </p>
 
+
 </footer>
 
 
 
 <!-- =========================
-     SMOOTH HERO SLIDESHOW
+     HERO SLIDESHOW
 ========================= -->
 
 <script>
@@ -1421,6 +1861,7 @@ let currentImage = 0;
 
 
 setInterval(() => {
+
 
   heroImages[currentImage]
 
@@ -1442,6 +1883,7 @@ setInterval(() => {
 }, 7000);
 
 </script>
+
 
 </body>
 
