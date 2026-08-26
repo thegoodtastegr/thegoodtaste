@@ -194,7 +194,7 @@ nav a:hover {
 ===================================================== */
 
 .latest-home {
-  padding: 70px 6% 0;
+  padding: 65px 6% 0;
   background: #f4eee5;
 }
 
@@ -226,7 +226,7 @@ nav a:hover {
 
 .latest-home-image {
   width: 100%;
-  height: 300px;
+  height: 260px;
   object-fit: cover;
   object-position: center;
   display: block;
@@ -267,7 +267,7 @@ nav a:hover {
 ===================================================== */
 
 .taste-section {
-  padding: 110px 6%;
+  padding: 100px 6% 110px;
   background: #f4eee5;
 }
 
@@ -558,7 +558,7 @@ nav a:hover {
   display: none;
   min-height: 100vh;
   background: #f4eee5;
-  padding: 135px 6% 100px;
+  padding: 125px 6% 90px;
 }
 
 .nos-article-inner {
@@ -566,21 +566,31 @@ nav a:hover {
   margin: 0 auto;
 }
 
+
+/* =========================
+   NOS HERO
+========================= */
+
 .nos-hero {
   width: 100%;
-  height: 390px;
+  height: 300px;
   object-fit: cover;
   object-position: center;
   display: block;
-  margin-bottom: 45px;
+  margin-bottom: 32px;
 }
+
+
+/* =========================
+   NOS TITLE
+========================= */
 
 .nos-article-category {
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: #722f37;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .nos-article-title {
@@ -589,7 +599,7 @@ nav a:hover {
   font-weight: normal;
   line-height: 0.95;
   color: #3b2b25;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .nos-article-location {
@@ -597,20 +607,25 @@ nav a:hover {
   font-style: italic;
   color: #722f37;
   font-size: 17px;
-  margin-bottom: 50px;
+  margin-bottom: 35px;
 }
 
+
+/* =========================
+   NOS REVIEW
+========================= */
+
 .nos-review {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   font-family: Georgia, serif;
-  font-size: 17px;
-  line-height: 1.85;
+  font-size: 16px;
+  line-height: 1.68;
   color: #4b3a32;
 }
 
 .nos-review p {
-  margin-bottom: 25px;
+  margin-bottom: 18px;
 }
 
 .nos-review strong {
@@ -618,8 +633,8 @@ nav a:hover {
 }
 
 .nos-rating {
-  margin-top: 35px;
-  font-size: 20px;
+  margin-top: 25px;
+  font-size: 18px;
   color: #722f37;
 }
 
@@ -629,63 +644,77 @@ nav a:hover {
 ===================================================== */
 
 .nos-gallery {
-  margin-top: 70px;
+  margin-top: 50px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 18px;
+  gap: 14px;
   align-items: start;
 }
 
+
+/* All gallery images are deliberately smaller */
+
 .nos-gallery img {
   width: 100%;
-  height: 235px;
+  height: 185px;
   object-fit: cover;
-  object-position: center;
   display: block;
 }
 
-/* deliberately scattered editorial layout */
+
+/* =========================
+   SCATTERED EDITORIAL LAYOUT
+========================= */
 
 .nos-gallery img:nth-child(1) {
-  grid-column: 1 / 6;
-  height: 270px;
-  margin-top: 10px;
+  grid-column: 1 / 5;
+  height: 205px;
+  margin-top: 8px;
+
+  /* Move the artichoke image clearly upward */
+  object-position: center 18%;
 }
 
 .nos-gallery img:nth-child(2) {
-  grid-column: 7 / 13;
-  height: 220px;
-  margin-top: 45px;
+  grid-column: 7 / 11;
+  height: 175px;
+  margin-top: 38px;
+  object-position: center;
 }
 
 .nos-gallery img:nth-child(3) {
-  grid-column: 2 / 7;
-  height: 245px;
-  margin-top: 20px;
+  grid-column: 4 / 8;
+  height: 185px;
+  margin-top: 5px;
+  object-position: center;
 }
 
 .nos-gallery img:nth-child(4) {
-  grid-column: 8 / 13;
-  height: 285px;
-  margin-top: -15px;
+  grid-column: 9 / 13;
+  height: 205px;
+  margin-top: -10px;
+  object-position: center;
 }
 
 .nos-gallery img:nth-child(5) {
   grid-column: 1 / 5;
-  height: 230px;
-  margin-top: 25px;
+  height: 180px;
+  margin-top: 18px;
+  object-position: center;
 }
 
 .nos-gallery img:nth-child(6) {
-  grid-column: 5 / 10;
-  height: 260px;
-  margin-top: -5px;
+  grid-column: 5 / 9;
+  height: 195px;
+  margin-top: -2px;
+  object-position: center;
 }
 
 .nos-gallery img:nth-child(7) {
-  grid-column: 10 / 13;
-  height: 215px;
-  margin-top: 35px;
+  grid-column: 9 / 13;
+  height: 175px;
+  margin-top: 30px;
+  object-position: center;
 }
 
 
@@ -867,25 +896,35 @@ footer p {
     letter-spacing: 2px;
   }
 
+
+  /* =========================
+     LATEST HOME MOBILE
+  ========================= */
+
   .latest-home {
-    padding: 55px 5% 0;
+    padding: 50px 5% 0;
   }
 
   .latest-home-card {
     grid-template-columns: 1fr;
-    gap: 22px;
+    gap: 18px;
   }
 
   .latest-home-image {
-    height: 220px;
+    height: 190px;
   }
 
   .latest-home-info h3 {
     font-size: 38px;
   }
 
+
+  /* =========================
+     TASTE MOBILE
+  ========================= */
+
   .taste-section {
-    padding: 75px 5%;
+    padding: 70px 5%;
   }
 
   .taste-grid {
@@ -904,6 +943,11 @@ footer p {
   .taste-card h3 {
     font-size: 30px;
   }
+
+
+  /* =========================
+     INTERNAL MOBILE
+  ========================= */
 
   .internal-page {
     padding: 125px 5% 80px;
@@ -935,36 +979,99 @@ footer p {
     height: 280px;
   }
 
+
+  /* =========================
+     NOS MOBILE
+  ========================= */
+
   .nos-article {
-    padding: 120px 5% 70px;
+    padding: 115px 5% 70px;
   }
 
   .nos-hero {
-    height: 230px;
-    margin-bottom: 35px;
+    height: 200px;
+    margin-bottom: 28px;
+    object-position: center;
+  }
+
+  .nos-article-category {
+    font-size: 9px;
+    letter-spacing: 2.5px;
   }
 
   .nos-article-title {
-    font-size: 48px;
+    font-size: 45px;
+  }
+
+  .nos-article-location {
+    font-size: 15px;
+    margin-bottom: 28px;
   }
 
   .nos-review {
-    font-size: 16px;
-    line-height: 1.8;
+    font-size: 15px;
+    line-height: 1.7;
   }
+
+  .nos-review p {
+    margin-bottom: 16px;
+  }
+
+  .nos-rating {
+    margin-top: 22px;
+    font-size: 17px;
+  }
+
+
+  /* =========================
+     NOS GALLERY MOBILE
+  ========================= */
 
   .nos-gallery {
     grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin-top: 50px;
+    gap: 10px;
+    margin-top: 40px;
   }
 
   .nos-gallery img,
   .nos-gallery img:nth-child(n) {
     grid-column: auto;
     margin-top: 0;
-    height: 180px;
+    height: 145px;
   }
+
+  .nos-gallery img:nth-child(1) {
+    object-position: center 15%;
+  }
+
+  .nos-gallery img:nth-child(2) {
+    margin-top: 14px;
+  }
+
+  .nos-gallery img:nth-child(3) {
+    margin-top: -5px;
+  }
+
+  .nos-gallery img:nth-child(4) {
+    margin-top: 10px;
+  }
+
+  .nos-gallery img:nth-child(5) {
+    margin-top: 5px;
+  }
+
+  .nos-gallery img:nth-child(6) {
+    margin-top: -8px;
+  }
+
+  .nos-gallery img:nth-child(7) {
+    margin-top: 12px;
+  }
+
+
+  /* =========================
+     ABOUT MOBILE
+  ========================= */
 
   .about-section {
     padding: 110px 7% 90px;
@@ -1482,10 +1589,7 @@ footer p {
 
 
 
-    <!-- NOS
-         It has a special class so it can be
-         hidden from ALL but shown in Island Life.
-    -->
+    <!-- NOS -->
 
     <article
       class="article-card restaurant-item nos-card"
@@ -1603,13 +1707,16 @@ footer p {
       class="nos-hero"
     >
 
+
     <div class="nos-article-category">
       Island Life
     </div>
 
+
     <h1 class="nos-article-title">
       NOS The Restaurant.
     </h1>
+
 
     <div class="nos-article-location">
       Φάρος, Σίφνος
@@ -1627,6 +1734,7 @@ footer p {
         μόνο για ένα ποτό και να απολαύσεις την ατμόσφαιρα.
       </p>
 
+
       <p>
         Από αυτά που δοκιμάσαμε, το <strong>carpaccio γαρίδας</strong> είχε την ιδανική
         οξύτητα και ισορροπία, η σαλάτα σπανακόπιτα ήταν top και τα
@@ -1639,14 +1747,24 @@ footer p {
         Για μένα, η καλύτερη γαστρονομική εμπειρία στο νησί.
       </p>
 
+
       <div class="nos-rating">
+
         📍 <strong>NOS Hotel & Villas, Φάρος, Σίφνος</strong>
+
         <br><br>
+
         ⭐ <strong>9/10</strong>
+
       </div>
 
     </div>
 
+
+
+    <!-- =========================
+         NOS GALLERY
+    ========================= -->
 
     <div class="nos-gallery">
 
@@ -2263,6 +2381,16 @@ function showRestaurants() {
 
   document.getElementById("restaurants-page").style.display = "block";
 
+  /*
+    Always open Restaurants with ALL selected.
+    NOS stays hidden from ALL.
+  */
+
+  const allButton =
+    document.querySelector(".restaurant-filter");
+
+  filterRestaurants("all", allButton);
+
   window.scrollTo({
     top: 0,
     behavior: "smooth"
@@ -2390,8 +2518,8 @@ function filterRestaurants(category, button) {
   items.forEach(item => {
 
     /*
-      NOS is intentionally hidden from ALL.
-      It appears only when Island Life is selected.
+      NOS must NEVER appear in ALL.
+      It only appears when Island Life is selected.
     */
 
     if (
@@ -2463,6 +2591,27 @@ function filterPlaces(category, button) {
   });
 
 }
+
+
+/* =========================
+   INITIAL RESTAURANT STATE
+========================= */
+
+/*
+  Make sure NOS is hidden from ALL
+  even before the user clicks anything.
+*/
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const allButton =
+    document.querySelector(".restaurant-filter");
+
+  if (allButton) {
+    filterRestaurants("all", allButton);
+  }
+
+});
 
 
 </script>
