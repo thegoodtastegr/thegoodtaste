@@ -442,9 +442,10 @@ nav a:hover {
 
 .article-card-image {
   width: 100%;
-  height: 310px;
-  object-fit: cover;
+  height: 240px;
+  object-fit: contain;
   display: block;
+  background: #f4eee5;
 }
 
 .article-card-info {
@@ -477,81 +478,100 @@ nav a:hover {
 
 
 /* =====================================================
-   NOS RESTAURANT REVIEW
+   NOS RESTAURANT CARD
 ===================================================== */
 
-.restaurant-review {
+.nos-card {
+  grid-column: span 1;
+}
+
+.nos-card .article-card-image {
+  height: 240px;
+  object-fit: contain;
+  background: #f4eee5;
+}
+
+
+/* =====================================================
+   NOS ARTICLE
+===================================================== */
+
+.nos-review {
+  display: none;
+  max-width: 1000px;
+  margin: 55px auto 0;
+  background: #ebe1d6;
+  padding: 45px;
+}
+
+.nos-review.active {
   display: block;
-  max-width: 1050px;
-  margin: 0 auto;
 }
 
-.restaurant-review-header {
-  max-width: 900px;
-  margin: 0 auto 30px;
+.nos-review-header {
+  text-align: left;
+  margin-bottom: 35px;
 }
 
-.restaurant-review-header h2 {
+.nos-review-header .article-card-category {
+  margin-bottom: 12px;
+}
+
+.nos-review-header h2 {
   font-family: Georgia, serif;
-  font-size: clamp(38px, 5vw, 62px);
+  font-size: clamp(36px, 5vw, 58px);
   font-weight: normal;
   color: #3b2b25;
   line-height: 1;
-  margin-bottom: 10px;
 }
 
-.restaurant-review-location {
+.nos-review-location {
+  margin-top: 10px;
   font-family: Georgia, serif;
-  font-size: 16px;
-  color: #722f37;
   font-style: italic;
+  color: #722f37;
+  font-size: 15px;
 }
 
-.restaurant-review-text {
-  max-width: 900px;
-  margin: 0 auto 30px;
+.nos-review-text {
+  max-width: 850px;
 }
 
-.restaurant-review-text p {
+.nos-review-text p {
   font-family: Georgia, serif;
-  font-size: 16px;
-  line-height: 1.65;
+  font-size: 17px;
+  line-height: 1.75;
   color: #4b3a32;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
-.restaurant-review-text strong {
+.nos-review-text strong {
   color: #722f37;
   font-weight: normal;
 }
 
-.restaurant-review-gallery {
+.nos-gallery {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  max-width: 950px;
-  margin: 0 auto;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 40px;
 }
 
-.restaurant-review-gallery img {
+.nos-gallery img {
   width: 100%;
-  height: 150px;
-  object-fit: cover;
+  height: 230px;
+  object-fit: contain;
   display: block;
+  background: #f4eee5;
 }
 
-.restaurant-review-gallery img:first-child {
-  grid-column: span 2;
-  height: 190px;
-}
-
-.restaurant-review-rating {
-  text-align: center;
+.nos-rating {
+  margin-top: 35px;
+  padding-top: 25px;
+  border-top: 1px solid #cdbdaf;
   font-family: Georgia, serif;
-  font-size: 20px;
-  line-height: 1.4;
+  font-size: 22px;
   color: #722f37;
-  margin: 25px 0 20px;
 }
 
 
@@ -800,44 +820,31 @@ footer p {
   }
 
   .article-card-image {
-    height: 280px;
+    height: 190px;
+    object-fit: contain;
   }
 
-  .restaurant-review {
-    max-width: 100%;
+  .nos-card .article-card-image {
+    height: 190px;
   }
 
-  .restaurant-review-header {
-    margin-bottom: 25px;
+  .nos-review {
+    padding: 28px;
+    margin-top: 35px;
   }
 
-  .restaurant-review-text {
-    margin-bottom: 25px;
+  .nos-review-text p {
+    font-size: 16px;
+    line-height: 1.75;
   }
 
-  .restaurant-review-text p {
-    font-size: 15px;
-    line-height: 1.6;
-    margin-bottom: 14px;
+  .nos-gallery {
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 
-  .restaurant-review-gallery {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-  }
-
-  .restaurant-review-gallery img {
-    height: 115px;
-  }
-
-  .restaurant-review-gallery img:first-child {
-    grid-column: span 2;
-    height: 150px;
-  }
-
-  .restaurant-review-rating {
-    font-size: 18px;
-    margin-top: 22px;
+  .nos-gallery img {
+    height: 190px;
   }
 
   .about-section {
@@ -1213,7 +1220,9 @@ footer p {
   <div class="article-grid">
 
 
-    <!-- NOS — FIRST -->
+    <!-- =================================================
+         NOS RESTAURANT
+    ================================================== -->
 
     <article
       class="article-card restaurant-item nos-card"
@@ -1224,7 +1233,7 @@ footer p {
       <img
         class="article-card-image"
         src="nos table.png.jpeg"
-        alt="NOS The Restaurant, Sifnos"
+        alt="NOS The Restaurant"
       >
 
       <div class="article-card-info">
@@ -1247,7 +1256,9 @@ footer p {
 
 
 
-    <!-- EXISTING UNNAMED RESTAURANTS -->
+    <!-- =================================================
+         EXISTING RESTAURANTS
+    ================================================== -->
 
     <article
       class="article-card restaurant-item"
@@ -1436,22 +1447,18 @@ footer p {
 
   </div>
 
-</section>
 
 
+  <!-- =================================================
+       NOS REVIEW
+  ================================================== -->
 
-<!-- =====================================================
-     NOS REVIEW
-===================================================== -->
+  <div
+    class="nos-review"
+    id="nos-review"
+  >
 
-<section
-  class="internal-page"
-  id="nos-review-page"
->
-
-  <div class="restaurant-review">
-
-    <div class="restaurant-review-header">
+    <div class="nos-review-header">
 
       <div class="article-card-category">
         Island Life
@@ -1461,14 +1468,14 @@ footer p {
         NOS The Restaurant
       </h2>
 
-      <div class="restaurant-review-location">
+      <div class="nos-review-location">
         Φάρος, Σίφνος
       </div>
 
     </div>
 
 
-    <div class="restaurant-review-text">
+    <div class="nos-review-text">
 
       <p>
         Το <strong>NOS The Restaurant</strong>, με τον
@@ -1479,69 +1486,66 @@ footer p {
         μόνο για ένα ποτό και να απολαύσεις την ατμόσφαιρα.
       </p>
 
+
       <p>
-        Από αυτά που δοκιμάσαμε, το <strong>carpaccio γαρίδας</strong> είχε την
-        ιδανική οξύτητα και ισορροπία, η σαλάτα σπανακόπιτα ήταν top και τα
-        <strong>μακαρόνια με θαλασσινά</strong> ήταν πραγματικά σαν να γεύεσαι
-        τη θάλασσα. Εγώ, όσο περίεργο κι αν ακούγεται, λάτρεψα την
-        <strong>ψητή αγκινάρα</strong> — τραγανή απ’ έξω, μαλακή μέσα και με τη
-        σάλτσα να δίνει ακριβώς την αλμύρα που χρειαζόταν. Το
-        <strong>Assyrtiko του Κτήματος Αργυρού</strong> που πήραμε ταίριαξε
-        τέλεια με τα ωμά και την pasta, με αυτή τη φρεσκάδα και την αλμύρα που
-        θέλεις χωρίς να γίνεται βαρύ. Δεν είναι φθηνό, αλλά σίγουρα άξιζε τα
-        λεφτά του. Για μένα, η καλύτερη γαστρονομική εμπειρία στο νησί.
+        Από αυτά που δοκιμάσαμε, το <strong>carpaccio
+        γαρίδας</strong> είχε την ιδανική οξύτητα και ισορροπία, η σαλάτα
+        σπανακόπιτα ήταν top και τα <strong>μακαρόνια με θαλασσινά</strong> ήταν
+        πραγματικά σαν να γεύεσαι τη θάλασσα. Εγώ, όσο περίεργο κι αν ακούγεται,
+        λάτρεψα την <strong>ψητή αγκινάρα</strong> — τραγανή απ’ έξω, μαλακή μέσα και με τη
+        σάλτσα να δίνει ακριβώς την αλμύρα που χρειαζόταν. Το <strong>Assyrtiko
+        του Κτήματος Αργυρού</strong> που πήραμε ταίριαξε τέλεια με τα ωμά και
+        την pasta, με αυτή τη φρεσκάδα και την αλμύρα που θέλεις χωρίς να γίνεται βαρύ.
+        Δεν είναι φθηνό, αλλά σίγουρα άξιζε τα λεφτά του. Για μένα, η καλύτερη
+        γαστρονομική εμπειρία στο νησί.
       </p>
+
+
+      <div class="nos-rating">
+        ⭐ 9/10
+      </div>
 
     </div>
 
 
-    <div class="restaurant-review-gallery">
+    <!-- NOS PHOTO GALLERY -->
+
+    <div class="nos-gallery">
 
       <img
         src="nos aginara.png.jpeg"
-        alt="NOS The Restaurant"
+        alt="NOS grilled artichoke"
       >
 
       <img
         src="nos carpaccio.png.jpeg"
-        alt="NOS The Restaurant"
+        alt="NOS shrimp carpaccio"
       >
 
       <img
         src="nos crl.png.jpeg"
-        alt="NOS The Restaurant"
+        alt="NOS restaurant"
       >
 
       <img
         src="nos pasta.png.jpeg"
-        alt="NOS The Restaurant"
+        alt="NOS seafood pasta"
       >
 
       <img
         src="nos spanako.png.jpeg"
-        alt="NOS The Restaurant"
+        alt="NOS spanakopita salad"
       >
 
       <img
         src="nos view.png.jpeg"
-        alt="NOS The Restaurant"
+        alt="NOS view"
       >
 
       <img
         src="nos view1.png.jpeg"
-        alt="NOS The Restaurant"
+        alt="NOS sunset view"
       >
-
-    </div>
-
-
-    <div class="restaurant-review-rating">
-
-      📍 NOS Hotel & Villas, Φάρος, Σίφνος
-
-      <br><br>
-
-      ⭐ 9/10
 
     </div>
 
@@ -2083,8 +2087,6 @@ function hideAllPages() {
 
   document.getElementById("about-page").style.display = "none";
 
-  document.getElementById("nos-review-page").style.display = "none";
-
 }
 
 
@@ -2118,6 +2120,8 @@ function showRestaurants() {
 
   document.getElementById("restaurants-page").style.display = "block";
 
+  document.getElementById("nos-review").classList.remove("active");
+
   window.scrollTo({
     top: 0,
     behavior: "smooth"
@@ -2128,19 +2132,28 @@ function showRestaurants() {
 
 
 /* =========================
-   NOS REVIEW
+   OPEN NOS REVIEW
 ========================= */
 
 function openNOS() {
 
-  hideAllPages();
+  const review =
+    document.getElementById("nos-review");
 
-  document.getElementById("nos-review-page").style.display = "block";
+  review.classList.toggle("active");
 
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
+  if (review.classList.contains("active")) {
+
+    setTimeout(() => {
+
+      review.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+
+    }, 100);
+
+  }
 
 }
 
@@ -2258,6 +2271,10 @@ function filterRestaurants(category, button) {
     }
 
   });
+
+
+  document.getElementById("nos-review")
+    .classList.remove("active");
 
 }
 
