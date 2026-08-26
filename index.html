@@ -496,6 +496,122 @@ nav a:hover {
 
 
 /* =====================================================
+   NOS ARTICLE
+===================================================== */
+
+.nos-article {
+  display: none;
+  min-height: 100vh;
+  background: #f4eee5;
+  padding: 145px 6% 120px;
+}
+
+.nos-article-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nos-back {
+  display: inline-block;
+  margin-bottom: 45px;
+  color: #722f37;
+  text-decoration: none;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.nos-back:hover {
+  opacity: 0.6;
+}
+
+.nos-article-header {
+  max-width: 900px;
+  margin: 0 auto 55px;
+}
+
+.nos-article-category {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #722f37;
+  margin-bottom: 16px;
+}
+
+.nos-article-title {
+  font-family: Georgia, serif;
+  font-size: clamp(48px, 7vw, 82px);
+  font-weight: normal;
+  line-height: 0.98;
+  color: #3b2b25;
+}
+
+.nos-article-location {
+  margin-top: 15px;
+  font-family: Georgia, serif;
+  font-size: 17px;
+  color: #722f37;
+}
+
+.nos-hero-image {
+  width: 100%;
+  max-width: 1050px;
+  height: 570px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 75px;
+}
+
+.nos-review {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.nos-review p {
+  font-family: Georgia, serif;
+  font-size: 18px;
+  line-height: 1.85;
+  color: #4b3a32;
+  margin-bottom: 30px;
+}
+
+.nos-review strong {
+  color: #3b2b25;
+}
+
+.nos-rating {
+  margin-top: 45px;
+  padding-top: 30px;
+  border-top: 1px solid #cdbdaf;
+  font-family: Georgia, serif;
+  font-size: 18px;
+  color: #722f37;
+}
+
+.nos-photo {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 75px auto;
+}
+
+.nos-photo-wide {
+  width: min(100%, 950px);
+}
+
+.nos-photo-medium {
+  width: min(100%, 720px);
+}
+
+.nos-photo-small {
+  width: min(100%, 600px);
+}
+
+
+/* =====================================================
    ABOUT
 ===================================================== */
 
@@ -722,6 +838,36 @@ footer p {
 
   .article-card-image {
     height: 280px;
+  }
+
+  .nos-article {
+    padding: 125px 5% 80px;
+  }
+
+  .nos-article-header {
+    margin-bottom: 40px;
+  }
+
+  .nos-article-title {
+    font-size: 48px;
+  }
+
+  .nos-hero-image {
+    height: 380px;
+    margin-bottom: 50px;
+  }
+
+  .nos-review {
+    max-width: 100%;
+  }
+
+  .nos-review p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .nos-photo {
+    margin: 50px auto;
   }
 
   .about-section {
@@ -1190,15 +1336,18 @@ footer p {
 
 
 
+    <!-- NOS RESTAURANT -->
+
     <article
       class="article-card restaurant-item"
       data-location="islands"
+      onclick="showNosArticle()"
     >
 
       <img
         class="article-card-image"
-        src="https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?auto=format&fit=crop&w=1200&q=85"
-        alt="Island restaurant"
+        src="nos table.png.jpeg"
+        alt="NOS The Restaurant"
       >
 
       <div class="article-card-info">
@@ -1208,11 +1357,11 @@ footer p {
         </div>
 
         <h3>
-          Restaurant Name
+          NOS The Restaurant
         </h3>
 
         <p>
-          Island tables, local flavours and summer stories.
+          Φάρος, Σίφνος
         </p>
 
       </div>
@@ -1281,6 +1430,147 @@ footer p {
 
     </article>
 
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     NOS RESTAURANT ARTICLE
+===================================================== -->
+
+<section
+  class="nos-article"
+  id="nos-article"
+>
+
+  <div class="nos-article-container">
+
+    <a
+      class="nos-back"
+      onclick="showRestaurants()"
+    >
+      ← Back to Restaurants
+    </a>
+
+
+    <div class="nos-article-header">
+
+      <div class="nos-article-category">
+        Island Life
+      </div>
+
+      <h1 class="nos-article-title">
+        NOS The Restaurant
+      </h1>
+
+      <div class="nos-article-location">
+        Φάρος, Σίφνος
+      </div>
+
+    </div>
+
+
+    <img
+      src="nos table.png.jpeg"
+      alt="NOS The Restaurant"
+      class="nos-hero-image"
+    >
+
+
+    <div class="nos-review">
+
+      <p>
+        Το <strong>NOS The Restaurant</strong>, με τον
+        Αθηναγόρα Κωστάκο στο τιμόνι της κουζίνας, ήταν πραγματικά από τις καλύτερες
+        εμπειρίες μου στη Σίφνο. Πολύ aesthetic χώρος, τέλεια θέα και ειδικά στο
+        ηλιοβασίλεμα είναι απλά υπέροχα — νομίζω αυτή είναι και η καλύτερη ώρα για να
+        πας. Η εξυπηρέτηση ήταν πολύ καλή και γρήγορη, ενώ μπορείς άνετα να πας και
+        μόνο για ένα ποτό και να απολαύσεις την ατμόσφαιρα.
+      </p>
+
+
+      <img
+        src="nos aginara.png.jpeg"
+        alt="NOS grilled artichoke"
+        class="nos-photo nos-photo-medium"
+      >
+
+
+      <p>
+        Από αυτά που δοκιμάσαμε, το <strong>carpaccio
+        γαρίδας</strong> είχε την ιδανική οξύτητα και ισορροπία, η σαλάτα
+        σπανακόπιτα ήταν top και τα <strong>μακαρόνια με θαλασσινά</strong> ήταν
+        πραγματικά σαν να γεύεσαι τη θάλασσα. Εγώ, όσο περίεργο κι αν ακούγεται,
+        λάτρεψα την <strong>ψητή αγκινάρα</strong> — τραγανή απ’ έξω, μαλακή μέσα και με τη
+        σάλτσα να δίνει ακριβώς την αλμύρα που χρειαζόταν.
+      </p>
+
+
+      <img
+        src="nos carpaccio.png.jpeg"
+        alt="NOS shrimp carpaccio"
+        class="nos-photo nos-photo-small"
+      >
+
+
+      <img
+        src="nos crl.png.jpeg"
+        alt="NOS restaurant"
+        class="nos-photo nos-photo-wide"
+      >
+
+
+      <p>
+        Το <strong>Assyrtiko
+        του Κτήματος Αργυρού</strong> που πήραμε ταίριαξε τέλεια με τα ωμά και
+        την pasta, με αυτή τη φρεσκάδα και την αλμύρα που θέλεις χωρίς να γίνεται βαρύ.
+        Δεν είναι φθηνό, αλλά σίγουρα άξιζε τα λεφτά του. Για μένα, η καλύτερη
+        γαστρονομική εμπειρία στο νησί.
+      </p>
+
+
+      <img
+        src="nos pasta.png.jpeg"
+        alt="NOS pasta with seafood"
+        class="nos-photo nos-photo-medium"
+      >
+
+
+      <img
+        src="nos spanako.png.jpeg"
+        alt="NOS spanakopita salad"
+        class="nos-photo nos-photo-wide"
+      >
+
+
+      <img
+        src="nos view.png.jpeg"
+        alt="NOS view"
+        class="nos-photo nos-photo-medium"
+      >
+
+
+      <img
+        src="nos view1.png.jpeg"
+        alt="NOS view at sunset"
+        class="nos-photo nos-photo-wide"
+      >
+
+
+      <div class="nos-rating">
+
+        📍 <strong>NOS Hotel & Villas, Φάρος, Σίφνος</strong>
+
+        <br><br>
+
+        ⭐ <strong>9/10</strong>
+
+      </div>
+
+    </div>
 
   </div>
 
@@ -1820,6 +2110,8 @@ function hideAllPages() {
 
   document.getElementById("about-page").style.display = "none";
 
+  document.getElementById("nos-article").style.display = "none";
+
 }
 
 
@@ -1852,6 +2144,25 @@ function showRestaurants() {
   hideAllPages();
 
   document.getElementById("restaurants-page").style.display = "block";
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+}
+
+
+
+/* =========================
+   NOS ARTICLE
+========================= */
+
+function showNosArticle() {
+
+  hideAllPages();
+
+  document.getElementById("nos-article").style.display = "block";
 
   window.scrollTo({
     top: 0,
