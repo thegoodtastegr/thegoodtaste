@@ -189,9 +189,82 @@ nav a:hover {
 }
 
 
-/* =========================
+/* =====================================================
+   LATEST HOME SECTION
+===================================================== */
+
+.latest-home {
+  padding: 70px 6% 0;
+  background: #f4eee5;
+}
+
+.latest-home-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.latest-home-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #722f37;
+  margin-bottom: 18px;
+}
+
+.latest-home-card {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 35px;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.35s ease;
+}
+
+.latest-home-card:hover {
+  transform: translateY(-4px);
+}
+
+.latest-home-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.latest-home-info {
+  padding: 10px 0;
+}
+
+.latest-home-category {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: #722f37;
+  margin-bottom: 12px;
+}
+
+.latest-home-info h3 {
+  font-family: Georgia, serif;
+  font-size: clamp(32px, 4vw, 50px);
+  font-weight: normal;
+  color: #3b2b25;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+
+.latest-home-info p {
+  font-family: Georgia, serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #68564c;
+  max-width: 600px;
+}
+
+
+/* =====================================================
    HOME / TASTE SECTION
-========================= */
+===================================================== */
 
 .taste-section {
   padding: 110px 6%;
@@ -442,10 +515,10 @@ nav a:hover {
 
 .article-card-image {
   width: 100%;
-  height: 240px;
-  object-fit: contain;
+  height: 310px;
+  object-fit: cover;
+  object-position: center;
   display: block;
-  background: #f4eee5;
 }
 
 .article-card-info {
@@ -478,119 +551,141 @@ nav a:hover {
 
 
 /* =====================================================
-   NOS RESTAURANT CARD
-===================================================== */
-
-.nos-card {
-  grid-column: span 1;
-}
-
-.nos-card .article-card-image {
-  height: 240px;
-  object-fit: contain;
-  background: #f4eee5;
-}
-
-
-/* =====================================================
    NOS ARTICLE
 ===================================================== */
 
-.nos-review {
+.nos-article {
   display: none;
-  max-width: 1000px;
-  margin: 55px auto 0;
-  background: #ebe1d6;
-  padding: 45px;
+  min-height: 100vh;
+  background: #f4eee5;
+  padding: 135px 6% 100px;
 }
 
-.nos-review.active {
+.nos-article-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nos-hero {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+  object-position: center;
   display: block;
+  margin-bottom: 45px;
 }
 
-.nos-review-header {
-  text-align: left;
-  margin-bottom: 35px;
+.nos-article-category {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #722f37;
+  margin-bottom: 14px;
 }
 
-.nos-review-header .article-card-category {
-  margin-bottom: 12px;
-}
-
-.nos-review-header h2 {
+.nos-article-title {
   font-family: Georgia, serif;
-  font-size: clamp(36px, 5vw, 58px);
+  font-size: clamp(45px, 7vw, 82px);
   font-weight: normal;
+  line-height: 0.95;
   color: #3b2b25;
-  line-height: 1;
+  margin-bottom: 15px;
 }
 
-.nos-review-location {
-  margin-top: 10px;
+.nos-article-location {
   font-family: Georgia, serif;
   font-style: italic;
   color: #722f37;
-  font-size: 15px;
+  font-size: 17px;
+  margin-bottom: 50px;
 }
 
-.nos-review-text {
-  max-width: 850px;
-}
-
-.nos-review-text p {
+.nos-review {
+  max-width: 900px;
+  margin: 0 auto;
   font-family: Georgia, serif;
   font-size: 17px;
-  line-height: 1.75;
+  line-height: 1.85;
   color: #4b3a32;
+}
+
+.nos-review p {
   margin-bottom: 25px;
 }
 
-.nos-review-text strong {
-  color: #722f37;
-  font-weight: normal;
-}
-
-.nos-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 14px;
-  margin-top: 40px;
-}
-
-.nos-gallery img {
-  width: 100%;
-  height: 230px;
-  object-fit: contain;
-  display: block;
-  background: #f4eee5;
+.nos-review strong {
+  color: #3b2b25;
 }
 
 .nos-rating {
   margin-top: 35px;
-  padding-top: 25px;
-  border-top: 1px solid #cdbdaf;
-  font-family: Georgia, serif;
-  font-size: 22px;
+  font-size: 20px;
   color: #722f37;
 }
 
 
 /* =====================================================
-   EMPTY STATE
+   NOS PHOTO GALLERY
 ===================================================== */
 
-.empty-state {
-  max-width: 700px;
-  margin: 80px auto 0;
-  text-align: left;
-  display: none;
+.nos-gallery {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 18px;
+  align-items: start;
 }
 
-.empty-state p {
-  font-family: Georgia, serif;
-  font-size: 18px;
-  line-height: 1.7;
-  color: #68564c;
+.nos-gallery img {
+  width: 100%;
+  height: 235px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* deliberately scattered editorial layout */
+
+.nos-gallery img:nth-child(1) {
+  grid-column: 1 / 6;
+  height: 270px;
+  margin-top: 10px;
+}
+
+.nos-gallery img:nth-child(2) {
+  grid-column: 7 / 13;
+  height: 220px;
+  margin-top: 45px;
+}
+
+.nos-gallery img:nth-child(3) {
+  grid-column: 2 / 7;
+  height: 245px;
+  margin-top: 20px;
+}
+
+.nos-gallery img:nth-child(4) {
+  grid-column: 8 / 13;
+  height: 285px;
+  margin-top: -15px;
+}
+
+.nos-gallery img:nth-child(5) {
+  grid-column: 1 / 5;
+  height: 230px;
+  margin-top: 25px;
+}
+
+.nos-gallery img:nth-child(6) {
+  grid-column: 5 / 10;
+  height: 260px;
+  margin-top: -5px;
+}
+
+.nos-gallery img:nth-child(7) {
+  grid-column: 10 / 13;
+  height: 215px;
+  margin-top: 35px;
 }
 
 
@@ -772,6 +867,23 @@ footer p {
     letter-spacing: 2px;
   }
 
+  .latest-home {
+    padding: 55px 5% 0;
+  }
+
+  .latest-home-card {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .latest-home-image {
+    height: 220px;
+  }
+
+  .latest-home-info h3 {
+    font-size: 38px;
+  }
+
   .taste-section {
     padding: 75px 5%;
   }
@@ -820,31 +932,38 @@ footer p {
   }
 
   .article-card-image {
-    height: 190px;
-    object-fit: contain;
+    height: 280px;
   }
 
-  .nos-card .article-card-image {
-    height: 190px;
+  .nos-article {
+    padding: 120px 5% 70px;
+  }
+
+  .nos-hero {
+    height: 230px;
+    margin-bottom: 35px;
+  }
+
+  .nos-article-title {
+    font-size: 48px;
   }
 
   .nos-review {
-    padding: 28px;
-    margin-top: 35px;
-  }
-
-  .nos-review-text p {
     font-size: 16px;
-    line-height: 1.75;
+    line-height: 1.8;
   }
 
   .nos-gallery {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 12px;
+    margin-top: 50px;
   }
 
-  .nos-gallery img {
-    height: 190px;
+  .nos-gallery img,
+  .nos-gallery img:nth-child(n) {
+    grid-column: auto;
+    margin-top: 0;
+    height: 180px;
   }
 
   .about-section {
@@ -1007,6 +1126,54 @@ footer p {
       <h1>
         THE GOOD TASTE.
       </h1>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       LATEST ON HOME
+  ========================= -->
+
+  <section class="latest-home">
+
+    <div class="latest-home-inner">
+
+      <div class="latest-home-label">
+        Latest from the table
+      </div>
+
+      <div
+        class="latest-home-card"
+        onclick="showNOS()"
+      >
+
+        <img
+          src="nos table.png.jpeg"
+          alt="NOS The Restaurant"
+          class="latest-home-image"
+        >
+
+        <div class="latest-home-info">
+
+          <div class="latest-home-category">
+            Island Life
+          </div>
+
+          <h3>
+            NOS The Restaurant.
+          </h3>
+
+          <p>
+            A beautiful table, sea views, great food and one
+            of my favourite experiences in Sifnos.
+          </p>
+
+        </div>
+
+      </div>
 
     </div>
 
@@ -1220,45 +1387,7 @@ footer p {
   <div class="article-grid">
 
 
-    <!-- =================================================
-         NOS RESTAURANT
-    ================================================== -->
-
-    <article
-      class="article-card restaurant-item nos-card"
-      data-location="islands"
-      onclick="openNOS()"
-    >
-
-      <img
-        class="article-card-image"
-        src="nos table.png.jpeg"
-        alt="NOS The Restaurant"
-      >
-
-      <div class="article-card-info">
-
-        <div class="article-card-category">
-          Island Life
-        </div>
-
-        <h3>
-          NOS The Restaurant
-        </h3>
-
-        <p>
-          Φάρος, Σίφνος
-        </p>
-
-      </div>
-
-    </article>
-
-
-
-    <!-- =================================================
-         EXISTING RESTAURANTS
-    ================================================== -->
+    <!-- EXISTING CARDS -->
 
     <article
       class="article-card restaurant-item"
@@ -1353,15 +1482,21 @@ footer p {
 
 
 
+    <!-- NOS
+         It has a special class so it can be
+         hidden from ALL but shown in Island Life.
+    -->
+
     <article
-      class="article-card restaurant-item"
+      class="article-card restaurant-item nos-card"
       data-location="islands"
+      onclick="showNOS()"
     >
 
       <img
         class="article-card-image"
-        src="https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?auto=format&fit=crop&w=1200&q=85"
-        alt="Island restaurant"
+        src="nos table.png.jpeg"
+        alt="NOS The Restaurant"
       >
 
       <div class="article-card-info">
@@ -1371,11 +1506,11 @@ footer p {
         </div>
 
         <h3>
-          Restaurant Name
+          NOS The Restaurant.
         </h3>
 
         <p>
-          Island tables, local flavours and summer stories.
+          Φάρος, Σίφνος
         </p>
 
       </div>
@@ -1447,35 +1582,41 @@ footer p {
 
   </div>
 
+</section>
 
 
-  <!-- =================================================
-       NOS REVIEW
-  ================================================== -->
 
-  <div
-    class="nos-review"
-    id="nos-review"
-  >
+<!-- =====================================================
+     NOS RESTAURANT ARTICLE
+===================================================== -->
 
-    <div class="nos-review-header">
+<section
+  class="nos-article"
+  id="nos-page"
+>
 
-      <div class="article-card-category">
-        Island Life
-      </div>
+  <div class="nos-article-inner">
 
-      <h2>
-        NOS The Restaurant
-      </h2>
+    <img
+      src="nos table.png.jpeg"
+      alt="NOS The Restaurant"
+      class="nos-hero"
+    >
 
-      <div class="nos-review-location">
-        Φάρος, Σίφνος
-      </div>
+    <div class="nos-article-category">
+      Island Life
+    </div>
 
+    <h1 class="nos-article-title">
+      NOS The Restaurant.
+    </h1>
+
+    <div class="nos-article-location">
+      Φάρος, Σίφνος
     </div>
 
 
-    <div class="nos-review-text">
+    <div class="nos-review">
 
       <p>
         Το <strong>NOS The Restaurant</strong>, με τον
@@ -1486,29 +1627,26 @@ footer p {
         μόνο για ένα ποτό και να απολαύσεις την ατμόσφαιρα.
       </p>
 
-
       <p>
-        Από αυτά που δοκιμάσαμε, το <strong>carpaccio
-        γαρίδας</strong> είχε την ιδανική οξύτητα και ισορροπία, η σαλάτα
-        σπανακόπιτα ήταν top και τα <strong>μακαρόνια με θαλασσινά</strong> ήταν
-        πραγματικά σαν να γεύεσαι τη θάλασσα. Εγώ, όσο περίεργο κι αν ακούγεται,
-        λάτρεψα την <strong>ψητή αγκινάρα</strong> — τραγανή απ’ έξω, μαλακή μέσα και με τη
-        σάλτσα να δίνει ακριβώς την αλμύρα που χρειαζόταν. Το <strong>Assyrtiko
-        του Κτήματος Αργυρού</strong> που πήραμε ταίριαξε τέλεια με τα ωμά και
-        την pasta, με αυτή τη φρεσκάδα και την αλμύρα που θέλεις χωρίς να γίνεται βαρύ.
-        Δεν είναι φθηνό, αλλά σίγουρα άξιζε τα λεφτά του. Για μένα, η καλύτερη
-        γαστρονομική εμπειρία στο νησί.
+        Από αυτά που δοκιμάσαμε, το <strong>carpaccio γαρίδας</strong> είχε την ιδανική
+        οξύτητα και ισορροπία, η σαλάτα σπανακόπιτα ήταν top και τα
+        <strong>μακαρόνια με θαλασσινά</strong> ήταν πραγματικά σαν να γεύεσαι τη θάλασσα.
+        Εγώ, όσο περίεργο κι αν ακούγεται, λάτρεψα την <strong>ψητή αγκινάρα</strong> —
+        τραγανή απ’ έξω, μαλακή μέσα και με τη σάλτσα να δίνει ακριβώς την αλμύρα που
+        χρειαζόταν. Το <strong>Assyrtiko του Κτήματος Αργυρού</strong> που πήραμε ταίριαξε
+        τέλεια με τα ωμά και την pasta, με αυτή τη φρεσκάδα και την αλμύρα που θέλεις
+        χωρίς να γίνεται βαρύ. Δεν είναι φθηνό, αλλά σίγουρα άξιζε τα λεφτά του.
+        Για μένα, η καλύτερη γαστρονομική εμπειρία στο νησί.
       </p>
 
-
       <div class="nos-rating">
-        ⭐ 9/10
+        📍 <strong>NOS Hotel & Villas, Φάρος, Σίφνος</strong>
+        <br><br>
+        ⭐ <strong>9/10</strong>
       </div>
 
     </div>
 
-
-    <!-- NOS PHOTO GALLERY -->
 
     <div class="nos-gallery">
 
@@ -1797,26 +1935,29 @@ footer p {
 
   <div class="article-grid">
 
-    <article class="article-card">
+    <article
+      class="article-card"
+      onclick="showNOS()"
+    >
 
       <img
         class="article-card-image"
-        src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=85"
-        alt="Food"
+        src="nos table.png.jpeg"
+        alt="NOS The Restaurant"
       >
 
       <div class="article-card-info">
 
         <div class="article-card-category">
-          Latest
+          Latest · Island Life
         </div>
 
         <h3>
-          Latest story coming soon.
+          NOS The Restaurant.
         </h3>
 
         <p>
-          New discoveries from the table.
+          Φάρος, Σίφνος
         </p>
 
       </div>
@@ -2087,6 +2228,8 @@ function hideAllPages() {
 
   document.getElementById("about-page").style.display = "none";
 
+  document.getElementById("nos-page").style.display = "none";
+
 }
 
 
@@ -2120,40 +2263,10 @@ function showRestaurants() {
 
   document.getElementById("restaurants-page").style.display = "block";
 
-  document.getElementById("nos-review").classList.remove("active");
-
   window.scrollTo({
     top: 0,
     behavior: "smooth"
   });
-
-}
-
-
-
-/* =========================
-   OPEN NOS REVIEW
-========================= */
-
-function openNOS() {
-
-  const review =
-    document.getElementById("nos-review");
-
-  review.classList.toggle("active");
-
-  if (review.classList.contains("active")) {
-
-    setTimeout(() => {
-
-      review.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
-
-    }, 100);
-
-  }
 
 }
 
@@ -2236,6 +2349,25 @@ function showAbout() {
 
 
 /* =========================
+   NOS ARTICLE
+========================= */
+
+function showNOS() {
+
+  hideAllPages();
+
+  document.getElementById("nos-page").style.display = "block";
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+}
+
+
+
+/* =========================
    RESTAURANT FILTER
 ========================= */
 
@@ -2257,6 +2389,23 @@ function filterRestaurants(category, button) {
 
   items.forEach(item => {
 
+    /*
+      NOS is intentionally hidden from ALL.
+      It appears only when Island Life is selected.
+    */
+
+    if (
+      item.classList.contains("nos-card") &&
+      category === "all"
+    ) {
+
+      item.style.display = "none";
+
+      return;
+
+    }
+
+
     if (
       category === "all" ||
       item.dataset.location === category
@@ -2271,10 +2420,6 @@ function filterRestaurants(category, button) {
     }
 
   });
-
-
-  document.getElementById("nos-review")
-    .classList.remove("active");
 
 }
 
@@ -2318,6 +2463,7 @@ function filterPlaces(category, button) {
   });
 
 }
+
 
 </script>
 
